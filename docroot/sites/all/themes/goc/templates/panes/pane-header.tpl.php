@@ -25,3 +25,4 @@
     </a>
   <?php if ($is_front): ?></h1><?php endif; ?>
 <?php endif; ?>
+<?php print getcwd(); ?>
