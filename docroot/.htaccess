@@ -136,9 +136,9 @@ DirectoryIndex index.php index.html index.htm
   </IfModule>
 </IfModule>
 
-<IfModule mod_authn_file.c>
-  AuthType Basic
-  AuthName "Protected"
-  AuthUserFile ../.htpasswd
-  Require user goc
-</IfModule>
+#<IfModule mod_authn_file.c>
+#  AuthType Basic
+#  AuthName "Protected"
+#  AuthUserFile ../.htpasswd
+#  Require user goc
+#</IfModule>
