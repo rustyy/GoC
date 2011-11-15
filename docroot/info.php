@@ -1,4 +1,4 @@
 <?php
 
-php_info();
+print php_info();
 ?>
