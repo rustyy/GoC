@@ -102,9 +102,13 @@ function ctools_features_export_render($module, $data) {
  * component module's namespace instead.
  */
 function ctools_component_features_api($module_name) {
+  $cache = &drupal_static(__FUNCTION__, array());
   $api = array();
   foreach (_ctools_features_get_info() as $component => $info) {
-    $api[$component] = $info;
+       if (!isset($cache[$component])) {
+      $api[$component] = $info;
+      $cache[$component] = $component;
+    }
   }
   return $api;
 }
