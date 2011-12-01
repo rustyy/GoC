@@ -84,20 +84,6 @@ function output_frontpage_views_default_views() {
 
   /* Display: VP Slideshow */
   $handler = $view->new_display('panel_pane', 'VP Slideshow', 'panel_pane_1');
-  $translatables['output_frontpage'] = array(
-    t('Master'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('VP Slideshow'),
-    t('View panes'),
-  );
   $export['output_frontpage'] = $view;
 
   return $export;
