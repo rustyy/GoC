@@ -20,6 +20,9 @@ api[page_manager][pages_default][path] = pages
 stylesheets[all][] = 960/reset.css
 stylesheets[all][] = 960/960_24_col.css
 
+;include style.css
+stylesheets[all][] = css/style.css
+
 regions[content] = Content
 
 ;settings[devgrid] = 0
