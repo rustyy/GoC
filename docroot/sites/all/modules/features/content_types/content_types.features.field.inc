@@ -82,72 +82,6 @@ function content_types_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-artikel-field_editorpick'
-  $fields['node-artikel-field_editorpick'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_editorpick',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          0 => 'Nein',
-          1 => 'Ja',
-        ),
-        'allowed_values_function' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'list_boolean',
-    ),
-    'field_instance' => array(
-      'bundle' => 'artikel',
-      'default_value' => array(
-        0 => array(
-          'value' => '0',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => 'Damit wird bewirkt, das auf der Startseite, in der Slideshow, der ausgewählte Artikel präsentiert wird.',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 2,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_editorpick',
-      'label' => 'Auswahl der Redaktion',
-      'required' => 1,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
-        'weight' => '4',
-      ),
-    ),
-  );
-
   // Exported field: 'node-artikel-field_gamespot'
   $fields['node-artikel-field_gamespot'] = array(
     'field_config' => array(
@@ -515,10 +449,8 @@ function content_types_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Auswahl der Redaktion');
   t('Auswahl für Medien(Bilder, Videos, Dokumente, Externes)');
   t('Body');
-  t('Damit wird bewirkt, das auf der Startseite, in der Slideshow, der ausgewählte Artikel präsentiert wird.');
   t('GameSpot');
   t('Infopool');
   t('Medien');
