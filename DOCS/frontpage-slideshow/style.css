@@ -1,0 +1,91 @@
+body {
+	//text-align:center;
+	background: #444;
+}
+
+a {
+ 	color: #fff;
+ 	text-decoration: none;
+}
+
+a:hover { 
+	text-decoration:underline;
+}
+
+a:hover img { 
+	opacity: 0.5; 
+}
+
+
+
+div.box{	/*reihenfolge wichtig*/
+	position:relative;	/*ermöglicht h2(mit absolute) sich an der box zu orientieren*/
+	overflow: hidden; 
+	float: left;
+	
+	
+	display: block;	
+	margin-right: 3px; 	
+	
+	
+}
+
+
+
+.box h2{
+	top:196px;
+	//left: 0;
+	margin: 0 0 0 10px;
+	position: absolute; 
+}
+
+img{
+	//position:relative;
+	//overflow:hidden;
+	margin: 0;
+	padding: 0;
+}
+
+.box h2 span{
+	color:white; 
+	font: bold 18px/45px Helvetica, Sans-Serif; 
+	//top: 237px; 
+	//left:0;
+	text-transform: uppercase;
+	letter-spacing: -1px;  
+	background: #A9122A; 
+	padding: 6px;
+	
+}
+.box p{
+	//width: 370px;	/*gegen komischen text effekt bei <p>*/
+	position: absolute;
+	top: 237px;
+	//left:0;
+	margin: 0 0 0 36px; 
+	padding: 3px 6px;	
+	//background: #000; 
+	background: rgba(0, 0, 0, 0.70);
+	font-size: 12pt;
+	//text-align: left;
+	color: white;
+	//line-height: 280%;
+	
+	
+	
+}	
+	
+
+#wrapper{
+	margin: 20px auto;
+	width: 630px;
+}
+#slider{
+	margin-top: 200px;
+	width:630px;
+}
+#b4{
+	margin: 0;
+}
+
+

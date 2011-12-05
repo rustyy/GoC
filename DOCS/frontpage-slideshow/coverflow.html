@@ -1,0 +1,130 @@
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="style.css" />
+		<script type="text/javascript" src="jquery-1.7.1.js"></script>
+		<script type="text/javascript">
+		var prev;
+		var time = 0;
+					
+		function timeCount(){
+				if(time == 5){
+					var prevIndex = prev.attr("id");
+					prevIndex = prevIndex.charAt(prevIndex.length-1).valueOf();
+					var nextIndex = (prevIndex % 4) +1;
+					//alert(nextIndex);
+					var next = $("#b" +nextIndex);
+					
+					$(".t"+prevIndex).fadeToggle();
+					$(".t"+nextIndex).fadeToggle("slow");
+					
+					next.animate({width:"432px"});
+					prev.animate({width:"63px"});
+					
+					prev = next;
+					
+					time = 0;
+				}
+				time = time + 1;
+				//document.getElementById('txt').value=time;
+				//setTimeout("timeCount()", 1000);
+		}//end timeCount
+		
+		function initializeTeaser(){
+				var prevIndex = prev.attr("id");
+					prevIndex = prevIndex.charAt(prevIndex.length-1).valueOf();
+					for(i = 1; i <= 4; i++){
+						if(i != prevIndex){
+							$(".t" +i).fadeOut(1);	//so schnell, dass man es nicht sieht
+						}
+					}
+		}
+		
+		$(document).ready(function(){
+			prev = $("#b2");
+			
+			initializeTeaser();	//fadet alle teaser aus, bis auf den vom aktiven slide
+						
+			//wenn viele schnell hintereinander angeklickt, dann kurzer fehler
+			$(".box").click(function(){
+				if(this.clientWidth == 63 ){	//verhindert Doppelclick- und activateMoreThanOne Fehler
+					var thisIndex = $(this).attr("id");
+					thisIndex = thisIndex.charAt(thisIndex.length-1).valueOf();
+					var prevIndex = prev.attr("id");
+						prevIndex = prevIndex.charAt(prevIndex.length-1).valueOf();	
+						
+					$(".t" +thisIndex).fadeToggle();
+					$(".t" +prevIndex).fadeToggle(1);	
+					
+					$(this).animate({width:"432px"});
+					prev.animate({width:"63px"});	
+					
+					prev = $(this);		
+					time = 0;	
+				}
+			});
+		});	//end ready
+			
+			/*$(".box1").click(function(){
+				$(".box1").animate({width:"432px"});
+				$(".box2").animate({width:"63px"});	
+				$(".box3").animate({width:"63px"});	
+				$(".box4").animate({width:"63px"});	
+			});		
+			$(".box2").click(function(){
+				$(".box1").animate({width:"63px"});
+				$(".box2").animate({width:"432px"});
+				$(".box3").animate({width:"63px"});	
+				$(".box4").animate({width:"63px"});		
+			});		
+			$(".box3").click(function(){
+				$(".box1").animate({width:"63px"});
+				$(".box2").animate({width:"63px"});	
+				$(".box3").animate({width:"432px"});
+				$(".box4").animate({width:"63px"});		
+			});	
+			$(".box4").click(function(){
+				$(".box1").animate({width:"63px"});
+				$(".box2").animate({width:"63px"});	
+				$(".box3").animate({width:"63px"});
+				$(".box4").animate({width:"432px"});		
+			});	
+		});
+	*/
+		
+			
+		</script>
+	</head>
+	<body onLoad="timeCount()">
+		<div id="wrapper">
+				
+					<div id="slider">
+						<div class="box"  id="b1" style="width: 63px; height:289px;">
+							<img height="289px" width="432px"  src="1.jpg"> 
+							<h2 class="t1" ><span><a href="http://www.google.com">Shiina Ringo</a></span></h2>
+							<p class="t1"><a href="http://www.google.com">INTERVIEW: The Guitar-Queen from Japan about life, <br/> love and friendship </a></p>					
+						</div>
+						<div class="box" id="b2" style="width:432px; height:289px;">
+							<img height="289px" width="432px"  src="2.jpg">
+							<h2 class="t2"><span><a href="http://www.google.com">Japanese Art</a></span></h2>
+							<p class="t2"><a href="http://www.google.com">Yusuke Nakamura und Takeshi Murakami geben sich<br/> die Ehre und erl&auml;utern ihre Sicht der Dinge </a></p>
+						</div>
+						<div class="box"  id="b3" style="width: 63px; height:289px;">
+							<img height="289px" width="432px"  src="3.jpg">
+							<h2 class="t3"><span><a href="http://www.google.com">How to let the sun shine</a></span></h2>
+							<p class="t3"><a href="http://www.google.com">Things can be so great if you're open for happiness <br/> How you can get one step further to get it</a></p>
+						</div>
+						<div class="box" id="b4" style="width: 63px; height:289px;">
+							<img height="289px" width="432px"  src="4.jpg">
+							<h2 class="t4"><span><a href="http://www.google.com">Love, Drama, Suspense: New Star</a></span></h2>
+							<p class="t4"><a href="http://www.google.com">What the new movie is all about</a></p>
+						</div>	
+					</div><!-- slider -->
+				
+		</div> <!--wrapper-->
+	
+		<!--<button id="btn1">test</button>
+		<input type="text" id="txt">-->
+		
+	</body>
+</html>
