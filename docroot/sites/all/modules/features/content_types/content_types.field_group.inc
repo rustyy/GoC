@@ -23,10 +23,10 @@ function content_types_field_group_info() {
     'label' => 'Kategorie',
     'weight' => '1',
     'children' => array(
-      0 => 'field_rubrik',
-      1 => 'field_gamespot',
-      2 => 'field_infopool',
-      3 => 'field_projects',
+      0 => 'field_gamespot',
+      1 => 'field_infopool',
+      2 => 'field_projects',
+      3 => 'field_rubrik',
     ),
     'format_type' => 'div',
     'format_settings' => array(
