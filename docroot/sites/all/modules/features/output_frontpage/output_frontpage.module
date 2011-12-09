@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the Output Frontpage feature.
- */
-
-include_once('output_frontpage.features.inc');
