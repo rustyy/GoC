@@ -23,6 +23,8 @@ $(document).ready(function() {
   var minWidth = (wrapperWidth - maxWidth) / (slideAmount - 1);
   // The index of the active slide.
   var currentIndex;
+  
+  var slideEasing = 'easeInSine';
 
 
   // All slides to be collapsed with specific css.
@@ -49,7 +51,8 @@ $(document).ready(function() {
         left: minWidth * currentIndex + 'px'
       },{
         queue: false, 
-        duration: 400
+        duration: 400,
+        easing : slideEasing
       });
     // Morph the siblings.
     $(this).siblings().each(function( i ){
@@ -67,7 +70,8 @@ $(document).ready(function() {
         left: left + 'px'
       }, {
         queue: false, 
-        duration: 400
+        duration: 400,
+        easing : slideEasing
       });
     });
   });  
@@ -83,7 +87,8 @@ $(document).ready(function() {
         left: medWidth * currentIndex + 'px'
       }, {
         queue: false, 
-        duration: 400
+        duration: 400,
+        easing : slideEasing
       });
     // Move all siblings to their ancestral size and postion.  
     $(this).siblings().each(function( i ){
@@ -101,7 +106,8 @@ $(document).ready(function() {
         left: left + 'px'
       }, {
         queue: false, 
-        duration: 400
+        duration: 400,
+        easing: slideEasing
       });
     });
   });
