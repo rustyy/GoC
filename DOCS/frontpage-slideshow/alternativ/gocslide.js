@@ -4,6 +4,7 @@
  *        - ie-test
  *        - round widths Math.round()
  *        - make some things dynamic (eg maxwidth, heights, duration)
+ *        - implement easing
  */
 
 $(document).ready(function() {
@@ -41,7 +42,7 @@ $(document).ready(function() {
       left: minWidth * currentIndex + 'px'
     },{
       queue: false, 
-      duration: 300
+      duration: 400
     });
     
     // Morph the siblings.
@@ -59,7 +60,7 @@ $(document).ready(function() {
         left: left + 'px'
       }, {
         queue: false, 
-        duration: 300
+        duration: 400
       });
     });
   });  
@@ -72,7 +73,7 @@ $(document).ready(function() {
       left: medWidth * currentIndex + 'px'
     }, {
       queue: false, 
-      duration: 300
+      duration: 400
     });
     
     $(this).siblings().each(function(i){
@@ -87,7 +88,7 @@ $(document).ready(function() {
         left: left + 'px'
       }, {
         queue: false, 
-        duration: 300
+        duration: 400
       });
     });
   });
