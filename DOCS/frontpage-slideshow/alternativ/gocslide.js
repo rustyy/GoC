@@ -25,7 +25,16 @@ $(document).ready(function() {
   var currentIndex;
   
   var slideEasing = 'easeInSine';
-
+  
+  function test(obj) {
+    $('.slide-teaser', obj).show('slow');
+    
+  }
+  
+  function test2(obj) {
+    $('.slide-teaser', obj).hide('slow');
+    
+  }
 
   // All slides to be collapsed with specific css.
   slides.each(function( i ){
@@ -52,7 +61,8 @@ $(document).ready(function() {
       },{
         queue: false, 
         duration: 400,
-        easing : slideEasing
+        easing: slideEasing,
+        complete: test($(this))
       });
     // Morph the siblings.
     $(this).siblings().each(function( i ){
@@ -88,7 +98,8 @@ $(document).ready(function() {
       }, {
         queue: false, 
         duration: 400,
-        easing : slideEasing
+        easing : slideEasing,
+        complete: test2($(this))
       });
     // Move all siblings to their ancestral size and postion.  
     $(this).siblings().each(function( i ){
