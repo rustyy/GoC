@@ -6,6 +6,7 @@
  *        - make some things dynamic (eg maxwidth, heights, duration)
  *        - implement easing
  *        - scale images inside slides
+ *        - chaining for teaser
  */
 
 $(document).ready(function() {
