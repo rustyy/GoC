@@ -8,9 +8,10 @@
  */
 
 $(document).ready(function() {
-  
-  // Get all slides available.
-  var slideAmount = $("#slideshow").children().length;
+  // All slides inside container.
+  var slides = $("#slideshow").children();
+  // Count all slides.
+  var slideAmount = slides.length;
   // Get containerwidth.
   var wrapperWidth = $("#slideshow").width();
   // medWidth is the slider-elements, when all of them are collapsed.
@@ -22,31 +23,35 @@ $(document).ready(function() {
   // The index of the active slide.
   var currentIndex;
 
+
   // All slides to be collapsed with specific css.
-  $("#slideshow .slide").each(function( i ){
-    $(this).css({
+  slides.each(function( i ){
+    $(this)
+    .addClass('slide')
+    .css({
       width: medWidth + 'px', 
       left: i*medWidth,
       'z-index': i+1
     });
   });
-
-  // mouseenter
-  $("#slideshow .slide").mouseenter(function(){
+  // Mouseenter.
+  slides.mouseenter(function(){
     currentIndex = $(this).index();
-    // Push active Slide to maximum and reduce 
+    
+    // Add css-class 'active' and push active Slide to maximum and reduce
     // the left-attribute to the width of elements before.
     // eg. currentIndex = 2, minWidth=42 -> left=84px
-    $(this).animate({
-      width: maxWidth + 'px',
-      left: minWidth * currentIndex + 'px'
-    },{
-      queue: false, 
-      duration: 400
-    });
-    
+    $(this)
+      .toggleClass('active')
+      .animate({
+        width: maxWidth + 'px',
+        left: minWidth * currentIndex + 'px'
+      },{
+        queue: false, 
+        duration: 400
+      });
     // Morph the siblings.
-    $(this).siblings().each(function(i){
+    $(this).siblings().each(function( i ){
       // Is sibling before acitve slide?
       if (i < currentIndex) {
         left = i * minWidth;
@@ -55,6 +60,7 @@ $(document).ready(function() {
       else {
         left = maxWidth + (i * minWidth);
       }
+      // Animate siblings.
       $(this).animate({
         width: minWidth + 'px',
         left: left + 'px'
@@ -66,23 +72,29 @@ $(document).ready(function() {
   });  
   
   // Mouseleave
-  $("#slideshow .slide").mouseleave(function(){
-
-    $(this).animate({
-      width: medWidth + 'px', 
-      left: medWidth * currentIndex + 'px'
-    }, {
-      queue: false, 
-      duration: 400
-    });
-    
-    $(this).siblings().each(function(i){
+  slides.mouseleave(function(){
+    // Remove 'active'-class and shrink former active slide
+    // to its ancestral size and position.
+    $(this)
+      .toggleClass('active')
+      .animate({
+        width: medWidth + 'px', 
+        left: medWidth * currentIndex + 'px'
+      }, {
+        queue: false, 
+        duration: 400
+      });
+    // Move all siblings to their ancestral size and postion.  
+    $(this).siblings().each(function( i ){
+      // Check if former active slide is reached.
       if (i < currentIndex) {
         left= i * medWidth;
       }
+      // If former active slide is passed, we have to 'jump' one slide ahead.
       else {
         left = (i+1) * medWidth;
       }
+      // Animate siblings with proper values.
       $(this).animate({
         width: medWidth + 'px',
         left: left + 'px'
