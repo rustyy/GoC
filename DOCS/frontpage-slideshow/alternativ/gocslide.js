@@ -5,6 +5,7 @@
  *        - round widths Math.round()
  *        - make some things dynamic (eg maxwidth, heights, duration)
  *        - implement easing
+ *        - scale images inside slides
  */
 
 $(document).ready(function() {
