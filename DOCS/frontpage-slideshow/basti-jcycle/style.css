@@ -28,12 +28,40 @@ div.slidebox{	/*reihenfolge wichtig*/
 	width: 63px;
 	height: 289px;
 }
-.slidebox img{
-	margin: 0;
-	padding: 0;
+#slider img{
+	margin-right: 3px;
+	width:435px;
+	height:289px;
+}
+
+#sliderContainer {
+	position: relative;
 	width:432px;
 	height:289px;
 }
+
+
+#prev {
+	width:30px;
+	height:30px;
+	left: 0;
+	top: 45%;
+	position:absolute;
+	z-index: 200;
+	background-image: url(arrorLeft.png);
+	//background: left no-repeat;
+	 
+}
+#next {
+	width:30px;
+	height:30px;
+	left: 405px;
+	top: 45%;
+	position:absolute;
+	z-index: 200;
+	background-image: url(arrorRight.png);	
+}
+
 .slidebox h2{
 	top: 196px;
 	left: 0;	/*für IE9*/
