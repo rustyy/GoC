@@ -509,80 +509,6 @@ function content_types_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-artikel-field_media'
-  $fields['node-artikel-field_media'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_media',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
-        ),
-      ),
-      'module' => 'mediafield',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'media',
-    ),
-    'field_instance' => array(
-      'bundle' => 'artikel',
-      'deleted' => '0',
-      'description' => 'Auswahl für Medien(Bilder, Videos, Dokumente, Externes)',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => NULL,
-          'settings' => array(),
-          'type' => 'media_large',
-          'weight' => 1,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_media',
-      'label' => 'Medien',
-      'required' => 0,
-      'settings' => array(
-        'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp3 mov m4v mp4 mpeg avi ogg wmv ico',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'media',
-        'settings' => array(
-          'allowed_schemes' => array(
-            'public' => 'public',
-          ),
-          'allowed_types' => array(
-            'audio' => 0,
-            'default' => 0,
-            'image' => 'image',
-            'video' => 0,
-          ),
-          'browser_plugins' => array(
-            'library' => 'library',
-            'media_default--media_browser_1' => 'media_default--media_browser_1',
-            'media_internet' => 'media_internet',
-            'upload' => 'upload',
-          ),
-          'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp3 mov m4v mp4 mpeg avi ogg wmv ico',
-          'progress_indicator' => 'throbber',
-        ),
-        'type' => 'media_generic',
-        'weight' => '4',
-      ),
-    ),
-  );
-
   // Exported field: 'node-artikel-field_projects'
   $fields['node-artikel-field_projects'] = array(
     'field_config' => array(
@@ -801,7 +727,6 @@ function content_types_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Auswahl für Medien(Bilder, Videos, Dokumente, Externes)');
   t('Bildunterschrift');
   t('Body');
   t('Credit');
