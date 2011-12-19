@@ -74,7 +74,7 @@ function content_types_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '2',
+        'weight' => '1',
       ),
     ),
   );
@@ -143,7 +143,7 @@ function content_types_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '3',
+        'weight' => '2',
       ),
     ),
   );
@@ -156,16 +156,26 @@ function content_types_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_mediafile',
-      'foreign keys' => array(),
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
       'indexes' => array(
         'fid' => array(
           0 => 'fid',
         ),
       ),
-      'module' => 'mediafield',
-      'settings' => array(),
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
       'translatable' => '0',
-      'type' => 'media',
+      'type' => 'image',
     ),
     'field_instance' => array(
       'bundle' => 'field_collection_media',
@@ -174,29 +184,27 @@ function content_types_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'mediafield',
+          'module' => 'image',
           'settings' => array(
-            'file_view_mode' => 'default',
+            'image_link' => '',
+            'image_style' => '',
           ),
-          'type' => 'media',
-          'weight' => '0',
-        ),
-        'full' => array(
-          'label' => 'above',
-          'module' => 'mediafield',
-          'settings' => array(
-            'file_view_mode' => 'default',
-          ),
-          'type' => 'media',
+          'type' => 'image',
           'weight' => '0',
         ),
       ),
       'entity_type' => 'field_collection_item',
       'field_name' => 'field_mediafile',
-      'label' => 'Media',
+      'label' => 'Medium',
       'required' => 0,
       'settings' => array(
-        'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp3 mov m4v mp4 mpeg avi ogg wmv ico',
+        'alt_field' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 0,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -204,7 +212,6 @@ function content_types_field_default_fields() {
         'module' => 'media',
         'settings' => array(
           'allowed_schemes' => array(
-            'private' => 'private',
             'public' => 'public',
           ),
           'allowed_types' => array(
@@ -215,15 +222,14 @@ function content_types_field_default_fields() {
           ),
           'browser_plugins' => array(
             'library' => 0,
-            'media_default--media_browser_1' => 0,
+            'media_default--media_browser_1' => 'media_default--media_browser_1',
             'media_internet' => 0,
-            'upload' => 0,
+            'upload' => 'upload',
           ),
-          'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp mp3 mov m4v mp4 mpeg avi ogg wmv ico',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '1',
+        'weight' => '0',
       ),
     ),
   );
@@ -802,8 +808,8 @@ function content_types_field_default_fields() {
   t('Fazit');
   t('GameSpot');
   t('Infopool');
-  t('Media');
   t('Medien');
+  t('Medium');
   t('Projekte');
   t('Rubrik');
 

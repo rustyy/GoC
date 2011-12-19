@@ -28,17 +28,12 @@ function content_types_field_group_info() {
       2 => 'field_projects',
       3 => 'field_rubrik',
     ),
-    'format_type' => 'div',
+    'format_type' => 'accordion',
     'format_settings' => array(
-      'formatter' => 'open',
+      'label' => 'Kategorie',
       'instance_settings' => array(
-        'description' => '',
-        'show_label' => 1,
-        'label_element' => 'h3',
-        'effect' => 'none',
-        'speed' => 'fast',
         'classes' => '',
-        'required_fields' => 1,
+        'effect' => 'bounceslide',
       ),
     ),
   );

@@ -1,3 +1,7 @@
+/**********
+http://drupal.org/node/1208346
+***********/
+
 diff --git a/field_collection.info b/field_collection.info
 index 39f62c2..494eb27 100644
 --- a/field_collection.info
