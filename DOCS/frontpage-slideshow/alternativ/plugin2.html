@@ -13,9 +13,7 @@ and open the template in the editor.
     <script type="text/javascript" src="haccordslide.js"></script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('.carousel').haccordslide({
-          maxWidth : 500
-        });
+        $('#slideshow').ImageAccordion();
       });
       
       
@@ -24,23 +22,67 @@ and open the template in the editor.
     
     
     
+  
     <style>
-
+      body{
+        background: #DCDCDC;
+      }
+      #slideshow {
+        
+        width: 630px;
+        height: 289px;
+        overflow:hidden;
+        position: relative;
+      }
+      .slide {
+        background: #FF0000;
+        height: 289px;
+        
+        -webkit-box-shadow: -5px 0 10px rgba(0,0,0,0.2);
+      }
+      
+      .slide-teaser {
+        display: none;
+        color: #FFF;
+        position: absolute;
+        background: rgba(0,0,0,0.5);
+        width: 200px;
+        left: 20px;
+        bottom: 20px;
+        padding: 10px;
+        
+        
+        
+      }
       
     </style>
   </head>
   <body>
     
-
-
-    
-<div class="carousel">
-  <div><p>aaaa</p></div>
-  <div><p>bbbb</p></div>
-  <div><p>ccc</p></div>
-  <div><p>ddd</p></div>
-</div>
-    
+    <div id="slideshow">
+      
+      <div>
+        <div class="slide-teaser">
+          <h2>Lorem Ipsum</h2>
+          <p>Lorem Ipsum dolor</p>
+        </div>
+        <img src="4.jpg" />
+      </div>
+      <div>
+        <div class="slide-teaser">
+          <h2>Lorem Ipsum</h2>
+          <p>Lorem Ipsum dolor</p>
+        </div>
+        <img src="3.jpg" />
+      </div>
+      <div>
+        <div class="slide-teaser">
+          <h2>Lorem Ipsum</h2>
+          <p>Lorem Ipsum dolor</p>
+        </div>
+        <img src="2.jpg" />
+      </div>
+    </div>
     
   </body>
 </html>
