@@ -1,0 +1,109 @@
+body {
+	background: #444;
+}
+
+a {
+ 	color: #fff;
+ 	text-decoration: none;
+}
+
+a:hover { 
+	text-decoration :underline;
+}
+
+/*a:hover img { 
+	opacity: 0.5; 
+}*/
+
+#sliderContainer {
+	height:345px;
+	position: relative;
+	width:715px;	
+}
+
+#sliderBottom {
+	background-color: #000000;
+	height: 50px;
+	position: relative;
+	width: 665px;		
+}
+
+#prev, #mag, #next {
+	background: url(sprites_nav.png) no-repeat left top;	 
+	display: block;	
+	float: left;
+	height: 15px;
+	margin: 17px 16px 0 0;	 	
+	width:14px;	
+}
+#prev {
+	margin-left: 30px;
+}
+#mag {
+	background-position: -28px 0; /*position auf sprite*/
+	width:19px;
+}
+#next {	
+	margin-right: 0;
+	background-position: -14px 0;	/*position auf sprite*/
+}
+
+/**** BY FELIX *****/
+/* Anmerkungen
+  - Background-Images: gerade bei solchen Sachen wie diesen Buttons,
+    bieten sich sog. CSS-Sprites an, siehe auch Sliding-Doors-Technik
+  - ansonsten sind alle Eigenschaften gleich, daher können sie zusammengefasst werden
+  - Ausnahme: left -> ist für prev 0 gesetzt, da eben links, für next ist left auf
+    auto, damit wird left:0 eben überschrieben, anschließend machst du nur right: 0
+    und damit hast du den next button eben rechts am Container
+    
+    Der Vorteil der sich jetzt eben bietet ist, dass wenn zB Höhe sich ändert,
+    musst du eben nur eine Zeile anpassen :)
+
+*/
+/*#prev, #next {
+  background: url(sprite.png) no-repeat left top;
+	height:30px;
+  left: 0;
+  position:absolute;
+  top: 45%;
+  width:30px;
+  z-index: 200;
+}
+
+#next {
+  background-position: ABpx CDpx;
+	left: auto;
+  right: 0;
+
+}
+*/
+
+/**** END BY FELIX ****/
+#sliderText {
+	color: white;
+	float: left;
+	font-size: 8pt;	/*in Fireworks sah 12pt aus wie im Browser 8pt*/
+	font-family: 'Nobile', sans-serif;
+
+	padding-left:54px;
+	text-align: left;
+}	
+#sliderText p{
+	padding-top: 7px;
+	width: 445px;
+}
+
+	
+#wrapper{
+	margin: 20px auto;
+	width: 630px;
+}
+#slider{
+	margin-top: 200px;
+	width:630px;
+}
+
+
+
+
