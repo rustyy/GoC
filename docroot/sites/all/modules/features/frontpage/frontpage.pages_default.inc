@@ -57,7 +57,7 @@ function frontpage_default_page_manager_pages() {
     $pane->pid = 'new-1';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'output_frontpage-panel_pane_1';
+    $pane->subtype = 'output_frontpage-vp_slideshow';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
