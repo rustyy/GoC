@@ -1,4 +1,4 @@
-name = "Content Types"
+name = "GoC Content Types"
 description = "Content Types for GoC"
 core = "7.x"
 package = "GamesOnCampus"
