@@ -55,14 +55,24 @@
         function test2(obj) {
           $('.slide-teaser', obj).hide('slow');
         }
+        // Add CSS to container
+        container.css({
+          'overflow' : 'hidden',
+          'height'   : '300px',
+          'position' : 'relative'
+          
+        });
+        
+        
         // All slides to be collapsed with specific css.
         slides.each(function( i ){
           $(this)
           .addClass('slide')
           .css({
-            'width' : medWidth + 'px', 
+            'display' : 'block',
             'left' : i*medWidth,
             'position' : 'absolute',
+            'width' : medWidth + 'px', 
             'z-index': i+1
           });
         });
