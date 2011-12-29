@@ -16,7 +16,10 @@ function frontpage_default_page_manager_pages() {
   $page->admin_title = 'Startseite';
   $page->admin_description = 'Startseite von GoC';
   $page->path = 'home';
-  $page->access = array();
+  $page->access = array(
+    'type' => 'none',
+    'settings' => NULL,
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array(
