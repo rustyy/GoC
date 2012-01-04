@@ -17,7 +17,7 @@ function awssdk_libraries_info() {
       'download url' => 'http://aws.amazon.com/sdkforphp/',
       'version arguments' => array(
         'file' => 'sdk.class.php',
-        'pattern' => "/define\('CFRUNTIME_VERSION', '(\d+\.\d+(\.\d+)?)'\);/",
+        'pattern' => "/define\('CFRUNTIME_VERSION', '(.*)'\);/",
         'lines' => 200,
       ),
       'files' => array(
