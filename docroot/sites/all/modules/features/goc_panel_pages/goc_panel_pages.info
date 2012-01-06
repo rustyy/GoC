@@ -1,7 +1,7 @@
 name = "GoC Panel Pages"
 description = "Panel Pages for GoC"
 core = "7.x"
-package = "Features"
+package = "GamesOnCampus"
 version = "7.x-1.0"
 project = "goc_panel_pages"
 dependencies[] = "ctools"
