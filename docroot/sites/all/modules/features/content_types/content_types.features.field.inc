@@ -538,14 +538,10 @@ function content_types_field_default_fields() {
           'label' => 'above',
           'module' => 'field_collection',
           'settings' => array(
-            'add' => 'Add',
-            'delete' => 'Delete',
-            'description' => TRUE,
-            'edit' => 'Edit',
             'view_mode' => 'full',
           ),
-          'type' => 'field_collection_view',
-          'weight' => '7',
+          'type' => 'field_collection_fields',
+          'weight' => '6',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -598,14 +594,10 @@ function content_types_field_default_fields() {
           'label' => 'above',
           'module' => 'field_collection',
           'settings' => array(
-            'add' => 'Add',
-            'delete' => 'Delete',
-            'description' => TRUE,
-            'edit' => 'Edit',
             'view_mode' => 'full',
           ),
-          'type' => 'field_collection_view',
-          'weight' => '9',
+          'type' => 'field_collection_fields',
+          'weight' => '7',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -631,14 +623,14 @@ function content_types_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-artikel-field_gamespot'
-  $fields['node-artikel-field_gamespot'] = array(
+  // Exported field: 'node-artikel-field_gamesspot'
+  $fields['node-artikel-field_gamesspot'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_gamespot',
+      'field_name' => 'field_gamesspot',
       'foreign keys' => array(
         'tid' => array(
           'columns' => array(
@@ -666,20 +658,16 @@ function content_types_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'artikel',
-      'default_value' => array(
-        0 => array(
-          'tid' => '6',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Bitte wählen sie den Bereich aus in dem der Artikel für den Games Spot rein soll.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '4',
+          'weight' => 11,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -689,8 +677,8 @@ function content_types_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_gamespot',
-      'label' => 'GameSpot',
+      'field_name' => 'field_gamesspot',
+      'label' => 'Games Spot',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -700,7 +688,289 @@ function content_types_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '7',
+        'weight' => '12',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-artikel-field_gamesspot_haw'
+  $fields['node-artikel-field_gamesspot_haw'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_gamesspot_haw',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'games_spot_on_haw',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'artikel',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Zu welchem Gerät gehört der Games Spot an der HAW',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 12,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_gamesspot_haw',
+      'label' => 'Games Spot - HAW',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '13',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-artikel-field_gamesspot_previews'
+  $fields['node-artikel-field_gamesspot_previews'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_gamesspot_previews',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'games_spot_previews',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'artikel',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Zu welcher Art gehört das Preview',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 13,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_gamesspot_previews',
+      'label' => 'Games Spot - Previews',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '14',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-artikel-field_gamesspot_reviews'
+  $fields['node-artikel-field_gamesspot_reviews'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_gamesspot_reviews',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'games_spot_reviews',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'artikel',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Zu welcher Art gehört das Preview',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 14,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_gamesspot_reviews',
+      'label' => 'Games Spot - Reviews',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '15',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-artikel-field_genre'
+  $fields['node-artikel-field_genre'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_genre',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'genre',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'artikel',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 15,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_genre',
+      'label' => 'Genre',
+      'required' => FALSE,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'module' => 'taxonomy',
+        'settings' => array(
+          'autocomplete_path' => 'taxonomy/autocomplete',
+          'size' => 60,
+        ),
+        'type' => 'taxonomy_autocomplete',
+        'weight' => '16',
       ),
     ),
   );
@@ -749,7 +1019,7 @@ function content_types_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '5',
+          'weight' => 19,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -760,16 +1030,17 @@ function content_types_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_infopool',
-      'label' => 'Infopool',
-      'required' => FALSE,
+      'label' => 'Info Pool',
+      'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
       ),
       'widget' => array(
+        'active' => 1,
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '8',
+        'weight' => '20',
       ),
     ),
   );
@@ -809,20 +1080,16 @@ function content_types_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'artikel',
-      'default_value' => array(
-        0 => array(
-          'tid' => '4',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Im welchen Bereich soll das Projekt rein?',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '6',
+          'weight' => 10,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -843,7 +1110,7 @@ function content_types_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '9',
+        'weight' => '11',
       ),
     ),
   );
@@ -887,7 +1154,7 @@ function content_types_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => '8',
+          'weight' => '5',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -951,20 +1218,16 @@ function content_types_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'artikel',
-      'default_value' => array(
-        0 => array(
-          'tid' => '12',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Bitte wählen sie die gewünschte Rubrik aus.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => '3',
+          'weight' => 9,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -985,7 +1248,217 @@ function content_types_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '6',
+        'weight' => '10',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-artikel-field_technews'
+  $fields['node-artikel-field_technews'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_technews',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tech_news',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'artikel',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Zu welcher Art gehört das Tech News?',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 16,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_technews',
+      'label' => 'Tech News',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '17',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-artikel-field_technews_hardware'
+  $fields['node-artikel-field_technews_hardware'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_technews_hardware',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tech_news_hardware',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'artikel',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 17,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_technews_hardware',
+      'label' => 'Tech News - Hardware',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '18',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-artikel-field_technews_software'
+  $fields['node-artikel-field_technews_software'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_technews_software',
+      'foreign keys' => array(
+        'tid' => array(
+          'columns' => array(
+            'tid' => 'tid',
+          ),
+          'table' => 'taxonomy_term_data',
+        ),
+      ),
+      'indexes' => array(
+        'tid' => array(
+          0 => 'tid',
+        ),
+      ),
+      'module' => 'taxonomy',
+      'settings' => array(
+        'allowed_values' => array(
+          0 => array(
+            'vocabulary' => 'tech_news_software',
+            'parent' => '0',
+          ),
+        ),
+      ),
+      'translatable' => '0',
+      'type' => 'taxonomy_term_reference',
+    ),
+    'field_instance' => array(
+      'bundle' => 'artikel',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'taxonomy',
+          'settings' => array(),
+          'type' => 'taxonomy_term_reference_link',
+          'weight' => 18,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_technews_software',
+      'label' => 'Tech News - Software',
+      'required' => 0,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(),
+        'type' => 'options_select',
+        'weight' => '19',
       ),
     ),
   );
@@ -1013,8 +1486,8 @@ function content_types_field_default_fields() {
       ),
       'module' => 'file',
       'settings' => array(
-        'display_default' => 0,
-        'display_field' => 0,
+        'display_default' => 1,
+        'display_field' => 1,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
@@ -1027,16 +1500,12 @@ function content_types_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'mediaelement',
+          'module' => 'file_entity',
           'settings' => array(
-            'controls' => TRUE,
-            'download_link' => FALSE,
-            'download_text' => 'Download',
-            'height' => '385',
-            'width' => '640',
+            'file_view_mode' => 'default',
           ),
-          'type' => 'mediaelement_video',
-          'weight' => '10',
+          'type' => 'file_rendered',
+          'weight' => '8',
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1086,20 +1555,33 @@ function content_types_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Bildunterschrift');
+  t('Bitte wählen sie den Bereich aus in dem der Artikel für den Games Spot rein soll.');
+  t('Bitte wählen sie die gewünschte Rubrik aus.');
   t('Body');
   t('Copyright');
   t('Credit');
   t('Dokument');
   t('Dokumente');
   t('Fazit');
-  t('GameSpot');
-  t('Infopool');
+  t('Games Spot');
+  t('Games Spot - HAW');
+  t('Games Spot - Previews');
+  t('Games Spot - Reviews');
+  t('Genre');
+  t('Im welchen Bereich soll das Projekt rein?');
+  t('Info Pool');
   t('Information');
   t('Medien');
   t('Medium');
   t('Projekte');
   t('Rubrik');
+  t('Tech News');
+  t('Tech News - Hardware');
+  t('Tech News - Software');
   t('Video');
+  t('Zu welchem Gerät gehört der Games Spot an der HAW');
+  t('Zu welcher Art gehört das Preview');
+  t('Zu welcher Art gehört das Tech News?');
 
   return $fields;
 }

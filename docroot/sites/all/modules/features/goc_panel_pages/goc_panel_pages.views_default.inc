@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * frontpage.views_default.inc
+ * goc_panel_pages.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function frontpage_views_default_views() {
+function goc_panel_pages_views_default_views() {
   $export = array();
 
   $view = new view;

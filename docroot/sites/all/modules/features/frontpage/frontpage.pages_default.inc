@@ -32,7 +32,7 @@ function frontpage_default_page_manager_pages() {
   $handler->handler = 'panel_context';
   $handler->weight = 0;
   $handler->conf = array(
-    'title' => 'Panel',
+    'title' => 'Home',
     'no_blocks' => 0,
     'pipeline' => 'standard',
     'css_id' => '',
@@ -75,10 +75,13 @@ function frontpage_default_page_manager_pages() {
     $pane->pid = 'new-2';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'output_frontpage-panel_pane_2';
+    $pane->subtype = 'view_panes-vp_big_teaser';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'items_per_page' => '2',
+      'offset' => '4',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -86,17 +89,20 @@ function frontpage_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 1;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-2'] = $pane;
     $display->panels['middle'][1] = 'new-2';
     $pane = new stdClass;
     $pane->pid = 'new-3';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'output_frontpage-panel_pane_3';
+    $pane->subtype = 'view_panes-vp_small_teaser';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'items_per_page' => '4',
+      'offset' => '6',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -104,17 +110,20 @@ function frontpage_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 2;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-3'] = $pane;
     $display->panels['middle'][2] = 'new-3';
     $pane = new stdClass;
     $pane->pid = 'new-4';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'output_frontpage-panel_pane_4';
+    $pane->subtype = 'view_panes-vp_small_teaser';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'items_per_page' => '2',
+      'offset' => '0',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -122,17 +131,20 @@ function frontpage_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 3;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-4'] = $pane;
     $display->panels['middle'][3] = 'new-4';
     $pane = new stdClass;
     $pane->pid = 'new-5';
     $pane->panel = 'middle';
     $pane->type = 'views_panes';
-    $pane->subtype = 'output_frontpage-panel_pane_5';
+    $pane->subtype = 'view_panes-vp_big_teaser';
     $pane->shown = TRUE;
     $pane->access = array();
-    $pane->configuration = array();
+    $pane->configuration = array(
+      'items_per_page' => '4',
+      'offset' => '0',
+    );
     $pane->cache = array();
     $pane->style = array(
       'settings' => NULL,
@@ -140,7 +152,7 @@ function frontpage_default_page_manager_pages() {
     $pane->css = array();
     $pane->extras = array();
     $pane->position = 4;
-    $pane->locks = '';
+    $pane->locks = array();
     $display->content['new-5'] = $pane;
     $display->panels['middle'][4] = 'new-5';
   $display->hide_title = PANELS_TITLE_FIXED;
