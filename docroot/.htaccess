@@ -129,10 +129,3 @@ DirectoryIndex index.php index.html index.htm
     </FilesMatch>
   </IfModule>
 </IfModule>
-
-<IfModule mod_authn_file.c>
-  AuthType Basic
-  AuthName "Protected"
-  AuthUserFile /mnt/www/html/gocdev/.htpasswd
-  Require user goc
-</IfModule>

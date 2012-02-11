@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the GoC-ImageStyles feature.
- */
-
-include_once('goc_imagestyles.features.inc');

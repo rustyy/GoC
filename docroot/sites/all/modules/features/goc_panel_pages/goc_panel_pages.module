@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the GoC Panel Pages feature.
- */
-
-include_once('goc_panel_pages.features.inc');
