@@ -2,6 +2,7 @@
 docroot/files
 docroot/sites/*/files
 docroot/sites/*/private
+docroot/sites/goc.local
 
 /nbproject
 .DS_Store
