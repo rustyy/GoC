@@ -1,0 +1,10 @@
+/* line 1, ../sass/global/_goc-site.scss */
+body {
+  background: #444;
+  font-family: 'Nobile', sans-serif;
+  font-size: 12px;
+  line-height: 17px; }
+
+/* line 11, ../sass/global/_goc-site.scss */
+#site {
+  background: #FFF; }

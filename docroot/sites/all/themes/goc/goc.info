@@ -1,0 +1,13 @@
+name = GoC
+description = GamesOnCampus Theme
+core = 7.x
+
+regions[content] = Content
+
+api[panels][styles][version] = 2
+plugins[panels][layouts] = plugins/layouts
+plugins[panels][styles] = plugins/styles
+
+stylesheets[all][] = 960gs/960_24_col.css
+stylesheets[all][] = compass/stylesheets/goc-all.css
+;scripts[] = js/goc.js

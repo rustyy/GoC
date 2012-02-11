@@ -1,0 +1,34 @@
+#sitetemplate,
+#panel-pane-skyscraper,
+#panel-pane-header,
+#panel-pane-adtop,
+#panel-pane-content,
+#panel-pane-sidebar {
+  float: left;
+}
+
+#panel-pane-skyscraper,
+#panel-pane-header,
+#panel-pane-adtop,
+#panel-pane-content,
+#panel-pane-sidebar {
+  margin: 0.5%;
+}
+
+#sitetemplate {
+  width: 80%;
+}
+
+#panel-pane-skyscraper {
+  width: 18%;  
+}
+
+#panel-pane-header,
+#panel-pane-content {
+  width: 70%;
+}
+
+#panel-pane-adtop,
+#panel-pane-sidebar {
+  width: 27%;
+}

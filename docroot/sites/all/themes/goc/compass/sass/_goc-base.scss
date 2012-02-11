@@ -1,0 +1,4 @@
+@mixin fontstyle($font: false, $size: false, $weight: false) {
+  @if $font == "arvo" { font-family: 'Arvo', serif; }
+  @if $font == "nobile" { font-family: 'Nobile', sans-serif; }
+}
