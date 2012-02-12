@@ -19,3 +19,6 @@ define('DRUPAL_ROOT', getcwd());
 require_once DRUPAL_ROOT . '/includes/bootstrap.inc';
 drupal_bootstrap(DRUPAL_BOOTSTRAP_FULL);
 menu_execute_active_handler();
+drupal_flush_all_caches();
+drupal_set_message('Cache cleared');
+drupal_goto();
