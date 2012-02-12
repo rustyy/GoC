@@ -13,14 +13,9 @@
       <div class="<?php print $item['classes']; ?>"<?php if ($num) : ?> style="display:none;"<?php endif; ?>>
         <?php print $item['image']; ?>
         <?php if (isset($item['caption']) && $item['caption'] != '') : ?>
-          <div class="field-slideshow-caption">            
-            <span class="field-slideshow-caption-text"><?php print $item['caption']; ?></span>        
+          <div class="field-slideshow-caption">
+            <span class="field-slideshow-caption-text"><?php print $item['caption']; ?></span>
           </div>
-        <?php endif; ?>
-        <?php if (isset($item['copyright']) && $item['copyright'] != ''): ?>
-          <div>
-            <span class="field-slideshow-subline"><?php print $item['copyright']; ?></span>
-          </div>          
         <?php endif; ?>
       </div>
     <?php endforeach; ?>
@@ -45,11 +40,11 @@
         <div id="field-slideshow-<?php print $id; ?>-carousel-wrapper" class="field-slideshow-carousel-wrapper">
           <a href="#" class="carousel-prev">«</a>
           <div id="field-slideshow-<?php print $id; ?>-carousel" class="field-slideshow-carousel">
-          <?php endif; ?>
+      <?php endif; ?>
 
-          <?php print $thumbnails; ?>
+      <?php print $thumbnails; ?>
 
-          <?php if ($pager == 'carousel') : ?>
+      <?php if ($pager == 'carousel') : ?>
           </div>
           <a href="#" class="carousel-next">»</a>
         </div>
