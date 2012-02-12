@@ -1,31 +1,58 @@
 #navigation {
   background: #FFF url(../images/bg-nav.png) repeat-x left top;
-  @include fontstyle("arvo");
+  @include fontstyle("arvo", $weight: 700);
   li {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: inline;
+    display: block;
+    float: left;
+    
   }
   
   .menu {
-    
+    position: relative;
+    height: 60px;
     a {
       display:block;
       float: left;
       height: 38px;
-      background: url(../images/bg-nav-btn.png) no-repeat center top;
       color: #FFF;
       padding: 0 15px;
       margin: 0 5px;
+      &:hover,
+      &.active-trail {
+        background: url(../images/bg-nav-btn.png) no-repeat center top;
+      }
     }
+    
+ 
+    
+  }
+  .menu .menu {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: auto;
+    li {
+          display: inline;
+          float: none;
+          }
+          
+          a {
+                display: inline;
+                background: none;
+                color: #000;
+                float: none;
+                padding: 0;
+                margin: 0;
+                }
+    
     
   }
   
-  
-  
-  
-  .menu .menu {
-    display: none;
+  .active-trail .menu {
+    display: block;
   }
+  
 }
