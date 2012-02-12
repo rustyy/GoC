@@ -6,7 +6,14 @@ body {
   line-height: 17px;
 }
 
-
+#header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px;
+  .pane-page-logo {
+    text-align: right;
+  }
+}
 
 #site {
   background: #FFF;

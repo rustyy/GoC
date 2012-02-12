@@ -5,6 +5,38 @@ body {
   font-size: 12px;
   line-height: 17px; }
 
-/* line 11, ../sass/global/_goc-site.scss */
+/* line 9, ../sass/global/_goc-site.scss */
+#header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px; }
+  /* line 13, ../sass/global/_goc-site.scss */
+  #header .pane-page-logo {
+    text-align: right; }
+
+/* line 18, ../sass/global/_goc-site.scss */
 #site {
   background: #FFF; }
+
+/* line 1, ../sass/global/_goc-navigation.scss */
+#navigation {
+  background: white url(../images/bg-nav.png) repeat-x left top;
+  font-family: 'Arvo', serif; }
+  /* line 4, ../sass/global/_goc-navigation.scss */
+  #navigation li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline; }
+  /* line 13, ../sass/global/_goc-navigation.scss */
+  #navigation .menu a {
+    display: block;
+    float: left;
+    height: 38px;
+    background: url(../images/bg-nav-btn.png) no-repeat center top;
+    color: #FFF;
+    padding: 0 15px;
+    margin: 0 5px; }
+  /* line 28, ../sass/global/_goc-navigation.scss */
+  #navigation .menu .menu {
+    display: none; }
