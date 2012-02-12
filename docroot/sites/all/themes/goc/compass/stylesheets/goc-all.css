@@ -7,36 +7,64 @@ body {
 
 /* line 9, ../sass/global/_goc-site.scss */
 #header {
+  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 960px; }
-  /* line 13, ../sass/global/_goc-site.scss */
+  /* line 14, ../sass/global/_goc-site.scss */
   #header .pane-page-logo {
     text-align: right; }
 
-/* line 18, ../sass/global/_goc-site.scss */
+/* line 19, ../sass/global/_goc-site.scss */
 #site {
   background: #FFF; }
 
 /* line 1, ../sass/global/_goc-navigation.scss */
 #navigation {
   background: white url(../images/bg-nav.png) repeat-x left top;
-  font-family: 'Arvo', serif; }
+  font-family: 'Arvo', serif;
+  text-transform: uppercase;
+  font-weight: 700; }
   /* line 4, ../sass/global/_goc-navigation.scss */
   #navigation li {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: inline; }
-  /* line 13, ../sass/global/_goc-navigation.scss */
-  #navigation .menu a {
     display: block;
-    float: left;
-    height: 38px;
-    background: url(../images/bg-nav-btn.png) no-repeat center top;
-    color: #FFF;
-    padding: 0 15px;
-    margin: 0 5px; }
-  /* line 28, ../sass/global/_goc-navigation.scss */
+    float: left; }
+  /* line 13, ../sass/global/_goc-navigation.scss */
+  #navigation .menu {
+    position: relative;
+    height: 60px; }
+    /* line 16, ../sass/global/_goc-navigation.scss */
+    #navigation .menu a {
+      display: block;
+      float: left;
+      height: 38px;
+      color: #FFF;
+      padding: 0 15px;
+      margin: 0 5px; }
+      /* line 24, ../sass/global/_goc-navigation.scss */
+      #navigation .menu a:hover, #navigation .menu a.active-trail {
+        background: url(../images/bg-nav-btn.png) no-repeat center top; }
+  /* line 32, ../sass/global/_goc-navigation.scss */
   #navigation .menu .menu {
-    display: none; }
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: auto; }
+    /* line 37, ../sass/global/_goc-navigation.scss */
+    #navigation .menu .menu li {
+      display: inline;
+      float: none; }
+    /* line 42, ../sass/global/_goc-navigation.scss */
+    #navigation .menu .menu a {
+      display: inline;
+      background: none;
+      color: #000;
+      float: none;
+      padding: 0;
+      margin: 0; }
+  /* line 54, ../sass/global/_goc-navigation.scss */
+  #navigation .active-trail .menu {
+    display: block; }
