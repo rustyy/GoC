@@ -15,7 +15,7 @@
 ;
 (function($) {
   jQuery.fn.stickyMenu = function(arg) {
-    var options = $.extend({},$.fn.stickyMenu.defaults,arg);
+    var o = $.extend({},$.fn.stickyMenu.defaults,arg);
     return this.each(function() {
       var stickyMenu = $(this);
       var stickyMenuCSS = {};
@@ -24,24 +24,33 @@
       stickyMenuCSS.height = stickyMenu.height();
       stickyMenuCSS.width = stickyMenu.width();
 
+      if (o.shadow) {
+        //stickyMenuCSS.shadow = {'-webkit-box-shadow' : '0px 0px'};
+      }
+
+
       stickyMenu.css(stickyMenuCSS);
       stickyMenu.wrap('<div class="sticky-menu-wrapper" />');
 
       $(document).scroll(function(){
         var docScrollTop = $(this).scrollTop();
         if (docScrollTop >= stickyMenuOffset.top) {
-          $('body .sticky-menu-wrapper').css({
+          stickyMenu.css({
+            'width' : stickyMenuCSS.width + 'px',
+            'height' : stickyMenuCSS.height + 'px',
             'position' : 'fixed',
             'top' : 0
           });
         }
         else {
-          $('body .sticky-menu-wrapper').attr('style', '');
+         stickyMenu.attr('style', '');
         }
       });
 
     });
   };
 
-  $.fn.stickyMenu.defaults = {};
+  $.fn.stickyMenu.defaults = {
+    shadow : true
+  };
 })(jQuery);
