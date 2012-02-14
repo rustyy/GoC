@@ -7,3 +7,4 @@ docroot/sites/goc.local
 /nbproject
 .DS_Store
 /docroot/sites/all/themes/goc/compass/.sass-cache/
+/tmp
