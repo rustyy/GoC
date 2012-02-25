@@ -8,3 +8,4 @@ docroot/sites/goc.local
 .DS_Store
 /docroot/sites/all/themes/goc/compass/.sass-cache/
 /tmp
+/private
