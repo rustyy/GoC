@@ -1,9 +1,9 @@
 $red: #af1028;
+$gray: #cccccc;
 
 
 
-
-@mixin fontstyle($font: false, $size: false, $weight: false) {
+@mixin fontstyle($font: false, $size: false, $weight: false, $color: false) {
   @if $font == "arvo" {
     font-family: 'Arvo', serif;
     text-transform: uppercase;
@@ -12,5 +12,11 @@ $red: #af1028;
   
   @if $weight {
     font-weight: $weight;
+  }
+  @if $size {
+    font-size: $size;
+  }
+  @if $color {
+    color: $color;
   }
 }

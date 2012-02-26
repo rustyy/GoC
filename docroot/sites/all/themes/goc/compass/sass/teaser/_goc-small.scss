@@ -1,0 +1,48 @@
+.small-teaser-group {
+  
+  
+  
+  
+  .views-row {
+    margin-bottom: 7px;
+    margin-top: 7px;
+  }
+  
+  
+  
+  
+  img {
+    float: left;
+    margin-right: 5px;
+  }
+  
+  
+  
+  
+  .layer {
+    float: left;
+    
+    .headline {
+      margin-bottom: 5px;
+      a {
+        @include fontstyle("arvo", $size: 18px, $weight: 700, $color: $red);
+        text-decoration: none;
+      }
+    }
+    
+    span{
+      float: right;
+      a {
+        color: $red;
+        text-decoration: none;
+      }
+    }
+    
+    p {
+      @include fontstyle("nobile", $weight: 400, $size: 12px);
+    }
+    
+  }
+  
+  
+}

@@ -1,0 +1,16 @@
+.line-teaser-group {
+  .views-row {
+    background: $gray;
+    margin-bottom: 7px;
+    padding: 6px 11px;
+    a {
+      @include fontstyle("arvo", $size: 12px, $weight: 700, $color: $red);
+      float: left;
+      text-decoration: none;
+    }
+    .created {
+      @include fontstyle("nobile", $weight: 400, $size: 12px, $color: #FFF);
+      float: right;
+    }
+  }
+}

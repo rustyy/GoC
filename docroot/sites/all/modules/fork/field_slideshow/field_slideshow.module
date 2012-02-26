@@ -21,6 +21,7 @@ function field_slideshow_field_formatter_info() {
         'slideshow_colorbox_slideshow_speed'  => '4000',
         'slideshow_colorbox_transition'       => 'elastic',
         'slideshow_colorbox_speed'            => '350',
+        'slideshow_copyright'                   => '',
         'slideshow_caption'                   => '',
         'slideshow_caption_link'              => '',
         'slideshow_fx'                        => 'fade',
@@ -154,6 +155,21 @@ function field_slideshow_field_formatter_settings_form($field, $instance, $view_
       ),
     );
   }
+  
+  //Copyright - Field
+  if ($field['type'] == 'media' || $field['type'] == 'field_collection')
+    $copyright = _field_slideshow_get_fields(array('text'), $field['type'], $field['field_name']);
+  else $copyright = array(
+    'title'   => t('Title text'),
+    'alt'     => t('Alt text'),
+  );
+  $element['slideshow_copyright'] = array(
+    '#title'          => t('Copyright'),
+    '#type'           => 'select',
+    '#default_value'  => $settings['slideshow_copyright'],
+    '#empty_option'   => t('Nothing'),
+    '#options'        => $copyright,
+  );
 
   if ($field['type'] == 'media' || $field['type'] == 'field_collection')
     $captions = _field_slideshow_get_fields(array('text'), $field['type'], $field['field_name']);
@@ -530,6 +546,23 @@ function field_slideshow_field_formatter_view($entity_type, $entity, $field, $in
     }
   }
 
+//FORK
+  
+// Get correct Copyright
+  if ($settings['slideshow_copyright'] != '') {
+    foreach ($items as $delta => $item) {
+      if ($field['type'] == 'media' || $field['type'] == 'field_collection') {
+        if ($field['type'] == 'media') $items[$delta]['copyright'] = $items[$delta]['file']->$settings['slideshow_copyright'];
+        elseif ($field['type'] == 'field_collection') $items[$delta]['copyright'] = $items[$delta][$settings['slideshow_copyright']];
+        if (!empty($items[$delta]['copyright']) && isset($items[$delta]['copyright'][$langcode]))
+          $items[$delta]['copyright'] = $items[$delta]['copyright'][$langcode][0]['value'];
+        else $items[$delta]['copyright'] = '';
+      }
+      else $items[$delta]['copyright'] = $item[$settings['slideshow_copyright']];
+    }
+  }
+  
+//FORK  
   // Get correct caption
   if ($settings['slideshow_caption'] != '') {
     foreach ($items as $delta => $item) {
@@ -591,6 +624,9 @@ function field_slideshow_field_formatter_view($entity_type, $entity, $field, $in
               'class' => array('colorbox'),
               'rel'   => 'field-slideshow[' . $entity_id_field . '-' . $entity->$entity_id_field . ']',
             );
+            //fork
+            if ($settings['slideshow_subline'] != '') $uri['options']['attributes']['title'] = $item['subline'];
+            //fork
             if ($settings['slideshow_caption'] != '') $uri['options']['attributes']['title'] = $item['caption'];
             if (isset($settings['slideshow_colorbox_slideshow']) && $settings['slideshow_colorbox_slideshow'] != '') {
               $uri['options']['attributes']['class'] = array('colorbox-load');
