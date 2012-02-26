@@ -9,3 +9,5 @@ docroot/sites/goc.local
 /docroot/sites/all/themes/goc/compass/.sass-cache/
 /tmp
 /private
+docroot/sites/*/modules/dev
+FirePHPCore
