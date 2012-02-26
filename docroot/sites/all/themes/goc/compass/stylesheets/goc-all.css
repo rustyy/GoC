@@ -68,3 +68,26 @@ body {
   /* line 54, ../sass/global/_goc-navigation.scss */
   #navigation .active-trail .menu {
     display: block; }
+
+/* line 5, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .views-row {
+  margin-bottom: 7px;
+  margin-top: 7px;
+  position: relative; }
+/* line 14, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .layer {
+  position: absolute;
+  bottom: 0; }
+  /* line 19, ../sass/teaser/_goc-big.scss */
+  .big-teaser-group .layer .headline {
+    background: #af1028;
+    display: inline;
+    padding: 0 10px; }
+    /* line 23, ../sass/teaser/_goc-big.scss */
+    .big-teaser-group .layer .headline a {
+      color: #FFF; }
+  /* line 28, ../sass/teaser/_goc-big.scss */
+  .big-teaser-group .layer p {
+    background: rgba(0, 0, 0, 0.7);
+    color: #FFF;
+    padding: 0 20px; }

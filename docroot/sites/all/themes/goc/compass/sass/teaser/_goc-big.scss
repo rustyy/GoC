@@ -1,0 +1,37 @@
+.big-teaser-group {
+  
+  
+  
+  .views-row {
+    margin-bottom: 7px;
+    margin-top: 7px;
+    position: relative;
+  }
+  
+  
+  
+  
+  .layer {
+    position: absolute;
+    bottom: 0;
+    
+    
+    .headline {
+      background: $red;
+      display: inline;
+      padding: 0 10px;
+      a {
+        color: #FFF;
+      }
+    }
+    
+    p {
+      background: rgba(0,0,0,0.7);
+      color: #FFF;
+      padding: 0 20px;
+    }
+    
+  }
+  
+  
+}

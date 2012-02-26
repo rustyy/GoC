@@ -1,3 +1,8 @@
+$red: #af1028;
+
+
+
+
 @mixin fontstyle($font: false, $size: false, $weight: false) {
   @if $font == "arvo" {
     font-family: 'Arvo', serif;
