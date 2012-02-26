@@ -82,12 +82,58 @@ body {
   .big-teaser-group .layer .headline {
     background: #af1028;
     display: inline;
-    padding: 0 10px; }
-    /* line 23, ../sass/teaser/_goc-big.scss */
+    margin-left: 10px;
+    padding: 6px; }
+    /* line 24, ../sass/teaser/_goc-big.scss */
     .big-teaser-group .layer .headline a {
-      color: #FFF; }
-  /* line 28, ../sass/teaser/_goc-big.scss */
+      font-family: 'Arvo', serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      color: #FFF;
+      line-height: 30px;
+      text-decoration: none; }
+  /* line 32, ../sass/teaser/_goc-big.scss */
   .big-teaser-group .layer p {
+    font-family: 'Nobile', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
     background: rgba(0, 0, 0, 0.7);
     color: #FFF;
-    padding: 0 20px; }
+    margin: 2px 13px 11px 30px;
+    padding: 3px 6px; }
+
+/* line 6, ../sass/teaser/_goc-small.scss */
+.small-teaser-group .views-row {
+  margin-bottom: 7px;
+  margin-top: 7px; }
+/* line 14, ../sass/teaser/_goc-small.scss */
+.small-teaser-group img {
+  float: left;
+  margin-right: 5px; }
+/* line 22, ../sass/teaser/_goc-small.scss */
+.small-teaser-group .layer {
+  float: left; }
+  /* line 25, ../sass/teaser/_goc-small.scss */
+  .small-teaser-group .layer .headline {
+    margin-bottom: 5px; }
+    /* line 27, ../sass/teaser/_goc-small.scss */
+    .small-teaser-group .layer .headline a {
+      font-family: 'Arvo', serif;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      color: #af1028;
+      text-decoration: none; }
+  /* line 34, ../sass/teaser/_goc-small.scss */
+  .small-teaser-group .layer span {
+    float: right; }
+    /* line 36, ../sass/teaser/_goc-small.scss */
+    .small-teaser-group .layer span a {
+      color: #af1028;
+      text-decoration: none; }
+  /* line 42, ../sass/teaser/_goc-small.scss */
+  .small-teaser-group .layer p {
+    font-family: 'Nobile', sans-serif;
+    font-weight: 400;
+    font-size: 12px; }

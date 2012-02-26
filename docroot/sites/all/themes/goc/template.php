@@ -20,6 +20,10 @@ function goc_preprocess_views_view(&$vars) {
   if ($display === 'vp_big_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view__vp_big_teaser';
   }
+
+  if ($display === 'vp_small_teaser_home') {
+    $vars['theme_hook_suggestions'][] = 'views_view__vp_small_teaser';
+  }
 }
 
 /**
@@ -41,6 +45,12 @@ function goc_preprocess_views_view_unformatted(&$vars) {
     }
     $vars['classes_array'] = $classes;
   }
+  if ($display === 'vp_small_teaser' || $display === 'vp_small_teaser_home') {
+    foreach ($classes as $id => $v) {
+        $classes[$id] .= ' alpha grid-16';
+    }
+    $vars['classes_array'] = $classes;
+  }
 }
 
 /**
@@ -53,5 +63,9 @@ function goc_preprocess_views_view_fields(&$vars) {
   // We use the standard fields-tpl-file if front-view is used.
   if ($display === 'vp_big_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_big_teaser';
+  }
+
+  if ($display === 'vp_small_teaser_home') {
+    $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_small_teaser';
   }
 }

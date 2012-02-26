@@ -13,4 +13,7 @@ $red: #af1028;
   @if $weight {
     font-weight: $weight;
   }
+  @if $size {
+    font-size: $size;
+  }
 }

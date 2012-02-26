@@ -19,16 +19,22 @@
     .headline {
       background: $red;
       display: inline;
-      padding: 0 10px;
+      margin-left: 10px;
+      padding: 6px;
       a {
+        @include fontstyle("arvo", $size: 18px, $weight: 700);
         color: #FFF;
+        line-height: 30px;
+        text-decoration: none;
       }
     }
     
     p {
+      @include fontstyle("nobile", $weight: 400, $size: 12px);
       background: rgba(0,0,0,0.7);
       color: #FFF;
-      padding: 0 20px;
+      margin: 2px 13px 11px 30px;
+      padding: 3px 6px;
     }
     
   }

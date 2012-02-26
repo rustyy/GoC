@@ -26,7 +26,8 @@
  * @ingroup views_templates
  */
 ?>
-<div class="<?php print $classes; ?> big-teaser-group">
+<div class="<?php print $classes; ?> small-teaser-group">
+
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <?php print $title; ?>
