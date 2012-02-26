@@ -24,7 +24,7 @@ function goc_preprocess_views_view(&$vars) {
   if ($display === 'vp_small_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view__vp_small_teaser';
   }
-  
+
   if ($display === 'vp_line_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view__vp_line_teaser';
   }
@@ -38,7 +38,7 @@ function goc_preprocess_views_view(&$vars) {
 function goc_preprocess_views_view_unformatted(&$vars) {
   $display = $vars['view']->current_display;
   $classes = $vars['classes_array'];
-  
+
   // Add grid classes to big-teaser.
   if ($display === 'vp_big_teaser' || $display === 'vp_big_teaser_home') {
     foreach ($classes as $id => $v) {
@@ -52,14 +52,14 @@ function goc_preprocess_views_view_unformatted(&$vars) {
   }
   if ($display === 'vp_small_teaser' || $display === 'vp_small_teaser_home') {
     foreach ($classes as $id => $v) {
-        $classes[$id] .= ' alpha grid-16';
+      $classes[$id] .= ' alpha grid-16';
     }
     $vars['classes_array'] = $classes;
   }
-  
+
   if ($display === 'vp_line_teaser' || $display === 'vp_line_teaser_home') {
     foreach ($classes as $id => $v) {
-        $classes[$id] .= ' alpha grid-16';
+      $classes[$id] .= ' alpha grid-16';
     }
     $vars['classes_array'] = $classes;
   }
@@ -71,7 +71,16 @@ function goc_preprocess_views_view_unformatted(&$vars) {
  * @param string $vars 
  */
 function goc_preprocess_views_view_fields(&$vars) {
+  $nid = $vars['view']->result[$vars['id']-1]->nid;
+  $image_content = $vars['fields']['field_fc_image']->content;
   $display = $vars['view']->current_display;
+  
+  // Wrap all images with a link to a node, when displayed in a teaser.
+  if ($vars['view']->name === "teaser") {
+    $image_content = l($image_content, 'node/' . $nid, array('attributes' => array('class' => array('teaser-image-link')), 'html' => TRUE));
+    $vars['fields']['field_fc_image']->content = $image_content;
+  }
+  
   // We use the standard fields-tpl-file if front-view is used.
   if ($display === 'vp_big_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_big_teaser';
@@ -80,7 +89,7 @@ function goc_preprocess_views_view_fields(&$vars) {
   if ($display === 'vp_small_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_small_teaser';
   }
-  
+
   if ($display === 'vp_line_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_line_teaser';
   }
