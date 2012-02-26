@@ -38,13 +38,14 @@ function goc_preprocess_views_view(&$vars) {
 function goc_preprocess_views_view_unformatted(&$vars) {
   $display = $vars['view']->current_display;
   $classes = $vars['classes_array'];
+  
   // Add grid classes to big-teaser.
   if ($display === 'vp_big_teaser' || $display === 'vp_big_teaser_home') {
     foreach ($classes as $id => $v) {
       if ($id % 2 === 0) {
-        $classes[$id] .= ' alpha grid-8';
+        $classes[$id] = $v . ' alpha grid-8';
       } else {
-        $classes[$id] .= ' omega grid-8';
+        $classes[$id] = $v . ' omega grid-8';
       }
     }
     $vars['classes_array'] = $classes;
