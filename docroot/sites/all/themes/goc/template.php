@@ -71,16 +71,8 @@ function goc_preprocess_views_view_unformatted(&$vars) {
  * @param string $vars 
  */
 function goc_preprocess_views_view_fields(&$vars) {
-  $nid = $vars['view']->result[$vars['id']-1]->nid;
-  $image_content = $vars['fields']['field_fc_image']->content;
   $display = $vars['view']->current_display;
-  
-  // Wrap all images with a link to a node, when displayed in a teaser.
-  if ($vars['view']->name === "teaser") {
-    $image_content = l($image_content, 'node/' . $nid, array('attributes' => array('class' => array('teaser-image-link')), 'html' => TRUE));
-    $vars['fields']['field_fc_image']->content = $image_content;
-  }
-  
+
   // We use the standard fields-tpl-file if front-view is used.
   if ($display === 'vp_big_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_big_teaser';
@@ -92,5 +84,20 @@ function goc_preprocess_views_view_fields(&$vars) {
 
   if ($display === 'vp_line_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_line_teaser';
+  }
+}
+
+/**
+ * Implements template_preprocess_views_view_field.
+ * 
+ * @param type $vars 
+ */
+function goc_preprocess_views_view_field(&$vars) {
+  // Wrap all field_fc_image fields with a link to a node, when displayed in a teaser.
+  if (($vars['view']->name === "teaser" || $vars['view']->name === "homepage") && $vars['field']->field === "field_fc_image") {
+    $nid = $vars['row']->nid;
+    $image_content = $vars['output'];
+    $image_content = l($image_content, 'node/' . $nid, array('attributes' => array('class' => array('teaser-image-link')), 'html' => TRUE));
+    $vars['output'] = $image_content;
   }
 }
