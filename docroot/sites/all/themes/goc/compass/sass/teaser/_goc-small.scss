@@ -25,8 +25,7 @@
     .headline {
       margin-bottom: 5px;
       a {
-        @include fontstyle("arvo", $size: 18px, $weight: 700);
-        color: $red;
+        @include fontstyle("arvo", $size: 18px, $weight: 700, $color: $red);
         text-decoration: none;
       }
     }

@@ -90,16 +90,16 @@ body {
       text-transform: uppercase;
       font-weight: 700;
       font-size: 18px;
-      color: #FFF;
+      color: white;
       line-height: 30px;
       text-decoration: none; }
-  /* line 32, ../sass/teaser/_goc-big.scss */
+  /* line 31, ../sass/teaser/_goc-big.scss */
   .big-teaser-group .layer p {
     font-family: 'Nobile', sans-serif;
     font-weight: 400;
     font-size: 12px;
+    color: white;
     background: rgba(0, 0, 0, 0.7);
-    color: #FFF;
     margin: 2px 13px 11px 30px;
     padding: 3px 6px; }
 
@@ -125,15 +125,37 @@ body {
       font-size: 18px;
       color: #af1028;
       text-decoration: none; }
-  /* line 34, ../sass/teaser/_goc-small.scss */
+  /* line 33, ../sass/teaser/_goc-small.scss */
   .small-teaser-group .layer span {
     float: right; }
-    /* line 36, ../sass/teaser/_goc-small.scss */
+    /* line 35, ../sass/teaser/_goc-small.scss */
     .small-teaser-group .layer span a {
       color: #af1028;
       text-decoration: none; }
-  /* line 42, ../sass/teaser/_goc-small.scss */
+  /* line 41, ../sass/teaser/_goc-small.scss */
   .small-teaser-group .layer p {
     font-family: 'Nobile', sans-serif;
     font-weight: 400;
     font-size: 12px; }
+
+/* line 2, ../sass/teaser/_goc-line.scss */
+.line-teaser-group .views-row {
+  background: #cccccc;
+  margin-bottom: 7px;
+  padding: 6px 11px; }
+  /* line 6, ../sass/teaser/_goc-line.scss */
+  .line-teaser-group .views-row a {
+    font-family: 'Arvo', serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    color: #af1028;
+    float: left;
+    text-decoration: none; }
+  /* line 11, ../sass/teaser/_goc-line.scss */
+  .line-teaser-group .views-row .created {
+    font-family: 'Nobile', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: white;
+    float: right; }
