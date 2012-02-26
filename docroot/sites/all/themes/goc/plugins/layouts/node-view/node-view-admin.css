@@ -1,0 +1,9 @@
+#node-view-left {
+  width: 30%;
+  float: left;
+}
+
+#node-view-right {
+  width: 70%;
+  float: left;
+}
