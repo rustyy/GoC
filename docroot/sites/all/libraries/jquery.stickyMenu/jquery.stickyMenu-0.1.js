@@ -16,24 +16,28 @@
 (function($) {
   jQuery.fn.stickyMenu = function(arg) {
     var o = $.extend({},$.fn.stickyMenu.defaults,arg);
+    
     return this.each(function() {
+
       var stickyMenu = $(this);
       var stickyMenuCSS = {};
-      var stickyMenuOffset = stickyMenu.offset();
+      var stickyMenuOffset;
+
+      // Wait until all images are loaded,
+      // otherwise we get some strange behaviour on webkit-browsers.
+      $(window).load(function() {
+        stickyMenuOffset= stickyMenu.offset()
+      });
 
       stickyMenuCSS.height = stickyMenu.height();
       stickyMenuCSS.width = stickyMenu.width();
-
-      if (o.shadow) {
-        //stickyMenuCSS.shadow = {'-webkit-box-shadow' : '0px 0px'};
-      }
-
-
       stickyMenu.css(stickyMenuCSS);
       stickyMenu.wrap('<div class="sticky-menu-wrapper" />');
 
       $(document).scroll(function(){
         var docScrollTop = $(this).scrollTop();
+        
+        //console.log(stickyMenuOffset.top);
         if (docScrollTop >= stickyMenuOffset.top) {
           $('.sticky-menu-wrapper').css({
             'width' : stickyMenuCSS.width + 'px',
@@ -50,11 +54,12 @@
           });
         }
         else {
-         stickyMenu.attr('style', '');
+          stickyMenu.attr('style', '');
         }
       });
 
     });
+    
   };
 
   $.fn.stickyMenu.defaults = {
