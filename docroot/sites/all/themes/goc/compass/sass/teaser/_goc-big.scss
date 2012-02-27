@@ -1,41 +1,30 @@
 .big-teaser-group {
   
-  
-  
   .views-row {
     margin-bottom: 7px;
     margin-top: 7px;
     position: relative;
   }
   
-  
-  
-  
   .layer {
-    position: absolute;
     bottom: 0;
-    
-    
+    position: absolute;
     .headline {
       background: $red;
       display: inline;
       margin-left: 10px;
       padding: 6px;
       a {
-        @include fontstyle("arvo", $size: 18px, $weight: 700, $color: #FFF);
-        line-height: 30px;
+        @include fontstyle(arvo, $size: large, $weight: 700, $color: #FFF);
         text-decoration: none;
       }
     }
     
     p {
-      @include fontstyle("nobile", $weight: 400, $size: 12px, $color: #FFF);
+      @include fontstyle($weight: 400, $color: #FFF);
       background: rgba(0,0,0,0.7);
       margin: 2px 13px 11px 30px;
       padding: 3px 6px;
     }
-    
   }
-  
-  
 }

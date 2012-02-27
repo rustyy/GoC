@@ -1,9 +1,6 @@
 body {
-  background: #444;
-  @include fontstyle("nobile");
-  
-  font-size: 12px;
-  line-height: 17px;
+  background: $grey-dark;
+  @include fontstyle("nobile", standard);
 }
 
 #header {
@@ -16,8 +13,4 @@ body {
   }
 }
 
-#site {
-  background: #FFF;
-  
-  
-}
+#site { background: #FFF; }

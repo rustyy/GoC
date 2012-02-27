@@ -1,22 +1,29 @@
+
+// GoC color defintions.
 $red: #af1028;
-$gray: #cccccc;
+$grey: #ccc;
+$grey-dark: #444;
 
-
-
+// Mixin to set different fontstyles.
 @mixin fontstyle($font: false, $size: false, $weight: false, $color: false) {
-  @if $font == "arvo" {
+  @if $font == arvo {
     font-family: 'Arvo', serif;
     text-transform: uppercase;
   }
-  @if $font == "nobile" { font-family: 'Nobile', sans-serif; }
   
-  @if $weight {
-    font-weight: $weight;
+  @if $font == nobile { font-family: 'Nobile', sans-serif; }
+  
+  @if $weight { font-weight: $weight; }
+  
+  @if $size == standard {
+    font-size: 12px;
+    line-height: 19px;
   }
-  @if $size {
-    font-size: $size;
+  
+  @if $size == large {
+    font-size: 18px;
+    line-height: 25px;
   }
-  @if $color {
-    color: $color;
-  }
+  
+  @if $color { color: $color; }
 }
