@@ -35,11 +35,18 @@
       $(document).scroll(function(){
         var docScrollTop = $(this).scrollTop();
         if (docScrollTop >= stickyMenuOffset.top) {
+          $('.sticky-menu-wrapper').css({
+            'width' : stickyMenuCSS.width + 'px',
+            'height' : stickyMenuCSS.height + 'px',
+            'overflow' : 'hidden'
+          });
           stickyMenu.css({
             'width' : stickyMenuCSS.width + 'px',
             'height' : stickyMenuCSS.height + 'px',
             'position' : 'fixed',
-            'top' : 0
+            'top' : 0,
+            'z-index' : 1000,
+            'overflow' : 'hidden'
           });
         }
         else {
