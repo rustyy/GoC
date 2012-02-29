@@ -1,0 +1,10 @@
+.slide-teaser {
+  display: none;
+  color: #FFF;
+  position: absolute;
+  background: rgba(0,0,0,0.5);
+  width: 200px;
+  left: 20px;
+  bottom: 20px;
+  padding: 10px;
+}

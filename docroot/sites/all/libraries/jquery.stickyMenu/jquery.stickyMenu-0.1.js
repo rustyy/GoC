@@ -22,7 +22,6 @@
       var stickyMenu = $(this);
       var stickyMenuCSS = {};
       var stickyMenuOffset;
-
       // Wait until all images are loaded,
       // otherwise we get some strange behaviour on webkit-browsers.
       $(window).load(function() {
@@ -33,6 +32,9 @@
       stickyMenuCSS.width = stickyMenu.width();
       stickyMenu.css(stickyMenuCSS);
       stickyMenu.wrap('<div class="sticky-menu-wrapper" />');
+
+console.log(stickyMenu.find('.sticky-menu-shadow'));
+
 
       $(document).scroll(function(){
         var docScrollTop = $(this).scrollTop();
@@ -52,9 +54,18 @@
             'z-index' : 1000,
             'overflow' : 'hidden'
           });
+          
+          
+          
+            stickyMenu.append('<div class="sticky-menu-shadow" style="background: url(shadow.png) repeat-x left top; height: 10px"></div>');
+          
+          
+          
+          
         }
         else {
           stickyMenu.attr('style', '');
+          stickyMenu.find('.sticky-menu-shadow').remove('sticky-menu-shadow');
         }
       });
 

@@ -2,17 +2,19 @@
 
 /**
  * Implements template_preprocess_html.
- * 
- * @param type $vars 
+ *
+ * @param type $vars
  */
 function goc_preprocess_html(&$vars) {
   drupal_add_js('sites/all/libraries/jquery.stickyMenu/jquery.stickyMenu-0.1.js', 'file');
+  drupal_add_js('sites/all/libraries/jquery.imageAccordion/jquery.imageAccordion-0.1a.js', 'file');
+  drupal_add_css('sites/all/libraries/jquery.imageAccordion/themes/standard/standard.css', 'file');
 }
 
 /**
  * Implements template_preprocess_views_view.
- * 
- * @param string $vars 
+ *
+ * @param string $vars
  */
 function goc_preprocess_views_view(&$vars) {
   $display = $vars['display_id'];
@@ -32,8 +34,8 @@ function goc_preprocess_views_view(&$vars) {
 
 /**
  * Implements template_preprocess_views_view_unformatted.
- * 
- * @param string $vars 
+ *
+ * @param string $vars
  */
 function goc_preprocess_views_view_unformatted(&$vars) {
   $display = $vars['view']->current_display;
@@ -67,8 +69,8 @@ function goc_preprocess_views_view_unformatted(&$vars) {
 
 /**
  * Implements template_preprocess_views_view_fields.
- * 
- * @param string $vars 
+ *
+ * @param string $vars
  */
 function goc_preprocess_views_view_fields(&$vars) {
   $display = $vars['view']->current_display;
@@ -89,8 +91,8 @@ function goc_preprocess_views_view_fields(&$vars) {
 
 /**
  * Implements template_preprocess_views_view_field.
- * 
- * @param type $vars 
+ *
+ * @param type $vars
  */
 function goc_preprocess_views_view_field(&$vars) {
   // Wrap all field_fc_image fields with a link to a node, when displayed in a teaser.

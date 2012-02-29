@@ -1,1 +1,0 @@
-(function(a){Drupal.behaviors.goc={attach:function(b,c){a("#navigation",b).stickyMenu()}}})(jQuery);
