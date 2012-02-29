@@ -26,6 +26,6 @@
 
 <?php print $fields['field_fc_image']->content; ?>
 <div class="slide-teaser">
-  <?php print $fields['title']->content; ?>
+  <h2><?php print $fields['title']->content; ?></h2>
   <?php print $fields['body']->content; ?>
 </div>

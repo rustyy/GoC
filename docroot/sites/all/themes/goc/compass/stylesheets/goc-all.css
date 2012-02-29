@@ -149,3 +149,27 @@ body {
   .line-teaser-group .views-row .created {
     color: white;
     float: right; }
+
+/* line 3, ../sass/teaser/_goc-slideshow.scss */
+.view-display-id-vp_slideshow h2 {
+  background: #af1028;
+  display: inline-block;
+  padding: 5px; }
+  /* line 7, ../sass/teaser/_goc-slideshow.scss */
+  .view-display-id-vp_slideshow h2 a {
+    font-family: 'Arvo', serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 25px;
+    color: white; }
+/* line 14, ../sass/teaser/_goc-slideshow.scss */
+.view-display-id-vp_slideshow .slide-teaser {
+  width: 300px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px; }
+  /* line 20, ../sass/teaser/_goc-slideshow.scss */
+  .view-display-id-vp_slideshow .slide-teaser p {
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    margin: 0 10px; }
