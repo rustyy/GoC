@@ -54,31 +54,18 @@
       slidesMax = accordionWidth * o.slidesMaxRatio;
       slidesMin = (accordionWidth - slidesMax) / (slidesAmount - 1);
 
+      slidesCss.height = slidesImages.eq(0).height() + 'px';
+      accordionCss.height = slidesCss.height
 
-      // Scale images if set to do so.
-      if (o.scaleImages) {
-        slidesImages.css({
-          'width' : slidesMax + 'px'
-        });
-        // Scale container and slides to image height.
-        slidesImages.eq(0).load(function(){
-          imgHeight = $(this).height();
-          slidesCss.height = imgHeight;
-          accordionCss.height = imgHeight + 'px';
-        });
-      }
-
-
+      accordionCss.overflow = 'hidden';
       accordionCss.position = 'relative';
       accordionCss.width = accordionWidth + 'px';
-
       accordion.css(accordionCss);
 
       slidesCss.width = slidesMed + 'px';
       slidesCss.position = 'absolute';
       // All slides to be collapsed with specific css.
       slides.each(function( i ){
-
         $(this)
         .addClass('slide slide-' + i)
         .css({
@@ -90,14 +77,34 @@
           'overflow' : 'hidden'
         });
       });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       // Mouseenter.
-      slides.mouseenter(function(){
+      slides.stop(true,true).mouseenter(function(){
         slidesCurrentIndex = $(this).index();
         // Add css-class 'active' and push active Slide to maximum and reduce
         // the left-attribute to the width of elements before.
         // eg. currentIndex = 2, minWidth=42 -> left=84px
         $(this)
-        .toggleClass('active')
         .animate({
           width: slidesMax + 'px',
           left: slidesMin * slidesCurrentIndex + 'px'
@@ -105,8 +112,9 @@
           queue: false,
           duration: o.duration,
           easing: o.sliderEasing,
-          complete: animateTeaser($(this), event)
-        });
+          complete: animateTeaser($(this), "mouseenter")
+        })
+        .toggleClass('active');
         // Morph the siblings.
         $(this).siblings().each(function( i ){
           // Is sibling before active slide?
@@ -129,11 +137,10 @@
         });
       });
       // Mouseleave
-      slides.mouseleave(function(){
+      slides.stop(true, true).mouseleave(function(){
         // Remove 'active'-class and shrink former active slide
         // to its ancestral size and position.
         $(this)
-        .toggleClass('active')
         .animate({
           width: slidesMed + 'px',
           left: slidesMed * slidesCurrentIndex + 'px'
@@ -141,8 +148,9 @@
           queue: false,
           duration: o.duration,
           easing : o.sliderEasing,
-          complete: animateTeaser($(this), event)
-        });
+          complete: animateTeaser($(this), "mouseleave")
+        })
+        .toggleClass('active');
         // Move all siblings to their ancestral size and postion.
         $(this).siblings().each(function( i ){
           // Check if former active slide is reached.
@@ -166,11 +174,10 @@
       });
 
       function animateTeaser(obj, e) {
-        if (e.type === "mouseover" && o.teaser != null) {
-          console.log($(o.teaser));
+        if (e === "mouseenter" && o.teaser != null) {
           $(o.teaser, obj).stop(true, true).fadeIn('slow');
         }
-        if (e.type === "mouseout" && o.teaser != null) {
+        if (e === "mouseleave" && o.teaser != null) {
           $(o.teaser, obj).stop(true, true).fadeOut('slow');
         }
       }
@@ -180,7 +187,6 @@
   // Default values.
   $.fn.imageAccordion.defaults = {
     slidesMaxRatio : 0.618, // Range from 0.1 to 0.9
-    scaleImages: true,
     sliderEasing : 'swing',
     duration : 500,
     teaser : null,

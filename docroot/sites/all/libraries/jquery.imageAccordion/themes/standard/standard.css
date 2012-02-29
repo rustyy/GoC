@@ -1,3 +1,11 @@
+.slide {
+  -moz-box-shadow: -5px 0 10px rgba(0,0,0,0.2);
+  -webkit-box-shadow: -5px 0 10px rgba(0,0,0,0.2);
+  box-shadow: -5px 0 10px rgba(0,0,0,0.2);
+}
+
+.slide img { display: block; }
+
 .slide-teaser {
   display: none;
   color: #FFF;
@@ -7,4 +15,5 @@
   left: 20px;
   bottom: 20px;
   padding: 10px;
+  z-index: 200;
 }
