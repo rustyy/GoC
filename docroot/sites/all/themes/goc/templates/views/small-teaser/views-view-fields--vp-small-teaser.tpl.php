@@ -24,7 +24,7 @@
  */
 ?>
 <?php print $fields['field_fc_image']->content; ?>
-<div class="layer grid-11 omega">
+<div class="grid-11 omega">
   <h2 class="kicker"><?php print $fields['field_kicker']->content; ?></h2>
   <h3 class="headline"><?php print $fields['title']->content; ?></h3>
   <?php print $fields['body']->content; ?>

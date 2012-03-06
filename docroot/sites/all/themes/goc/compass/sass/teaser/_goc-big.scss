@@ -1,30 +1,31 @@
 .big-teaser-group {
-  
+
   .views-row {
     margin-bottom: 7px;
     margin-top: 7px;
     position: relative;
   }
-  
+
   .layer {
-    bottom: 0;
+    bottom: 17px;
+    left: 10px;
     position: absolute;
-    .headline {
-      background: $red;
-      display: inline;
-      margin-left: 10px;
-      padding: 6px;
-      a {
-        @include fontstyle(arvo, $size: large, $weight: 700, $color: #FFF);
-        text-decoration: none;
-      }
-    }
-    
-    p {
-      @include fontstyle($weight: 400, $color: #FFF);
-      background: rgba(0,0,0,0.7);
-      margin: 2px 13px 11px 30px;
-      padding: 3px 6px;
-    }
+  }
+
+
+  .kicker {
+    @include fontstyle(arvo, standard);
+    background: $grey;
+    display: inline-block;
+    color: $grey-dark;
+    padding: 2px;
+  }
+  .headline a {
+    @include fontstyle(arvo, large);
+    background: $red;
+    color: #FFF;
+    padding: 5px;
+    text-decoration: none;
+
   }
 }

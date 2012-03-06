@@ -19,8 +19,6 @@ $icons: sprite-map("fixed/*.png", $spacing: 30px);
   }
 }
 
-
-
 // Mixin to set different fontstyles.
 @mixin fontstyle($font: false, $size: false, $weight: false, $color: false) {
   @if $font == arvo {
@@ -37,10 +35,43 @@ $icons: sprite-map("fixed/*.png", $spacing: 30px);
     line-height: 19px;
   }
 
+  @if $size == medium {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
   @if $size == large {
     font-size: 18px;
     line-height: 25px;
   }
 
   @if $color { color: $color; }
+}
+
+@mixin headlines($selector-headline: ".headline", $selector-kicker: ".kicker", $size-headline: large, $size-kicker: medium, $background: false) {
+
+  #{$selector-headline},
+  #{$selector-kicker} { @include fontstyle(arvo); }
+
+  #{$selector-headline} { @include fontstyle($size: $size-headline); }
+
+  #{$selector-kicker} { @include fontstyle($size: $size-kicker); }
+
+  @if $background {
+
+  }
+  @else {
+    #{$selector-headline} a {
+      color: $red;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+
+    }
+
+    #{$selector-kicker} { color: $grey-dark; }
+  }
+
+
 }

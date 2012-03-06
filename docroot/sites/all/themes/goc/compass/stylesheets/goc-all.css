@@ -76,61 +76,63 @@ body {
   position: relative; }
 /* line 9, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .layer {
-  bottom: 0;
+  bottom: 17px;
+  left: 10px;
   position: absolute; }
-  /* line 12, ../sass/teaser/_goc-big.scss */
-  .big-teaser-group .layer .headline {
-    background: #af1028;
-    display: inline;
-    margin-left: 10px;
-    padding: 6px; }
-    /* line 17, ../sass/teaser/_goc-big.scss */
-    .big-teaser-group .layer .headline a {
-      font-family: 'Arvo', serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 25px;
-      color: white;
-      text-decoration: none; }
-  /* line 23, ../sass/teaser/_goc-big.scss */
-  .big-teaser-group .layer p {
-    font-weight: 400;
-    color: white;
-    background: rgba(0, 0, 0, 0.7);
-    margin: 2px 13px 11px 30px;
-    padding: 3px 6px; }
+/* line 16, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .kicker {
+  font-family: 'Arvo', serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 19px;
+  background: #cccccc;
+  display: inline-block;
+  color: #444444;
+  padding: 2px; }
+/* line 23, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .headline a {
+  font-family: 'Arvo', serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 25px;
+  background: #af1028;
+  color: #FFF;
+  padding: 5px;
+  text-decoration: none; }
 
-/* line 2, ../sass/teaser/_goc-small.scss */
+/* line 54, ../sass/_goc-base.scss */
+.small-teaser-group .headline,
+.small-teaser-group .kicker {
+  font-family: 'Arvo', serif;
+  text-transform: uppercase; }
+/* line 56, ../sass/_goc-base.scss */
+.small-teaser-group .headline {
+  font-size: 18px;
+  line-height: 25px; }
+/* line 58, ../sass/_goc-base.scss */
+.small-teaser-group .kicker {
+  font-size: 15px;
+  line-height: 22px; }
+/* line 64, ../sass/_goc-base.scss */
+.small-teaser-group .headline a {
+  color: #af1028;
+  text-decoration: none; }
+  /* line 67, ../sass/_goc-base.scss */
+  .small-teaser-group .headline a:hover {
+    text-decoration: underline; }
+/* line 73, ../sass/_goc-base.scss */
+.small-teaser-group .kicker {
+  color: #444444; }
+/* line 4, ../sass/teaser/_goc-small.scss */
 .small-teaser-group .views-row {
-  margin-bottom: 7px;
-  margin-top: 7px; }
+  margin: 7px 0; }
 /* line 6, ../sass/teaser/_goc-small.scss */
-.small-teaser-group img {
-  float: left;
-  margin-right: 5px; }
-/* line 10, ../sass/teaser/_goc-small.scss */
-.small-teaser-group .layer {
-  float: left; }
-  /* line 13, ../sass/teaser/_goc-small.scss */
-  .small-teaser-group .layer .headline {
-    margin-bottom: 5px; }
-    /* line 15, ../sass/teaser/_goc-small.scss */
-    .small-teaser-group .layer .headline a {
-      font-family: 'Arvo', serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 25px;
-      color: #af1028;
-      text-decoration: none; }
-  /* line 21, ../sass/teaser/_goc-small.scss */
-  .small-teaser-group .layer span {
-    float: right; }
-    /* line 23, ../sass/teaser/_goc-small.scss */
-    .small-teaser-group .layer span a {
-      color: #af1028;
-      text-decoration: none; }
+.small-teaser-group p {
+  display: inline; }
+/* line 8, ../sass/teaser/_goc-small.scss */
+.small-teaser-group span a {
+  color: #af1028;
+  text-decoration: none; }
 
 /* line 2, ../sass/teaser/_goc-line.scss */
 .line-teaser-group .views-row {
