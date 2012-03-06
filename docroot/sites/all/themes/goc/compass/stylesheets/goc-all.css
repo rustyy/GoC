@@ -173,3 +173,17 @@ body {
     background: rgba(0, 0, 0, 0.5);
     color: #FFF;
     margin: 0 10px; }
+
+/* line 4, ../sass/content/_goc-article.scss */
+.node-type-article .field-name-field-media-image {
+  left: -35px;
+  position: relative;
+  width: 665px; }
+/* line 10, ../sass/content/_goc-article.scss */
+.node-type-article .field-slideshow-wrapper {
+  background: url(../images/bg-image-carousel-article.png) no-repeat left bottom;
+  padding-bottom: 30px; }
+/* line 15, ../sass/content/_goc-article.scss */
+.node-type-article .field-slideshow {
+  background: #000;
+  color: #FFF; }
