@@ -4,26 +4,43 @@ $red: #af1028;
 $grey: #ccc;
 $grey-dark: #444;
 
+
+////
+// sprites for fixed elements
+$icons: sprite-map("fixed/*.png", $spacing: 30px);
+// This is a custom mixin for the fixe-elements-sprite.
+// Use this instead of the build-in compass mixins.
+@mixin sprite-icons($icon, $hover: false, $offset-x: 0, $offset-y: 0) {
+  background: sprite($icons, $icon, $offset-x, $offset-y) no-repeat;
+  @if $hover {
+    &:hover {
+      background-position: sprite-position($icons, #{$icon}_hover, $offset-x, $offset-y);
+    }
+  }
+}
+
+
+
 // Mixin to set different fontstyles.
 @mixin fontstyle($font: false, $size: false, $weight: false, $color: false) {
   @if $font == arvo {
     font-family: 'Arvo', serif;
     text-transform: uppercase;
   }
-  
+
   @if $font == nobile { font-family: 'Nobile', sans-serif; }
-  
+
   @if $weight { font-weight: $weight; }
-  
+
   @if $size == standard {
     font-size: 12px;
     line-height: 19px;
   }
-  
+
   @if $size == large {
     font-size: 18px;
     line-height: 25px;
   }
-  
+
   @if $color { color: $color; }
 }
