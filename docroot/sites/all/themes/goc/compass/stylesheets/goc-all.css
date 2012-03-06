@@ -173,3 +173,8 @@ body {
     background: rgba(0, 0, 0, 0.5);
     color: #FFF;
     margin: 0 10px; }
+
+/* line 1, ../sass/node/_goc-fieldslideshow.scss */
+.field-name-field-media-image {
+  left: -30px;
+  position: relative; }

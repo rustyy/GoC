@@ -625,7 +625,7 @@ function field_slideshow_field_formatter_view($entity_type, $entity, $field, $in
               'rel'   => 'field-slideshow[' . $entity_id_field . '-' . $entity->$entity_id_field . ']',
             );
             //fork
-            if ($settings['slideshow_subline'] != '') $uri['options']['attributes']['title'] = $item['subline'];
+            if ($settings['slideshow_copyright'] != '') $uri['options']['attributes']['title'] = $item['copyright'];
             //fork
             if ($settings['slideshow_caption'] != '') $uri['options']['attributes']['title'] = $item['caption'];
             if (isset($settings['slideshow_colorbox_slideshow']) && $settings['slideshow_colorbox_slideshow'] != '') {
