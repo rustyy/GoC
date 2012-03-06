@@ -97,9 +97,18 @@ function goc_preprocess_views_view_fields(&$vars) {
 function goc_preprocess_views_view_field(&$vars) {
   // Wrap all field_fc_image fields with a link to a node, when displayed in a teaser.
   if (($vars['view']->name === "teaser" || $vars['view']->name === "homepage") && $vars['field']->field === "field_fc_image") {
+    // $link_classes is used to define certain classes for the wrapping anchor.
+    $link_classes = array();
+    $link_classes[] = 'teaser-image-link';
+    // Set grid-classes for images on small teaser.
+    if (preg_match('|small_teaser|', $vars['view']->current_display)) {
+      $link_classes[] = 'grid-5';
+      $link_classes[] = 'alpha';
+    }
+    // Rewrite origin row output.
     $nid = $vars['row']->nid;
     $image_content = $vars['output'];
-    $image_content = l($image_content, 'node/' . $nid, array('attributes' => array('class' => array('teaser-image-link')), 'html' => TRUE));
+    $image_content = l($image_content, 'node/' . $nid, array('attributes' => array('class' => $link_classes), 'html' => TRUE));
     $vars['output'] = $image_content;
   }
 }

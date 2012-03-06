@@ -1,29 +1,12 @@
 .small-teaser-group {
-  .views-row {
-    margin-bottom: 7px;
-    margin-top: 7px;
-  }
-  img {
-    float: left;
-    margin-right: 5px;
-  }
-  .layer {
-    float: left;
-    
-    .headline {
-      margin-bottom: 5px;
-      a {
-        @include fontstyle("arvo", $size: large, $weight: 700, $color: $red);
-        text-decoration: none;
-      }
-    }
-    
-    span{
-      float: right;
-      a {
-        color: $red;
-        text-decoration: none;
-      }
-    }
+  @include headlines();
+
+  .views-row { margin: 7px 0; }
+
+  p { display: inline; }
+
+  span a {
+    color: $red;
+    text-decoration: none;
   }
 }

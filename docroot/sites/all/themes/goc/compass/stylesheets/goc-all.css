@@ -76,61 +76,63 @@ body {
   position: relative; }
 /* line 9, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .layer {
-  bottom: 0;
+  bottom: 17px;
+  left: 10px;
   position: absolute; }
-  /* line 12, ../sass/teaser/_goc-big.scss */
-  .big-teaser-group .layer .headline {
-    background: #af1028;
-    display: inline;
-    margin-left: 10px;
-    padding: 6px; }
-    /* line 17, ../sass/teaser/_goc-big.scss */
-    .big-teaser-group .layer .headline a {
-      font-family: 'Arvo', serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 25px;
-      color: white;
-      text-decoration: none; }
-  /* line 23, ../sass/teaser/_goc-big.scss */
-  .big-teaser-group .layer p {
-    font-weight: 400;
-    color: white;
-    background: rgba(0, 0, 0, 0.7);
-    margin: 2px 13px 11px 30px;
-    padding: 3px 6px; }
+/* line 15, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .kicker {
+  font-family: 'Arvo', serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 19px;
+  background: #cccccc;
+  display: inline-block;
+  color: #444444;
+  padding: 2px; }
+/* line 22, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .headline a {
+  font-family: 'Arvo', serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 25px;
+  background: #af1028;
+  color: #FFF;
+  padding: 5px;
+  text-decoration: none; }
 
-/* line 2, ../sass/teaser/_goc-small.scss */
+/* line 54, ../sass/_goc-base.scss */
+.small-teaser-group .headline,
+.small-teaser-group .kicker {
+  font-family: 'Arvo', serif;
+  text-transform: uppercase; }
+/* line 56, ../sass/_goc-base.scss */
+.small-teaser-group .headline {
+  font-size: 18px;
+  line-height: 25px; }
+/* line 58, ../sass/_goc-base.scss */
+.small-teaser-group .kicker {
+  font-size: 15px;
+  line-height: 22px; }
+/* line 64, ../sass/_goc-base.scss */
+.small-teaser-group .headline a {
+  color: #af1028;
+  text-decoration: none; }
+  /* line 67, ../sass/_goc-base.scss */
+  .small-teaser-group .headline a:hover {
+    text-decoration: underline; }
+/* line 73, ../sass/_goc-base.scss */
+.small-teaser-group .kicker {
+  color: #444444; }
+/* line 4, ../sass/teaser/_goc-small.scss */
 .small-teaser-group .views-row {
-  margin-bottom: 7px;
-  margin-top: 7px; }
+  margin: 7px 0; }
 /* line 6, ../sass/teaser/_goc-small.scss */
-.small-teaser-group img {
-  float: left;
-  margin-right: 5px; }
-/* line 10, ../sass/teaser/_goc-small.scss */
-.small-teaser-group .layer {
-  float: left; }
-  /* line 13, ../sass/teaser/_goc-small.scss */
-  .small-teaser-group .layer .headline {
-    margin-bottom: 5px; }
-    /* line 15, ../sass/teaser/_goc-small.scss */
-    .small-teaser-group .layer .headline a {
-      font-family: 'Arvo', serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 25px;
-      color: #af1028;
-      text-decoration: none; }
-  /* line 21, ../sass/teaser/_goc-small.scss */
-  .small-teaser-group .layer span {
-    float: right; }
-    /* line 23, ../sass/teaser/_goc-small.scss */
-    .small-teaser-group .layer span a {
-      color: #af1028;
-      text-decoration: none; }
+.small-teaser-group p {
+  display: inline; }
+/* line 8, ../sass/teaser/_goc-small.scss */
+.small-teaser-group span a {
+  color: #af1028;
+  text-decoration: none; }
 
 /* line 2, ../sass/teaser/_goc-line.scss */
 .line-teaser-group .views-row {
@@ -151,24 +153,32 @@ body {
     float: right; }
 
 /* line 3, ../sass/teaser/_goc-slideshow.scss */
-.view-display-id-vp_slideshow h2 {
-  background: #af1028;
+.view-display-id-vp_slideshow .kicker {
+  font-family: 'Arvo', serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 19px;
+  background: #cccccc;
   display: inline-block;
-  padding: 5px; }
-  /* line 7, ../sass/teaser/_goc-slideshow.scss */
-  .view-display-id-vp_slideshow h2 a {
-    font-family: 'Arvo', serif;
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 25px;
-    color: white; }
-/* line 14, ../sass/teaser/_goc-slideshow.scss */
+  color: #444444;
+  padding: 2px; }
+/* line 11, ../sass/teaser/_goc-slideshow.scss */
+.view-display-id-vp_slideshow .headline a {
+  font-family: 'Arvo', serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 25px;
+  background: #af1028;
+  color: #FFF;
+  padding: 5px;
+  text-decoration: none; }
+/* line 20, ../sass/teaser/_goc-slideshow.scss */
 .view-display-id-vp_slideshow .slide-teaser {
   width: 300px;
   left: 10px;
   right: 10px;
   bottom: 10px; }
-  /* line 20, ../sass/teaser/_goc-slideshow.scss */
+  /* line 26, ../sass/teaser/_goc-slideshow.scss */
   .view-display-id-vp_slideshow .slide-teaser p {
     background: rgba(0, 0, 0, 0.5);
     color: #FFF;
@@ -178,3 +188,47 @@ body {
 .field-name-field-media-image {
   left: -30px;
   position: relative; }
+/* line 7, ../sass/content/_goc-article.scss */
+.node-type-article .field-name-field-media-image {
+  left: -35px;
+  position: relative;
+  width: 665px; }
+/* line 13, ../sass/content/_goc-article.scss */
+.node-type-article .field-slideshow-wrapper {
+  background: url(../images/bg-image-carousel-article.png) no-repeat left bottom;
+  padding-bottom: 30px;
+  position: relative; }
+/* line 20, ../sass/content/_goc-article.scss */
+.node-type-article .field-slideshow {
+  background: #000;
+  color: #FFF; }
+/* line 25, ../sass/content/_goc-article.scss */
+.node-type-article .field-slideshow-slide {
+  height: 400px; }
+/* line 29, ../sass/content/_goc-article.scss */
+.node-type-article .field-slideshow-controls {
+  background: url(../images/bg-field-slideshow-controls.png) repeat-y right top;
+  bottom: 30px;
+  height: 55px;
+  padding-right: 150px;
+  position: absolute;
+  z-index: 100; }
+  /* line 39, ../sass/content/_goc-article.scss */
+  .node-type-article .field-slideshow-controls .prev,
+  .node-type-article .field-slideshow-controls .next {
+    display: inline-block;
+    height: 15px;
+    margin-top: 20px;
+    text-indent: -999em;
+    width: 15px; }
+  /* line 47, ../sass/content/_goc-article.scss */
+  .node-type-article .field-slideshow-controls .prev {
+    background: url('../images/fixed-s8836399120.png') 0 0 no-repeat; }
+  /* line 48, ../sass/content/_goc-article.scss */
+  .node-type-article .field-slideshow-controls .next {
+    background: url('../images/fixed-s8836399120.png') 0 -45px no-repeat; }
+/* line 54, ../sass/content/_goc-article.scss */
+.node-type-article .field-slideshow-caption,
+.node-type-article .field-slideshow-subline {
+  display: block;
+  padding-left: 160px; }

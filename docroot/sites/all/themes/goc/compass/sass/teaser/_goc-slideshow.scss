@@ -1,14 +1,20 @@
 .view-display-id-vp_slideshow {
 
-  h2 {
-    background: $red;
+  .kicker {
+    @include fontstyle(arvo, standard);
+    background: $grey;
     display: inline-block;
+    color: $grey-dark;
+    padding: 2px;
+  }
+
+  .headline a {
+    @include fontstyle(arvo, large);
+    background: $red;
+    color: #FFF;
     padding: 5px;
-    a {
-      @include fontstyle(arvo, large, $color: #FFF);
+    text-decoration: none;
 
-
-    }
   }
 
   .slide-teaser {
