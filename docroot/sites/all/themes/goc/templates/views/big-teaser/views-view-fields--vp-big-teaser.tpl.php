@@ -26,6 +26,7 @@
 
 <?php print $fields['field_fc_image']->content; ?>
 <div class="layer">
-  <h2 class="headline"><?php print $fields['title']->content; ?></h2>
+  <h2 class="kicker"><?php print $fields['field_kicker']->content; ?></h2>
+  <h3 class="headline"><?php print $fields['title']->content; ?></h3>
   <?php print $fields['body']->content; ?>
 </div>
