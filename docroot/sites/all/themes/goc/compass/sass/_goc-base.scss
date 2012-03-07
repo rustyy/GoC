@@ -50,7 +50,7 @@ $icons: sprite-map("fixed/*.png", $spacing: 30px);
 @mixin headlines($selector-headline: ".headline", $selector-kicker: ".kicker", $size-headline: large, $size-kicker: medium, $background: false) {
 
   #{$selector-headline},
-  #{$selector-kicker} { @include fontstyle(arvo); }
+  #{$selector-kicker} { @include fontstyle(sans-serif); }
 
   #{$selector-headline} { @include fontstyle($size: $size-headline); }
 

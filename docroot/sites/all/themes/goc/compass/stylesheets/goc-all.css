@@ -112,6 +112,10 @@ body {
     font-weight: bold;
     text-decoration: none; }
 
+/* line 53, ../sass/_goc-base.scss */
+.small-teaser-group .headline,
+.small-teaser-group .kicker {
+  font-family: 'Droid Sans', sans-serif; }
 /* line 55, ../sass/_goc-base.scss */
 .small-teaser-group .headline {
   font-size: 18px;
@@ -132,27 +136,27 @@ body {
   color: #444444; }
 /* line 5, ../sass/teaser/_goc-small.scss */
 .small-teaser-group .views-row {
-  margin: 7px 0;
-  position: relative; }
-/* line 10, ../sass/teaser/_goc-small.scss */
+  padding: 7px 0;
+  position: relative;
+  border-bottom: 1px dotted #cccccc; }
+/* line 13, ../sass/teaser/_goc-small.scss */
 .small-teaser-group .category-label {
   position: absolute;
   top: 10px;
   left: 10px;
   background: #FFF;
   padding: 0 5px; }
-  /* line 16, ../sass/teaser/_goc-small.scss */
+  /* line 19, ../sass/teaser/_goc-small.scss */
   .small-teaser-group .category-label a {
     color: #444444;
     font-family: 'Droid serif', serif;
-    text-transform: uppercase;
     font-size: 10px;
     font-weight: bold;
     text-decoration: none; }
-/* line 28, ../sass/teaser/_goc-small.scss */
+/* line 31, ../sass/teaser/_goc-small.scss */
 .small-teaser-group p {
   display: inline; }
-/* line 30, ../sass/teaser/_goc-small.scss */
+/* line 33, ../sass/teaser/_goc-small.scss */
 .small-teaser-group span a {
   color: #af1028;
   text-decoration: none; }
