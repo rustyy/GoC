@@ -1,6 +1,6 @@
 body {
   background: $grey-dark;
-  @include fontstyle("nobile", standard);
+  @include fontstyle(serif, standard);
 }
 
 #header {

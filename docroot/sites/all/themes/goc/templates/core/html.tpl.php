@@ -47,7 +47,8 @@
 <head profile="<?php print $grddl_profile; ?>">
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
-  <link href='http://fonts.googleapis.com/css?family=Arvo:400,700|Nobile:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <!--<link href='http://fonts.googleapis.com/css?family=Arvo:400,700|Nobile:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
   <?php print $styles; ?>
   <?php print $scripts; ?>
 </head>

@@ -13,14 +13,14 @@
   }
 
   .kicker {
-    @include fontstyle(arvo, standard);
+    @include fontstyle(sans-serif, standard);
     background: $grey;
     display: inline-block;
     color: $grey-dark;
     padding: 2px;
   }
   .headline a {
-    @include fontstyle(arvo, large);
+    @include fontstyle(sans-serif, large);
     background: $red;
     color: #FFF;
     padding: 5px;
@@ -38,7 +38,7 @@
     padding: 0 5px;
     a {
       color: $grey-dark;
-      @include fontstyle(nobile);
+      @include fontstyle(serif);
       text-transform: uppercase;
       font-size: 10px;
       font-weight: bold;

@@ -1,15 +1,15 @@
 #navigation {
   background: #FFF url(../images/bg-nav.png) repeat-x left top;
-  @include fontstyle("arvo", $weight: 700);
+  @include fontstyle(sans-serif, $weight: 700);
   li {
     list-style: none;
     margin: 0;
     padding: 0;
     display: block;
     float: left;
-    
+
   }
-  
+
   .menu {
     position: relative;
     height: 60px;
@@ -25,9 +25,9 @@
         background: url(../images/bg-nav-btn.png) no-repeat center top;
       }
     }
-    
- 
-    
+
+
+
   }
   .menu .menu {
     display: none;
@@ -38,7 +38,7 @@
           display: inline;
           float: none;
           }
-          
+
           a {
                 display: inline;
                 background: none;
@@ -47,12 +47,12 @@
                 padding: 0;
                 margin: 0;
                 }
-    
-    
+
+
   }
-  
+
   .active-trail .menu {
     display: block;
   }
-  
+
 }

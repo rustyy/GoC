@@ -15,7 +15,7 @@
     padding: 0 5px;
     a {
       color: $grey-dark;
-      @include fontstyle(nobile);
+      @include fontstyle(serif);
       text-transform: uppercase;
       font-size: 10px;
       font-weight: bold;
