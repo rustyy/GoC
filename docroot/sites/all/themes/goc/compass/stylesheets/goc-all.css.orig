@@ -184,11 +184,12 @@ body {
     color: #FFF;
     margin: 0 10px; }
 
+<<<<<<< HEAD
 /* line 1, ../sass/node/_goc-fieldslideshow.scss */
 .field-name-field-media-image {
   left: -30px;
   position: relative; }
-
+=======
 /* line 3, ../sass/content/_goc-article.scss */
 .node-type-article .pane-page-content {
   position: relative; }
@@ -236,3 +237,4 @@ body {
 .node-type-article .field-slideshow-subline {
   display: block;
   padding-left: 160px; }
+>>>>>>> 839d6e9bad3e72589eb8f5e1f8bab44fa9026c78
