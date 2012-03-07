@@ -21,12 +21,11 @@ $icons: sprite-map("fixed/*.png", $spacing: 30px);
 
 // Mixin to set different fontstyles.
 @mixin fontstyle($font: false, $size: false, $weight: false, $color: false) {
-  @if $font == arvo {
-    font-family: 'Arvo', serif;
-    text-transform: uppercase;
+  @if $font == sans-serif {
+    font-family: 'Droid Sans', sans-serif;
   }
 
-  @if $font == nobile { font-family: 'Nobile', sans-serif; }
+  @if $font == serif { font-family: 'Droid serif', serif; }
 
   @if $weight { font-weight: $weight; }
 
@@ -51,7 +50,7 @@ $icons: sprite-map("fixed/*.png", $spacing: 30px);
 @mixin headlines($selector-headline: ".headline", $selector-kicker: ".kicker", $size-headline: large, $size-kicker: medium, $background: false) {
 
   #{$selector-headline},
-  #{$selector-kicker} { @include fontstyle(arvo); }
+  #{$selector-kicker} { @include fontstyle(sans-serif); }
 
   #{$selector-headline} { @include fontstyle($size: $size-headline); }
 

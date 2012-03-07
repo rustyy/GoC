@@ -4,7 +4,7 @@
     margin-bottom: 7px;
     padding: 6px 11px;
     a {
-      @include fontstyle("arvo", $weight: 700, $color: $red);
+      @include fontstyle(sans-serif, $weight: 700, $color: $red);
       float: left;
       text-decoration: none;
     }

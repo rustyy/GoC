@@ -1,7 +1,7 @@
 .view-display-id-vp_slideshow {
 
   .kicker {
-    @include fontstyle(arvo, standard);
+    @include fontstyle(sans-serif, standard);
     background: $grey;
     display: inline-block;
     color: $grey-dark;
@@ -9,7 +9,7 @@
   }
 
   .headline a {
-    @include fontstyle(arvo, large);
+    @include fontstyle(sans-serif, large);
     background: $red;
     color: #FFF;
     padding: 5px;

@@ -1,7 +1,32 @@
+// @TODO: CLEANUP!!
 .small-teaser-group {
   @include headlines();
 
-  .views-row { margin: 7px 0; }
+  .views-row {
+
+    padding: 7px 0;
+    position: relative;
+
+    border-bottom: 1px dotted $grey;
+  }
+
+  .category-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #FFF;
+    padding: 0 5px;
+    a {
+      color: $grey-dark;
+      @include fontstyle(serif);
+      
+      font-size: 10px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+  }
+
 
   p { display: inline; }
 
