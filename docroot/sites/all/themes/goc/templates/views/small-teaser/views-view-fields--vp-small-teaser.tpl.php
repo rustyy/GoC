@@ -23,6 +23,11 @@
  * @ingroup views_templates
  */
 ?>
+
+<div class="category-label">
+  <?php print $fields['field_rubric']->content; ?>
+</div>
+
 <?php print $fields['field_fc_image']->content; ?>
 <div class="grid-11 omega">
   <h2 class="kicker"><?php print $fields['field_kicker']->content; ?></h2>

@@ -24,6 +24,9 @@
  */
 ?>
 
+<div class="category-label">
+  <?php print $fields['field_rubric']->content; ?>
+</div>
 <?php print $fields['field_fc_image']->content; ?>
 <div class="layer">
   <h2 class="kicker"><?php print $fields['field_kicker']->content; ?></h2>
