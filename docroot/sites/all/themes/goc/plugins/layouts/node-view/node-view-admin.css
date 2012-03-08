@@ -5,5 +5,10 @@
 
 #node-view-right {
   width: 70%;
-  float: left;
+  float: right;
+}
+
+#node-view-bottom {
+  clear: both;
+  width: 100%;
 }
