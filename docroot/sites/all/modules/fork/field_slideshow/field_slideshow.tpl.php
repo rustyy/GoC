@@ -12,16 +12,14 @@
     <?php foreach ($items as $num => $item) : ?>
       <div class="<?php print $item['classes']; ?>"<?php if ($num) : ?> style="display:none;"<?php endif; ?>>
         <?php print $item['image']; ?>
-        <?php if (isset($item['caption']) && $item['caption'] != '') : ?>
-          <div class="field-slideshow-caption">            
-            <span class="field-slideshow-caption-text"><?php print $item['caption']; ?></span>        
-          </div>
-        <?php endif; ?>
-        <?php if (isset($item['copyright']) && $item['copyright'] != ''): ?>
-          <div>
-            <span class="field-slideshow-subline"><?php print $item['copyright']; ?></span>
-          </div>          
-        <?php endif; ?>
+        <div class="field-slideshow-image-infos">
+          <?php if (isset($item['caption']) && $item['caption'] != '') : ?>
+              <span class="field-slideshow-caption"><?php print $item['caption']; ?></span>
+          <?php endif; ?>
+          <?php if (isset($item['copyright']) && $item['copyright'] != ''): ?>
+              <span class="field-slideshow-copyright"><?php print $item['copyright']; ?></span>
+          <?php endif; ?>
+        </div>
       </div>
     <?php endforeach; ?>
   </div>

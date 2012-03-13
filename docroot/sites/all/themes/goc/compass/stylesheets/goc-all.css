@@ -246,12 +246,28 @@ body {
     width: 15px; }
   /* line 47, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .prev {
-    background: url('../images/fixed-s8836399120.png') 0 0 no-repeat; }
-  /* line 48, ../sass/node/_goc-fieldslideshow.scss */
+    background: url('../images/fixed-s8836399120.png') 0 0 no-repeat;
+    margin-left: 26px;
+    margin-right: 16px; }
+  /* line 52, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .next {
     background: url('../images/fixed-s8836399120.png') 0 -45px no-repeat; }
-/* line 54, ../sass/node/_goc-fieldslideshow.scss */
-.node-type-article .field-slideshow-caption,
-.node-type-article .field-slideshow-subline {
+/* line 57, ../sass/node/_goc-fieldslideshow.scss */
+.node-type-article .field-slideshow-image-infos {
+  font-family: 'Droid serif', serif;
+  font-size: 12px;
+  line-height: 19px;
   display: block;
-  padding-left: 160px; }
+  padding-left: 180px;
+  padding-top: 10px; }
+
+/* line 3, ../sass/node/_goc-node-results.scss */
+.pane-node-field-pro,
+.pane-node-field-contra,
+.pane-node-field-result {
+  font-family: 'Droid serif', serif;
+  background: #af1028;
+  color: #FFF;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  padding: 7px; }

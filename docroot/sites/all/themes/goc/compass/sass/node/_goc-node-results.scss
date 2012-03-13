@@ -1,0 +1,14 @@
+.pane-node-field-pro,
+.pane-node-field-contra,
+.pane-node-field-result {
+  @include fontstyle(serif);
+  background: $red;
+  color: #FFF;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  padding: 7px;
+  
+  .field-label {
+    
+  }
+}
