@@ -1,41 +1,41 @@
-/* line 1, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-site.scss */
+/* line 1, ../sass/global/_goc-site.scss */
 body {
   background: #444444;
   font-family: 'Droid serif', serif;
   font-size: 12px;
   line-height: 19px; }
 
-/* line 6, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-site.scss */
+/* line 6, ../sass/global/_goc-site.scss */
 #header {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   width: 960px; }
-  /* line 11, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-site.scss */
+  /* line 11, ../sass/global/_goc-site.scss */
   #header .pane-page-logo {
     text-align: right; }
 
-/* line 16, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-site.scss */
+/* line 16, ../sass/global/_goc-site.scss */
 #site {
   background: #FFF; }
 
-/* line 1, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-navigation.scss */
+/* line 1, ../sass/global/_goc-navigation.scss */
 #navigation {
   background: white url(../images/bg-nav.png) repeat-x left top;
   font-family: 'Droid Sans', sans-serif;
   font-weight: 700; }
-  /* line 4, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-navigation.scss */
+  /* line 4, ../sass/global/_goc-navigation.scss */
   #navigation li {
     list-style: none;
     margin: 0;
     padding: 0;
     display: block;
     float: left; }
-  /* line 13, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-navigation.scss */
+  /* line 13, ../sass/global/_goc-navigation.scss */
   #navigation .menu {
     position: relative;
     height: 60px; }
-    /* line 16, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-navigation.scss */
+    /* line 16, ../sass/global/_goc-navigation.scss */
     #navigation .menu a {
       display: block;
       float: left;
@@ -43,20 +43,20 @@ body {
       color: #FFF;
       padding: 0 15px;
       margin: 0 5px; }
-      /* line 24, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-navigation.scss */
+      /* line 24, ../sass/global/_goc-navigation.scss */
       #navigation .menu a:hover, #navigation .menu a.active-trail {
         background: url(../images/bg-nav-btn.png) no-repeat center top; }
-  /* line 32, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-navigation.scss */
+  /* line 32, ../sass/global/_goc-navigation.scss */
   #navigation .menu .menu {
     display: none;
     position: absolute;
     bottom: 0;
     height: auto; }
-    /* line 37, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-navigation.scss */
+    /* line 37, ../sass/global/_goc-navigation.scss */
     #navigation .menu .menu li {
       display: inline;
       float: none; }
-    /* line 42, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-navigation.scss */
+    /* line 42, ../sass/global/_goc-navigation.scss */
     #navigation .menu .menu a {
       display: inline;
       background: none;
@@ -64,21 +64,21 @@ body {
       float: none;
       padding: 0;
       margin: 0; }
-  /* line 54, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/global/_goc-navigation.scss */
+  /* line 54, ../sass/global/_goc-navigation.scss */
   #navigation .active-trail .menu {
     display: block; }
 
-/* line 3, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-big.scss */
+/* line 3, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .views-row {
   margin-bottom: 7px;
   margin-top: 7px;
   position: relative; }
-/* line 9, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-big.scss */
+/* line 9, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .layer {
   bottom: 17px;
   left: 10px;
   position: absolute; }
-/* line 15, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-big.scss */
+/* line 15, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .kicker {
   font-family: 'Droid Sans', sans-serif;
   font-size: 12px;
@@ -87,7 +87,7 @@ body {
   display: inline-block;
   color: #444444;
   padding: 2px; }
-/* line 22, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-big.scss */
+/* line 22, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .headline a {
   font-family: 'Droid Sans', sans-serif;
   font-size: 18px;
@@ -96,14 +96,14 @@ body {
   color: #FFF;
   padding: 5px;
   text-decoration: none; }
-/* line 33, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-big.scss */
+/* line 33, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .category-label {
   position: absolute;
   top: 10px;
   left: 10px;
   background: #FFF;
   padding: 0 5px; }
-  /* line 39, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-big.scss */
+  /* line 39, ../sass/teaser/_goc-big.scss */
   .big-teaser-group .category-label a {
     color: #444444;
     font-family: 'Droid serif', serif;
@@ -112,73 +112,73 @@ body {
     font-weight: bold;
     text-decoration: none; }
 
-/* line 53, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/_goc-base.scss */
+/* line 53, ../sass/_goc-base.scss */
 .small-teaser-group .headline,
 .small-teaser-group .kicker {
   font-family: 'Droid Sans', sans-serif; }
-/* line 55, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/_goc-base.scss */
+/* line 55, ../sass/_goc-base.scss */
 .small-teaser-group .headline {
   font-size: 18px;
   line-height: 25px; }
-/* line 57, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/_goc-base.scss */
+/* line 57, ../sass/_goc-base.scss */
 .small-teaser-group .kicker {
   font-size: 15px;
   line-height: 22px; }
-/* line 63, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/_goc-base.scss */
+/* line 63, ../sass/_goc-base.scss */
 .small-teaser-group .headline a {
   color: #af1028;
   text-decoration: none; }
-  /* line 66, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/_goc-base.scss */
+  /* line 66, ../sass/_goc-base.scss */
   .small-teaser-group .headline a:hover {
     text-decoration: underline; }
-/* line 72, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/_goc-base.scss */
+/* line 72, ../sass/_goc-base.scss */
 .small-teaser-group .kicker {
   color: #444444; }
-/* line 5, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-small.scss */
+/* line 5, ../sass/teaser/_goc-small.scss */
 .small-teaser-group .views-row {
   padding: 7px 0;
   position: relative;
   border-bottom: 1px dotted #cccccc; }
-/* line 13, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-small.scss */
+/* line 13, ../sass/teaser/_goc-small.scss */
 .small-teaser-group .category-label {
   position: absolute;
   top: 10px;
   left: 10px;
   background: #FFF;
   padding: 0 5px; }
-  /* line 19, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-small.scss */
+  /* line 19, ../sass/teaser/_goc-small.scss */
   .small-teaser-group .category-label a {
     color: #444444;
     font-family: 'Droid serif', serif;
     font-size: 10px;
     font-weight: bold;
     text-decoration: none; }
-/* line 31, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-small.scss */
+/* line 31, ../sass/teaser/_goc-small.scss */
 .small-teaser-group p {
   display: inline; }
-/* line 33, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-small.scss */
+/* line 33, ../sass/teaser/_goc-small.scss */
 .small-teaser-group span a {
   color: #af1028;
   text-decoration: none; }
 
-/* line 2, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-line.scss */
+/* line 2, ../sass/teaser/_goc-line.scss */
 .line-teaser-group .views-row {
   background: #cccccc;
   margin-bottom: 7px;
   padding: 6px 11px; }
-  /* line 6, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-line.scss */
+  /* line 6, ../sass/teaser/_goc-line.scss */
   .line-teaser-group .views-row a {
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
     color: #af1028;
     float: left;
     text-decoration: none; }
-  /* line 11, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-line.scss */
+  /* line 11, ../sass/teaser/_goc-line.scss */
   .line-teaser-group .views-row .created {
     color: white;
     float: right; }
 
-/* line 3, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-slideshow.scss */
+/* line 3, ../sass/teaser/_goc-slideshow.scss */
 .view-display-id-vp_slideshow .kicker {
   font-family: 'Droid Sans', sans-serif;
   font-size: 12px;
@@ -187,7 +187,7 @@ body {
   display: inline-block;
   color: #444444;
   padding: 2px; }
-/* line 11, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-slideshow.scss */
+/* line 11, ../sass/teaser/_goc-slideshow.scss */
 .view-display-id-vp_slideshow .headline a {
   font-family: 'Droid Sans', sans-serif;
   font-size: 18px;
@@ -196,44 +196,39 @@ body {
   color: #FFF;
   padding: 5px;
   text-decoration: none; }
-/* line 20, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-slideshow.scss */
+/* line 20, ../sass/teaser/_goc-slideshow.scss */
 .view-display-id-vp_slideshow .slide-teaser {
   width: 300px;
   left: 10px;
   right: 10px;
   bottom: 10px; }
-  /* line 26, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/teaser/_goc-slideshow.scss */
+  /* line 26, ../sass/teaser/_goc-slideshow.scss */
   .view-display-id-vp_slideshow .slide-teaser p {
     background: rgba(0, 0, 0, 0.5);
     color: #FFF;
     margin: 0 10px; }
 
-/* line 1, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/node/_goc-fieldslideshow.scss */
-.field-name-field-media-image {
-  left: -30px;
-  position: relative; }
-
-/* line 3, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/content/_goc-article.scss */
+/* line 3, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .pane-page-content {
   position: relative; }
-/* line 7, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/content/_goc-article.scss */
+/* line 7, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-name-field-media-image {
   left: -35px;
   position: relative;
   width: 665px; }
-/* line 13, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/content/_goc-article.scss */
+/* line 13, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-wrapper {
   background: url(../images/bg-image-carousel-article.png) no-repeat left bottom;
   padding-bottom: 30px;
   position: relative; }
-/* line 20, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/content/_goc-article.scss */
+/* line 20, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow {
   background: #000;
   color: #FFF; }
-/* line 25, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/content/_goc-article.scss */
+/* line 25, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-slide {
   height: 400px; }
-/* line 29, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/content/_goc-article.scss */
+/* line 29, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-controls {
   background: url(../images/bg-field-slideshow-controls.png) repeat-y right top;
   bottom: 30px;
@@ -241,7 +236,7 @@ body {
   padding-right: 150px;
   position: absolute;
   z-index: 100; }
-  /* line 39, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/content/_goc-article.scss */
+  /* line 39, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .prev,
   .node-type-article .field-slideshow-controls .next {
     display: inline-block;
@@ -249,13 +244,13 @@ body {
     margin-top: 20px;
     text-indent: -999em;
     width: 15px; }
-  /* line 47, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/content/_goc-article.scss */
+  /* line 47, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .prev {
     background: url('../images/fixed-s8836399120.png') 0 0 no-repeat; }
-  /* line 48, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/content/_goc-article.scss */
+  /* line 48, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .next {
     background: url('../images/fixed-s8836399120.png') 0 -45px no-repeat; }
-/* line 54, /Users/ewaldschmidt/Sites/goc/docroot/sites/all/themes/goc/compass/sass/content/_goc-article.scss */
+/* line 54, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-caption,
 .node-type-article .field-slideshow-subline {
   display: block;

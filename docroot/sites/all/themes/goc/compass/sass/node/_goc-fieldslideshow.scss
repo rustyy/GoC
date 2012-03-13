@@ -1,4 +1,59 @@
-.field-name-field-media-image {
-  left: -30px;
-  position: relative;
+.node-type-article {
+
+  .pane-page-content { position: relative; }
+
+
+  // Slideshow headerimages.
+  .field-name-field-media-image {
+    left: -35px;
+    position: relative;
+    width: 665px;
+  }
+
+  .field-slideshow-wrapper {
+    background: url(../images/bg-image-carousel-article.png) no-repeat left bottom;
+    padding-bottom: 30px;
+    position: relative;
+
+  }
+
+  .field-slideshow {
+    background: #000;
+    color: #FFF;
+  }
+
+  .field-slideshow-slide {
+    height: 400px;
+  }
+
+  .field-slideshow-controls {
+    background: url(../images/bg-field-slideshow-controls.png) repeat-y right top;
+    bottom: 30px;
+    height: 55px;
+    padding-right: 150px;
+    position: absolute;
+    z-index: 100;
+
+
+    .prev,
+    .next {
+      display: inline-block;
+      height: image-height(sprite-file($icons, btn-slideshow-left));
+      margin-top: 20px;
+      text-indent: -999em;
+      width: image-width(sprite-file($icons, btn-slideshow-left));
+    }
+
+    .prev { @include sprite-icons(btn-slideshow-left); }
+    .next { @include sprite-icons(btn-slideshow-right); }
+
+
+  }
+
+  .field-slideshow-caption,
+  .field-slideshow-subline {
+    display: block;
+    padding-left: 160px;
+  }
+
 }

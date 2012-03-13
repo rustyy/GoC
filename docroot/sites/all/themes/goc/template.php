@@ -30,6 +30,14 @@ function goc_preprocess_views_view(&$vars) {
   if ($display === 'vp_line_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view__vp_line_teaser';
   }
+  // This if functions are for related content.
+  if ($display === 'small_teaser_related_content') {
+    $vars['theme_hook_suggestions'][] = 'views_view__small_teaser_related_content';
+  }
+  
+  if ($display === 'line_teaser_related_content') {
+    $vars['theme_hook_suggestions'][] = 'views_view__line_teaser_related_content';
+  }
 }
 
 /**
@@ -65,6 +73,21 @@ function goc_preprocess_views_view_unformatted(&$vars) {
     }
     $vars['classes_array'] = $classes;
   }
+
+  // This if functions are for related content.
+  if ($display === 'small_teaser_related_content') {
+    foreach ($classes as $id => $v) {
+      $classes[$id] .= ' alpha grid-16';
+    }
+    $vars['classes_array'] = $classes;
+  }
+
+  if ($display === 'line_teaser_related_content') {
+    foreach ($classes as $id => $v) {
+      $classes[$id] .= ' alpha grid-16';
+    }
+    $vars['classes_array'] = $classes;
+  }
 }
 
 /**
@@ -87,6 +110,15 @@ function goc_preprocess_views_view_fields(&$vars) {
   if ($display === 'vp_line_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_line_teaser';
   }
+
+  // This if functions are for the related content teaser.
+  if ($display === 'small_teaser_related_content') {
+    $vars['theme_hook_suggestions'][] = 'views_view_fields__small_teaser_related_content';
+  }
+
+  if ($display === 'line_teaser_related_content') {
+    $vars['theme_hook_suggestions'][] = 'views_view_fields__line_teaser_related_content';
+  }
 }
 
 /**
@@ -96,7 +128,7 @@ function goc_preprocess_views_view_fields(&$vars) {
  */
 function goc_preprocess_views_view_field(&$vars) {
   // Wrap all field_fc_image fields with a link to a node, when displayed in a teaser.
-  if (($vars['view']->name === "teaser" || $vars['view']->name === "homepage") && $vars['field']->field === "field_fc_image") {
+  if (($vars['view']->name === "teaser" || $vars['view']->name === "homepage" || $vars['view']->name === "node_view") && $vars['field']->field === "field_fc_image") {
     // $link_classes is used to define certain classes for the wrapping anchor.
     $link_classes = array();
     $link_classes[] = 'teaser-image-link';
