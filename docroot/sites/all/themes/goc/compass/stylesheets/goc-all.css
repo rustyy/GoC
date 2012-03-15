@@ -271,3 +271,15 @@ body {
   margin-bottom: 7px;
   margin-top: 7px;
   padding: 7px; }
+
+/* line 1, ../sass/node/_goc-node-header.scss */
+.pane-node-header {
+  background: #af1028;
+  color: #FFF;
+  height: 39px;
+  left: 200px;
+  padding: 6px;
+  position: relative;
+  top: 13px;
+  width: 418px;
+  z-index: 5; }
