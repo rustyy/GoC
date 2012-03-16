@@ -1,0 +1,6 @@
+name = GoC FB Social
+description = "This Module shows the FB LikeBox on every Page"
+dependencies = fb_social
+core = 7.x
+package = "Facebook Social Plugins"
+files[] = goc_fb_social.module

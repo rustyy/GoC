@@ -1,0 +1,12 @@
+<?php
+/**
+ * Implements hook_init().
+ * 
+ */
+
+function goc_fb_social_init() {
+  global $_fb_script_init;
+  $_fb_script_init = TRUE;
+}
+
+?>
