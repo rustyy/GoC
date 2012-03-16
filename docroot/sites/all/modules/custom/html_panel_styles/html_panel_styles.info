@@ -1,0 +1,6 @@
+name = HTML Panel Styles
+description = "Provides some specific panel-pane-styles to wrap panes with certain html-tags"
+dependencies[] = panels
+package = "Panels"
+core = 7.x
+version = "7.x-0.1"

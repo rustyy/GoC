@@ -211,24 +211,21 @@ body {
 /* line 3, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .pane-page-content {
   position: relative; }
-/* line 7, ../sass/node/_goc-fieldslideshow.scss */
-.node-type-article .field-name-field-media-image {
-  left: -35px;
-  position: relative;
-  width: 665px; }
-/* line 13, ../sass/node/_goc-fieldslideshow.scss */
+/* line 6, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-wrapper {
   background: url(../images/bg-image-carousel-article.png) no-repeat left bottom;
+  left: -35px;
   padding-bottom: 30px;
-  position: relative; }
-/* line 20, ../sass/node/_goc-fieldslideshow.scss */
+  position: relative;
+  width: 665px; }
+/* line 14, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow {
   background: #000;
   color: #FFF; }
-/* line 25, ../sass/node/_goc-fieldslideshow.scss */
+/* line 19, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-slide {
   height: 400px; }
-/* line 29, ../sass/node/_goc-fieldslideshow.scss */
+/* line 23, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-controls {
   background: url(../images/bg-field-slideshow-controls.png) repeat-y right top;
   bottom: 30px;
@@ -236,7 +233,7 @@ body {
   padding-right: 150px;
   position: absolute;
   z-index: 100; }
-  /* line 39, ../sass/node/_goc-fieldslideshow.scss */
+  /* line 32, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .prev,
   .node-type-article .field-slideshow-controls .next {
     display: inline-block;
@@ -244,15 +241,15 @@ body {
     margin-top: 20px;
     text-indent: -999em;
     width: 15px; }
-  /* line 47, ../sass/node/_goc-fieldslideshow.scss */
+  /* line 40, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .prev {
     background: url('../images/fixed-s8836399120.png') 0 0 no-repeat;
     margin-left: 26px;
     margin-right: 16px; }
-  /* line 52, ../sass/node/_goc-fieldslideshow.scss */
+  /* line 45, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .next {
     background: url('../images/fixed-s8836399120.png') 0 -45px no-repeat; }
-/* line 57, ../sass/node/_goc-fieldslideshow.scss */
+/* line 50, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-image-infos {
   font-family: 'Droid serif', serif;
   font-size: 12px;
@@ -261,18 +258,7 @@ body {
   padding-left: 180px;
   padding-top: 10px; }
 
-/* line 3, ../sass/node/_goc-node-results.scss */
-.pane-node-field-pro,
-.pane-node-field-contra,
-.pane-node-field-result {
-  font-family: 'Droid serif', serif;
-  background: #af1028;
-  color: #FFF;
-  margin-bottom: 7px;
-  margin-top: 7px;
-  padding: 7px; }
-
-/* line 1, ../sass/node/_goc-node-header.scss */
+/* line 2, ../sass/node/_goc-node.scss */
 .pane-node-header {
   background: #af1028;
   color: #FFF;
@@ -283,3 +269,18 @@ body {
   top: 13px;
   width: 418px;
   z-index: 100; }
+
+/* line 17, ../sass/node/_goc-node.scss */
+.pane-node-field-pro,
+.pane-node-field-contra,
+.pane-node-field-result {
+  font-family: 'Droid serif', serif;
+  background: #af1028;
+  color: #FFF;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  padding: 7px; }
+
+/* line 28, ../sass/node/_goc-node.scss */
+.node-view p {
+  margin-bottom: 1em; }

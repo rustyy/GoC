@@ -1,31 +1,25 @@
 .node-type-article {
-  
+
   .pane-page-content { position: relative; }
-  
-  
+
   // Slideshow headerimages.
-  .field-name-field-media-image {
+  .field-slideshow-wrapper {
+    background: url(../images/bg-image-carousel-article.png) no-repeat left bottom;
     left: -35px;
+    padding-bottom: 30px;
     position: relative;
     width: 665px;
   }
-  
-  .field-slideshow-wrapper {
-    background: url(../images/bg-image-carousel-article.png) no-repeat left bottom;
-    padding-bottom: 30px;
-    position: relative;
-    
-  }
-  
+
   .field-slideshow {
     background: #000;
     color: #FFF;
   }
-  
+
   .field-slideshow-slide {
     height: 400px;
   }
-  
+
   .field-slideshow-controls {
     background: url(../images/bg-field-slideshow-controls.png) repeat-y right top;
     bottom: 30px;
@@ -33,8 +27,7 @@
     padding-right: 150px;
     position: absolute;
     z-index: 100;
-    
-    
+
     .prev,
     .next {
       display: inline-block;
@@ -43,22 +36,22 @@
       text-indent: -999em;
       width: image-width(sprite-file($icons, btn-slideshow-left));
     }
-    
-    .prev { 
+
+    .prev {
       @include sprite-icons(btn-slideshow-left);
       margin-left: 26px;
       margin-right: 16px;
     }
     .next { @include sprite-icons(btn-slideshow-right); }
-    
-    
+
+
   }
-  
+
   .field-slideshow-image-infos {
     @include fontstyle(serif, standard);
     display: block;
     padding-left: 180px;
     padding-top: 10px;
   }
-  
+
 }
