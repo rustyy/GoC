@@ -23,20 +23,12 @@ function goc_preprocess_views_view(&$vars) {
     $vars['theme_hook_suggestions'][] = 'views_view__vp_big_teaser';
   }
 
-  if ($display === 'vp_small_teaser_home') {
+  if ($display === 'vp_small_teaser_home' || $display === 'small_teaser_related_content') {
     $vars['theme_hook_suggestions'][] = 'views_view__vp_small_teaser';
   }
 
-  if ($display === 'vp_line_teaser_home') {
+  if ($display === 'vp_line_teaser_home' || $display === 'line_teaser_related_content') {
     $vars['theme_hook_suggestions'][] = 'views_view__vp_line_teaser';
-  }
-  // This if functions are for related content.
-  if ($display === 'small_teaser_related_content') {
-    $vars['theme_hook_suggestions'][] = 'views_view__small_teaser_related_content';
-  }
-  
-  if ($display === 'line_teaser_related_content') {
-    $vars['theme_hook_suggestions'][] = 'views_view__line_teaser_related_content';
   }
 }
 
@@ -103,21 +95,12 @@ function goc_preprocess_views_view_fields(&$vars) {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_big_teaser';
   }
 
-  if ($display === 'vp_small_teaser_home') {
+  if ($display === 'vp_small_teaser_home' || $display === 'small_teaser_related_content') {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_small_teaser';
   }
 
-  if ($display === 'vp_line_teaser_home') {
+  if ($display === 'vp_line_teaser_home' || $display === 'line_teaser_related_content') {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_line_teaser';
-  }
-
-  // This if functions are for the related content teaser.
-  if ($display === 'small_teaser_related_content') {
-    $vars['theme_hook_suggestions'][] = 'views_view_fields__small_teaser_related_content';
-  }
-
-  if ($display === 'line_teaser_related_content') {
-    $vars['theme_hook_suggestions'][] = 'views_view_fields__line_teaser_related_content';
   }
 }
 
