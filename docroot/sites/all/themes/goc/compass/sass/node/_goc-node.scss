@@ -23,8 +23,15 @@
   padding: 7px;
 }
 
+
+// Node-title and kicker.
+#mini-panel-node_header {
+  h1 { @include fontstyle($size: large); }
+}
+
 // Node body.
 .node-view {
+
   p {
     margin-bottom: 1em;
   }

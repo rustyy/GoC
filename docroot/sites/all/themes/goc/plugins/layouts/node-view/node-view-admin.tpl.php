@@ -27,7 +27,7 @@
   <div id="node-view-right">
     <?php print $content['right']; ?>
   </div>
-  <div id="node-view-bottom">
+  <div>
     <?php print $content['bottom']; ?>
   </div>
 </div> 

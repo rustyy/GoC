@@ -281,6 +281,11 @@ body {
   margin-top: 7px;
   padding: 7px; }
 
-/* line 28, ../sass/node/_goc-node.scss */
+/* line 29, ../sass/node/_goc-node.scss */
+#mini-panel-node_header h1 {
+  font-size: 18px;
+  line-height: 25px; }
+
+/* line 35, ../sass/node/_goc-node.scss */
 .node-view p {
   margin-bottom: 1em; }
