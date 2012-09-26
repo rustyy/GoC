@@ -1,13 +1,13 @@
 # Ignore paths that contain user-generated content.
-docroot/files
-docroot/sites/*/files
-docroot/sites/*/private
-docroot/sites/goc.local
+sites/*/files
+sites/*/private
+sites/goc.local
 
-/nbproject
+nbproject
 .DS_Store
-/docroot/sites/all/themes/goc/compass/.sass-cache/
-/tmp
-/private
-docroot/sites/*/modules/dev
+sites/all/themes/goc/compass/.sass-cache/
+/sites/*/modules/dev
 FirePHPCore
+
+# phpstorm stuff
+.idea
