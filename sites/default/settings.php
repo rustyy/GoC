@@ -25,10 +25,17 @@ ini_set('session.use_trans_sid',    0);
 ini_set('url_rewriter.tags',        '');
 
 
-// On Acquia Cloud, this include file configures Drupal to use the correct
-// database in each site environment (Dev, Stage, or Prod). To use this 
-// settings.php for development on your local workstation, set $db_url
-// (Drupal 5 or 6) or $databases (Drupal 7) as described in comments above.
-if (file_exists('/var/www/site-php')) {
-  require('/var/www/site-php/goc/goc-settings.inc');
+/**
+ * Include settings.php from private folder.
+ */
+if (file_exists(DRUPAL_ROOT . '/../private/settings.php')) {
+  include(DRUPAL_ROOT . '/../private/settings.php');
 }
+
+/**
+ * Include local.settings.php from private folder.
+ */
+if (file_exists(DRUPAL_ROOT . '/../private/local.settings.php')) {
+  include(DRUPAL_ROOT . '/../private/local.settings.php');
+}
+
