@@ -709,3 +709,10 @@ function media_update_7201() {
 function media_update_7202() {
   module_enable(array('views'));
 }
+
+/**
+ * Empty update function to trigger cache clear.
+ */
+function media_update_7203() {
+  // Do nothing.
+}
