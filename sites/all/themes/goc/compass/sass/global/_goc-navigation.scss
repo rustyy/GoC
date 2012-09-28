@@ -1,20 +1,20 @@
 #navigation {
-  background: #FFF url(../images/bg-nav.png) repeat-x left top;
+  background: #FFF image-url('bg-nav.png') repeat-x left top;
   @include fontstyle(sans-serif, $weight: 700);
+
   li {
     list-style: none;
     margin: 0;
     padding: 0;
     display: block;
     float: left;
-
   }
 
   .menu {
     position: relative;
     height: 60px;
     a {
-      display:block;
+      display: block;
       float: left;
       height: 38px;
       color: #FFF;
@@ -22,37 +22,71 @@
       margin: 0 5px;
       &:hover,
       &.active-trail {
-        background: url(../images/bg-nav-btn.png) no-repeat center top;
+        background: image-url('bg-nav-btn.png') no-repeat center top;
       }
     }
-
-
-
   }
   .menu .menu {
     display: none;
     position: absolute;
     bottom: 0;
     height: auto;
+    
     li {
-          display: inline;
-          float: none;
-          }
+      display: inline;
+      float: none;
+    }
 
-          a {
-                display: inline;
-                background: none;
-                color: #000;
-                float: none;
-                padding: 0;
-                margin: 0;
-                }
-
+    a {
+      display: inline;
+      background: none;
+      color: #000;
+      float: none;
+      padding: 0;
+      margin: 0;
+    }
 
   }
 
   .active-trail .menu {
     display: block;
   }
+}
 
+// Footer Menu.
+#footer {
+  .pane-system-main-menu {
+    margin: 20px 0;
+  }
+  .menu {
+    @include fontstyle(sans-serif);
+    overflow: hidden;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0 20px;
+      padding: 0;
+      vertical-align: top;
+      // Subcategories
+      li {
+        display: block;
+        margin: 0;
+        a {
+          font-weight: 300;
+        }
+      }
+    }
+
+    a {
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
