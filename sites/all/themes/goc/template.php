@@ -43,42 +43,11 @@ function goc_preprocess_views_view_unformatted(&$vars) {
 
   // Add grid classes to big-teaser.
   if ($display === 'vp_big_teaser' || $display === 'vp_big_teaser_home') {
-    foreach ($classes as $id => $v) {
-      if ($id % 2 === 0) {
-        $classes[$id] = $v . ' alpha grid-8';
-      } else {
-        $classes[$id] = $v . ' omega grid-8';
-      }
-    }
-    $vars['classes_array'] = $classes;
+    $vars['classes_array'] = _helper_extend_teaser_css_classes($classes, array('alpha grid-8', 'omega grid-8'), $vars['view'], TRUE);
   }
-  if ($display === 'vp_small_teaser' || $display === 'vp_small_teaser_home') {
-    foreach ($classes as $id => $v) {
-      $classes[$id] .= ' alpha grid-16';
-    }
-    $vars['classes_array'] = $classes;
-  }
-
-  if ($display === 'vp_line_teaser' || $display === 'vp_line_teaser_home') {
-    foreach ($classes as $id => $v) {
-      $classes[$id] .= ' alpha grid-16';
-    }
-    $vars['classes_array'] = $classes;
-  }
-
-  // This if functions are for related content.
-  if ($display === 'small_teaser_related_content') {
-    foreach ($classes as $id => $v) {
-      $classes[$id] .= ' alpha grid-16';
-    }
-    $vars['classes_array'] = $classes;
-  }
-
-  if ($display === 'line_teaser_related_content') {
-    foreach ($classes as $id => $v) {
-      $classes[$id] .= ' alpha grid-16';
-    }
-    $vars['classes_array'] = $classes;
+  // Add grid classes to other teaser variants.
+  if ($display === 'vp_small_teaser' || $display === 'vp_small_teaser_home' || $display === 'vp_line_teaser' || $display === 'vp_line_teaser_home' || $display === 'small_teaser_related_content' || $display === 'line_teaser_related_content') {
+    $vars['classes_array'] = _helper_extend_teaser_css_classes($classes, array('alpha grid-16'), $vars['view'], TRUE);
   }
 }
 
@@ -89,7 +58,6 @@ function goc_preprocess_views_view_unformatted(&$vars) {
  */
 function goc_preprocess_views_view_fields(&$vars) {
   $display = $vars['view']->current_display;
-
   // We use the standard fields-tpl-file if front-view is used.
   if ($display === 'vp_big_teaser_home') {
     $vars['theme_hook_suggestions'][] = 'views_view_fields__vp_big_teaser';
@@ -123,7 +91,42 @@ function goc_preprocess_views_view_field(&$vars) {
     // Rewrite origin row output.
     $nid = $vars['row']->nid;
     $image_content = $vars['output'];
-    $image_content = l($image_content, 'node/' . $nid, array('attributes' => array('class' => $link_classes), 'html' => TRUE));
+    $image_content = l($image_content, 'node/' . $nid, array(
+      'attributes' => array('class' => $link_classes),
+      'html' => TRUE
+    ));
     $vars['output'] = $image_content;
   }
+}
+
+/***
+ * Helper function to extend the classes_array of a view.
+ *
+ * @param $classes_array
+ * @param $further_classes
+ * @param $view
+ * @param bool $check_image
+ * @return mixed
+ */
+function _helper_extend_teaser_css_classes($classes_array, $further_classes, $view, $check_image = FALSE) {
+  foreach ($classes_array as $id => $v) {
+    if (count($further_classes) === 2) {
+      if ($id % 2 === 0) {
+        $classes_array[$id] .= ' ' . $further_classes[0];
+      }
+      else {
+        $classes_array[$id] .= ' ' . $further_classes[1];
+      }
+    }
+    else {
+      $classes_array[$id] .= ' ' . $further_classes[0];
+    }
+
+    if ($check_image) {
+      if (empty($view->result[$id]->field_field_fc_image)) {
+        $classes_array[$id] .= ' no-img';
+      }
+    }
+  }
+  return $classes_array;
 }
