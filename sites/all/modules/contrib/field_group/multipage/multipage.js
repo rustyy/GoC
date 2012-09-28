@@ -25,8 +25,8 @@ Drupal.behaviors.MultiPage = {
       // Transform each div.multipage-pane into a multipage with controls.
       $panes.each(function () {
         
-        $controls = $('<div class="multipage-controls-list clearfix"></div>');
-        $(this).append($controls);
+        $controls = $('<div class="multipage-controls-list"></div>');
+        $(this).append('<div class="multipage-controls clearfix"></div>').append($controls);
         
         // Check if the submit button needs to move to the latest pane.
         if (Drupal.settings.field_group.multipage_move_submit && $('.form-actions').length) {
@@ -140,7 +140,6 @@ Drupal.multipageControl.prototype = {
    */
   nextPage: function () {
     this.wrapper.next().data('multipageControl').focus();
-    $('html, body').scrollTop(this.wrapper.parents('.field-group-multipage-group-wrapper').offset().top);
   },
   
   /**
@@ -148,7 +147,6 @@ Drupal.multipageControl.prototype = {
    */
   previousPage: function () {
     this.wrapper.prev().data('multipageControl').focus();
-    $('html, body').scrollTop(this.wrapper.parents('.field-group-multipage-group-wrapper').offset().top);
   },
 
   /**
