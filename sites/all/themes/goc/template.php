@@ -19,15 +19,15 @@ function goc_preprocess_html(&$vars) {
 function goc_preprocess_views_view(&$vars) {
   $display = $vars['display_id'];
   // If the front-view is used, we set a specific class.
-  if ($display === 'vp_big_teaser_home') {
+  if ($display === 'vp_big_teaser_home' || $display === 'vp_big_teaser') {
     $vars['classes_array'][] = 'big-teaser-group';
   }
 
-  if ($display === 'vp_small_teaser_home' || $display === 'small_teaser_related_content') {
+  if ($display === 'vp_small_teaser_home' || $display === 'vp_small_teaser' || $display === 'small_teaser_related_content') {
     $vars['classes_array'][] = 'small-teaser-group';
   }
 
-  if ($display === 'vp_line_teaser_home' || $display === 'line_teaser_related_content') {
+  if ($display === 'vp_line_teaser_home' || $display === 'vp_line_teaser' || $display === 'line_teaser_related_content') {
     $vars['classes_array'][] = 'line-teaser-group';
   }
 }
