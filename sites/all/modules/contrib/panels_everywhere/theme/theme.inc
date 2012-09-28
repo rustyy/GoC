@@ -35,7 +35,7 @@ function theme_panels_everywhere_page($vars) {
     'arguments' => $args,
   );
 
-  return $info['content'];
+  return is_array($info['content']) ? drupal_render($info['content']) : $info['content'];
 }
 
 function template_preprocess_pane_header(&$vars) {
@@ -69,12 +69,12 @@ function template_preprocess_pane_navigation(&$vars) {
 function template_process_pane_navigation(&$vars) {
   $vars['main_menu'] = theme('links__system_main_menu', array(
     'links' => $vars['main_menu'],
-    'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix')),
+    'attributes' => array('id' => 'main-menu', 'class' => array('links', 'clearfix', 'inline')),
     'heading' => t('Main menu')
   ));
   $vars['secondary_menu'] = theme('links__system_secondary_menu', array(
     'links' => $vars['secondary_menu'],
-    'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix')),
+    'attributes' => array('id' => 'secondary-menu', 'class' => array('links', 'clearfix', 'inline')),
     'heading' => t('Secondary menu')
   ));
   $vars['breadcrumb'] = theme('breadcrumb', array('breadcrumb' => drupal_get_breadcrumb()));
