@@ -6,7 +6,7 @@
   left: 200px;
   padding: 6px;
   position: relative;
-  top: 13px;
+  top: 26px;
   width: 418px;
   z-index: 100;
 
@@ -35,9 +35,20 @@
   margin-bottom: 7px;
   margin-top: 7px;
   padding: 7px;
+
+  .pane-title {
+    @include fontstyle($size: large, $weight: 700);
+  }
 }
 
 // Node body.
-.node-view p {
-  margin-bottom: 1em;
+.node-view {
+  .pane-node-field-cover {
+    text-align: center;
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
 }
