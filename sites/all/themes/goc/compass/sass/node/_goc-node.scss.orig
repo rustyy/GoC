@@ -44,7 +44,7 @@
   }
 }
 
-
+<<<<<<< HEAD
 .pane-node-field-media-documents .field-collection-documents-item {
   padding-bottom: 40px;
   position: relative;
@@ -67,6 +67,8 @@
   h1 { @include fontstyle($size: large); }
 }
 
+=======
+>>>>>>> c71a73a4048ce62030de875cc131fa384080dde2
 // Node body.
 .node-view {
   .pane-node-field-cover {

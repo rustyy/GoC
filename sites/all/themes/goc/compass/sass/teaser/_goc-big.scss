@@ -1,6 +1,7 @@
 .big-teaser-group {
 
   .views-row {
+    background: $red;
     margin-bottom: 7px;
     margin-top: 7px;
     position: relative;
@@ -19,23 +20,22 @@
     color: $grey-dark;
     padding: 2px;
   }
+
   .headline a {
     @include fontstyle(sans-serif, large);
     background: $red;
     color: #FFF;
     padding: 5px;
     text-decoration: none;
-
   }
-
-
 
   .category-label {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: #FFF;
+    background: #fff;
     padding: 0 5px;
+
     a {
       color: $grey-dark;
       @include fontstyle(serif);
@@ -45,5 +45,22 @@
       text-decoration: none;
     }
 
+  }
+
+  // Fallback, if no image was set.
+  .no-img {
+    .category-label,
+    .layer {
+      position: static;
+    }
+
+    .headline {
+      background: $red;
+      padding: 5px;
+
+      a {
+        padding: 0;
+      }
+    }
   }
 }
