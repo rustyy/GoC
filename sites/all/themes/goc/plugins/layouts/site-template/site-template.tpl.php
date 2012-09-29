@@ -1,3 +1,5 @@
+<div class="hide-overflow-content"></div>
+
 <div id="header">
   <?php print $content['header']; ?>
     <div id="navigation" class="clearfix">
