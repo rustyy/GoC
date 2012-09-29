@@ -9,6 +9,20 @@
   top: 13px;
   width: 418px;
   z-index: 100;
+
+  h1 {
+    @include fontstyle($size: large);
+  }
+}
+
+// Fallback for node title, if no image is set.
+.no-img .pane-node-header {
+  background: none;
+  color: $grey-dark;
+  height: auto;
+  margin-bottom: 1em;
+  padding: 0;
+  top: 0;
 }
 
 // Small sidebar left.
@@ -23,17 +37,7 @@
   padding: 7px;
 }
 
-
-// Node-title and kicker.
-#mini-panel-node_header {
-  h1 { @include fontstyle($size: large); }
-}
-
 // Node body.
-.node-view {
-
-  p {
-    margin-bottom: 1em;
-  }
-
+.node-view p {
+  margin-bottom: 1em;
 }

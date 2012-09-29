@@ -29,9 +29,11 @@
 </div>
 
 <?php print $fields['field_fc_image']->content; ?>
-<div class="grid-11 omega">
-  <h2 class="kicker"><?php print $fields['field_kicker']->content; ?></h2>
-  <h3 class="headline"><?php print $fields['title']->content; ?></h3>
+
+<div class="<?php print (empty($fields['field_fc_image']->content)) ? 'grid-16 alpha omega' : 'grid-11 omega' ?>">
+    <h2 class="kicker"><?php print $fields['field_kicker']->content; ?></h2>
+
+    <h3 class="headline"><?php print $fields['title']->content; ?></h3>
   <?php print $fields['body']->content; ?>
-  <span><?php print $fields['view_node']->content ?></span>
+    <span><?php print $fields['view_node']->content ?></span>
 </div>

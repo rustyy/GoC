@@ -11,6 +11,30 @@ function goc_preprocess_html(&$vars) {
   drupal_add_css('sites/all/libraries/jquery.imageAccordion/themes/standard/standard.css', 'file');
 }
 
+/***
+ * Implements template_preprocess_panels_pane().
+ *
+ * @param $vars
+ */
+function goc_preprocess_panels_pane(&$vars) {
+  // Add a fallback css-class if no image is set.
+  // So we can change the node-titles style.
+  if (arg(0) === 'node') {
+    $node = node_load(arg(1));
+    if (empty($node->field_media_image)) {
+      if ($vars['pane']->type === 'page_content') {
+        $vars['classes_array'][] = 'no-img';
+      }
+      if ($vars['pane']->subtype === 'node_header') {
+        dpm($vars);
+        $vars['classes_array'][] = 'grid-12';
+        $vars['classes_array'][] = 'push-4';
+        $vars['classes_array'][] = 'alpha omega';
+      }
+    }
+  }
+}
+
 /**
  * Implements template_preprocess_views_view.
  *
@@ -43,7 +67,10 @@ function goc_preprocess_views_view_unformatted(&$vars) {
 
   // Add grid classes to big-teaser.
   if ($display === 'vp_big_teaser' || $display === 'vp_big_teaser_home') {
-    $vars['classes_array'] = _helper_extend_teaser_css_classes($classes, array('alpha grid-8', 'omega grid-8'), $vars['view'], TRUE);
+    $vars['classes_array'] = _helper_extend_teaser_css_classes($classes, array(
+      'alpha grid-8',
+      'omega grid-8'
+    ), $vars['view'], TRUE);
   }
   // Add grid classes to other teaser variants.
   if ($display === 'vp_small_teaser' || $display === 'vp_small_teaser_home' || $display === 'vp_line_teaser' || $display === 'vp_line_teaser_home' || $display === 'small_teaser_related_content' || $display === 'line_teaser_related_content') {
@@ -90,12 +117,14 @@ function goc_preprocess_views_view_field(&$vars) {
     }
     // Rewrite origin row output.
     $nid = $vars['row']->nid;
-    $image_content = $vars['output'];
-    $image_content = l($image_content, 'node/' . $nid, array(
-      'attributes' => array('class' => $link_classes),
-      'html' => TRUE
-    ));
-    $vars['output'] = $image_content;
+    if (!empty($vars['output'])) {
+      $image_content = $vars['output'];
+      $image_content = l($image_content, 'node/' . $nid, array(
+        'attributes' => array('class' => $link_classes),
+        'html' => TRUE
+      ));
+      $vars['output'] = $image_content;
+    }
   }
 }
 

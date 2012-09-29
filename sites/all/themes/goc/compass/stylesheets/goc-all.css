@@ -105,15 +105,16 @@ body {
 
 /* line 3, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .views-row {
+  background: #af1028;
   margin-bottom: 7px;
   margin-top: 7px;
   position: relative; }
-/* line 9, ../sass/teaser/_goc-big.scss */
+/* line 10, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .layer {
   bottom: 17px;
   left: 10px;
   position: absolute; }
-/* line 15, ../sass/teaser/_goc-big.scss */
+/* line 16, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .kicker {
   font-family: 'Droid Sans', sans-serif;
   font-size: 12px;
@@ -122,7 +123,7 @@ body {
   display: inline-block;
   color: #444444;
   padding: 2px; }
-/* line 22, ../sass/teaser/_goc-big.scss */
+/* line 24, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .headline a {
   font-family: 'Droid Sans', sans-serif;
   font-size: 18px;
@@ -131,12 +132,12 @@ body {
   color: #FFF;
   padding: 5px;
   text-decoration: none; }
-/* line 33, ../sass/teaser/_goc-big.scss */
+/* line 32, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .category-label {
   position: absolute;
   top: 10px;
   left: 10px;
-  background: #FFF;
+  background: #fff;
   padding: 0 5px; }
   /* line 39, ../sass/teaser/_goc-big.scss */
   .big-teaser-group .category-label a {
@@ -146,6 +147,17 @@ body {
     font-size: 10px;
     font-weight: bold;
     text-decoration: none; }
+/* line 53, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .no-img .category-label,
+.big-teaser-group .no-img .layer {
+  position: static; }
+/* line 57, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .no-img .headline {
+  background: #af1028;
+  padding: 5px; }
+  /* line 61, ../sass/teaser/_goc-big.scss */
+  .big-teaser-group .no-img .headline a {
+    padding: 0; }
 
 /* line 53, ../sass/_goc-base.scss */
 .small-teaser-group .headline,
@@ -169,32 +181,32 @@ body {
 /* line 72, ../sass/_goc-base.scss */
 .small-teaser-group .kicker {
   color: #444444; }
-/* line 5, ../sass/teaser/_goc-small.scss */
+/* line 4, ../sass/teaser/_goc-small.scss */
 .small-teaser-group .views-row {
+  border-bottom: 1px dotted #cccccc;
   padding: 7px 0;
-  position: relative;
-  border-bottom: 1px dotted #cccccc; }
-/* line 13, ../sass/teaser/_goc-small.scss */
+  position: relative; }
+/* line 10, ../sass/teaser/_goc-small.scss */
 .small-teaser-group .category-label {
-  position: absolute;
-  top: 10px;
-  left: 10px;
   background: #FFF;
-  padding: 0 5px; }
-  /* line 19, ../sass/teaser/_goc-small.scss */
+  left: 10px;
+  padding: 0 5px;
+  position: absolute;
+  top: 10px; }
+  /* line 17, ../sass/teaser/_goc-small.scss */
   .small-teaser-group .category-label a {
-    color: #444444;
     font-family: 'Droid serif', serif;
+    color: #444444;
     font-size: 10px;
-    font-weight: bold;
+    font-weight: 700;
     text-decoration: none; }
-/* line 31, ../sass/teaser/_goc-small.scss */
-.small-teaser-group p {
-  display: inline; }
-/* line 33, ../sass/teaser/_goc-small.scss */
+/* line 26, ../sass/teaser/_goc-small.scss */
 .small-teaser-group span a {
   color: #af1028;
   text-decoration: none; }
+/* line 31, ../sass/teaser/_goc-small.scss */
+.small-teaser-group .no-img .category-label {
+  position: static; }
 
 /* line 2, ../sass/teaser/_goc-line.scss */
 .line-teaser-group .views-row {
@@ -304,8 +316,21 @@ body {
   top: 13px;
   width: 418px;
   z-index: 100; }
+  /* line 13, ../sass/node/_goc-node.scss */
+  .pane-node-header h1 {
+    font-size: 18px;
+    line-height: 25px; }
 
-/* line 17, ../sass/node/_goc-node.scss */
+/* line 19, ../sass/node/_goc-node.scss */
+.no-img .pane-node-header {
+  background: none;
+  color: #444444;
+  height: auto;
+  margin-bottom: 1em;
+  padding: 0;
+  top: 0; }
+
+/* line 31, ../sass/node/_goc-node.scss */
 .pane-node-field-pro,
 .pane-node-field-contra,
 .pane-node-field-result {
@@ -316,11 +341,6 @@ body {
   margin-top: 7px;
   padding: 7px; }
 
-/* line 29, ../sass/node/_goc-node.scss */
-#mini-panel-node_header h1 {
-  font-size: 18px;
-  line-height: 25px; }
-
-/* line 35, ../sass/node/_goc-node.scss */
+/* line 41, ../sass/node/_goc-node.scss */
 .node-view p {
   margin-bottom: 1em; }
