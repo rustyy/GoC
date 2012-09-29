@@ -43,7 +43,10 @@ function goc_preprocess_views_view_unformatted(&$vars) {
 
   // Add grid classes to big-teaser.
   if ($display === 'vp_big_teaser' || $display === 'vp_big_teaser_home') {
-    $vars['classes_array'] = _helper_extend_teaser_css_classes($classes, array('alpha grid-8', 'omega grid-8'), $vars['view'], TRUE);
+    $vars['classes_array'] = _helper_extend_teaser_css_classes($classes, array(
+      'alpha grid-8',
+      'omega grid-8'
+    ), $vars['view'], TRUE);
   }
   // Add grid classes to other teaser variants.
   if ($display === 'vp_small_teaser' || $display === 'vp_small_teaser_home' || $display === 'vp_line_teaser' || $display === 'vp_line_teaser_home' || $display === 'small_teaser_related_content' || $display === 'line_teaser_related_content') {
@@ -129,4 +132,18 @@ function _helper_extend_teaser_css_classes($classes_array, $further_classes, $vi
     }
   }
   return $classes_array;
+}
+
+function goc_preprocess_entity(&$variables) {
+
+
+  if (!empty($variables['field_fc_document'])) {
+    //dpm($variables);
+    $uri = $variables['field_fc_document'][0]['uri'];
+    $url = file_create_url($uri);
+
+    $variables['link_to_file'] = $url;
+    //dpm($url);
+  }
+
 }

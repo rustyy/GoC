@@ -14,7 +14,8 @@
 // Small sidebar left.
 .pane-node-field-pro,
 .pane-node-field-contra,
-.pane-node-field-result {
+.pane-node-field-result,
+.pane-node-field-media-documents {
   @include fontstyle(serif);
   background: $red;
   color: #FFF;
@@ -22,8 +23,26 @@
   margin-top: 7px;
   padding: 7px;
 
+  a { color: #FFF; }
+
   .pane-title {
     @include fontstyle($size: large, $weight: 700);
+  }
+}
+
+.pane-node-field-media-documents .field-collection-documents-item {
+  padding-bottom: 40px;
+  position: relative;
+
+  .documents-download-button {
+    @include sprite-icons($icon: dl-button-40, $hover: true);
+
+    bottom: 0;
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    width: 40px;
   }
 }
 

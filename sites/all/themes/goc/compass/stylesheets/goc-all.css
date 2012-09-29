@@ -248,12 +248,12 @@ body {
     width: 15px; }
   /* line 40, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .prev {
-    background: url('../images/fixed-sb0fb8ddf98.png') 0 -45px no-repeat;
+    background: url('../images/fixed-s7f1337badd.png') 0 -185px no-repeat;
     margin-left: 26px;
     margin-right: 16px; }
   /* line 45, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .next {
-    background: url('../images/fixed-sb0fb8ddf98.png') 0 0 no-repeat; }
+    background: url('../images/fixed-s7f1337badd.png') 0 -140px no-repeat; }
 /* line 50, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-image-informations {
   font-family: 'Droid serif', serif;
@@ -275,32 +275,57 @@ body {
   width: 418px;
   z-index: 100; }
 
-/* line 17, ../sass/node/_goc-node.scss */
+/* line 18, ../sass/node/_goc-node.scss */
 .pane-node-field-pro,
 .pane-node-field-contra,
-.pane-node-field-result {
+.pane-node-field-result,
+.pane-node-field-media-documents {
   font-family: 'Droid serif', serif;
   background: #af1028;
   color: #FFF;
   margin-bottom: 7px;
   margin-top: 7px;
   padding: 7px; }
-  /* line 25, ../sass/node/_goc-node.scss */
+  /* line 26, ../sass/node/_goc-node.scss */
+  .pane-node-field-pro a,
+  .pane-node-field-contra a,
+  .pane-node-field-result a,
+  .pane-node-field-media-documents a {
+    color: #FFF; }
+  /* line 28, ../sass/node/_goc-node.scss */
   .pane-node-field-pro .pane-title,
   .pane-node-field-contra .pane-title,
-  .pane-node-field-result .pane-title {
+  .pane-node-field-result .pane-title,
+  .pane-node-field-media-documents .pane-title {
     font-weight: 700;
     font-size: 18px;
     line-height: 25px; }
 
 /* line 33, ../sass/node/_goc-node.scss */
+.pane-node-field-media-documents .field-collection-documents-item {
+  padding-bottom: 40px;
+  position: relative; }
+  /* line 37, ../sass/node/_goc-node.scss */
+  .pane-node-field-media-documents .field-collection-documents-item .documents-download-button {
+    background: url('../images/fixed-s7f1337badd.png') 0 -70px no-repeat;
+    bottom: 0;
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    width: 40px; }
+    /* line 16, ../sass/_goc-base.scss */
+    .pane-node-field-media-documents .field-collection-documents-item .documents-download-button:hover {
+      background-position: 0 0; }
+
+/* line 52, ../sass/node/_goc-node.scss */
 #mini-panel-node_header h1 {
   font-size: 18px;
   line-height: 25px; }
 
-/* line 39, ../sass/node/_goc-node.scss */
+/* line 58, ../sass/node/_goc-node.scss */
 .node-view .pane-node-field-cover {
   text-align: center; }
-/* line 43, ../sass/node/_goc-node.scss */
+/* line 62, ../sass/node/_goc-node.scss */
 .node-view p {
   margin-bottom: 1em; }
