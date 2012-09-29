@@ -1,0 +1,356 @@
+/* line 1, ../sass/global/_goc-site.scss */
+body {
+  background: #444444;
+  font-family: 'Droid serif', serif;
+  font-size: 12px;
+  line-height: 19px; }
+
+/* line 6, ../sass/global/_goc-site.scss */
+#header {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 960px; }
+  /* line 11, ../sass/global/_goc-site.scss */
+  #header .pane-page-logo {
+    text-align: right; }
+
+/* line 16, ../sass/global/_goc-site.scss */
+#site {
+  background: #FFF; }
+
+/* line 20, ../sass/global/_goc-site.scss */
+#footer {
+  background: #af1028; }
+
+/* line 1, ../sass/global/_goc-navigation.scss */
+#navigation {
+  background: white url('../images/bg-nav.png?1348728600') repeat-x left top;
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: 700; }
+  /* line 5, ../sass/global/_goc-navigation.scss */
+  #navigation li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    float: left; }
+  /* line 13, ../sass/global/_goc-navigation.scss */
+  #navigation .menu {
+    position: relative;
+    height: 60px; }
+    /* line 16, ../sass/global/_goc-navigation.scss */
+    #navigation .menu a {
+      display: block;
+      float: left;
+      height: 38px;
+      color: #FFF;
+      padding: 0 15px;
+      margin: 0 5px; }
+      /* line 24, ../sass/global/_goc-navigation.scss */
+      #navigation .menu a:hover, #navigation .menu a.active-trail {
+        background: url('../images/bg-nav-btn.png?1348728600') no-repeat center top; }
+  /* line 29, ../sass/global/_goc-navigation.scss */
+  #navigation .menu .menu {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    height: auto; }
+    /* line 35, ../sass/global/_goc-navigation.scss */
+    #navigation .menu .menu li {
+      display: inline;
+      float: none; }
+    /* line 40, ../sass/global/_goc-navigation.scss */
+    #navigation .menu .menu a {
+      display: inline;
+      background: none;
+      color: #000;
+      float: none;
+      padding: 0;
+      margin: 0; }
+  /* line 51, ../sass/global/_goc-navigation.scss */
+  #navigation .active-trail .menu {
+    display: block; }
+
+/* line 58, ../sass/global/_goc-navigation.scss */
+#footer .pane-system-main-menu {
+  margin: 20px 0; }
+/* line 61, ../sass/global/_goc-navigation.scss */
+#footer .menu {
+  font-family: 'Droid Sans', sans-serif;
+  overflow: hidden;
+  text-align: center; }
+  /* line 66, ../sass/global/_goc-navigation.scss */
+  #footer .menu li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+    vertical-align: top; }
+    /* line 73, ../sass/global/_goc-navigation.scss */
+    #footer .menu li li {
+      display: block;
+      margin: 0; }
+      /* line 76, ../sass/global/_goc-navigation.scss */
+      #footer .menu li li a {
+        font-weight: 300; }
+  /* line 82, ../sass/global/_goc-navigation.scss */
+  #footer .menu a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none; }
+    /* line 87, ../sass/global/_goc-navigation.scss */
+    #footer .menu a:hover {
+      text-decoration: underline; }
+
+/* line 3, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .views-row {
+  background: #af1028;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  position: relative; }
+/* line 10, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .layer {
+  bottom: 17px;
+  left: 10px;
+  position: absolute; }
+/* line 16, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .kicker {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 12px;
+  line-height: 19px;
+  background: #cccccc;
+  display: inline-block;
+  color: #444444;
+  padding: 2px; }
+/* line 24, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .headline a {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  background: #af1028;
+  color: #FFF;
+  padding: 5px;
+  text-decoration: none; }
+/* line 32, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .category-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #fff;
+  padding: 0 5px; }
+  /* line 39, ../sass/teaser/_goc-big.scss */
+  .big-teaser-group .category-label a {
+    color: #444444;
+    font-family: 'Droid serif', serif;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: none; }
+/* line 53, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .no-img .category-label,
+.big-teaser-group .no-img .layer {
+  position: static; }
+/* line 57, ../sass/teaser/_goc-big.scss */
+.big-teaser-group .no-img .headline {
+  background: #af1028;
+  padding: 5px; }
+  /* line 61, ../sass/teaser/_goc-big.scss */
+  .big-teaser-group .no-img .headline a {
+    padding: 0; }
+
+/* line 53, ../sass/_goc-base.scss */
+.small-teaser-group .headline,
+.small-teaser-group .kicker {
+  font-family: 'Droid Sans', sans-serif; }
+/* line 55, ../sass/_goc-base.scss */
+.small-teaser-group .headline {
+  font-size: 18px;
+  line-height: 25px; }
+/* line 57, ../sass/_goc-base.scss */
+.small-teaser-group .kicker {
+  font-size: 15px;
+  line-height: 22px; }
+/* line 63, ../sass/_goc-base.scss */
+.small-teaser-group .headline a {
+  color: #af1028;
+  text-decoration: none; }
+  /* line 66, ../sass/_goc-base.scss */
+  .small-teaser-group .headline a:hover {
+    text-decoration: underline; }
+/* line 72, ../sass/_goc-base.scss */
+.small-teaser-group .kicker {
+  color: #444444; }
+/* line 4, ../sass/teaser/_goc-small.scss */
+.small-teaser-group .views-row {
+  border-bottom: 1px dotted #cccccc;
+  padding: 7px 0;
+  position: relative; }
+/* line 10, ../sass/teaser/_goc-small.scss */
+.small-teaser-group .category-label {
+  background: #FFF;
+  left: 10px;
+  padding: 0 5px;
+  position: absolute;
+  top: 10px; }
+  /* line 17, ../sass/teaser/_goc-small.scss */
+  .small-teaser-group .category-label a {
+    font-family: 'Droid serif', serif;
+    color: #444444;
+    font-size: 10px;
+    font-weight: 700;
+    text-decoration: none; }
+/* line 26, ../sass/teaser/_goc-small.scss */
+.small-teaser-group span a {
+  color: #af1028;
+  text-decoration: none; }
+/* line 31, ../sass/teaser/_goc-small.scss */
+.small-teaser-group .no-img .category-label {
+  position: static; }
+
+/* line 2, ../sass/teaser/_goc-line.scss */
+.line-teaser-group .views-row {
+  background: #cccccc;
+  margin-bottom: 7px;
+  padding: 6px 11px; }
+  /* line 6, ../sass/teaser/_goc-line.scss */
+  .line-teaser-group .views-row a {
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: 700;
+    color: #af1028;
+    float: left;
+    text-decoration: none; }
+  /* line 11, ../sass/teaser/_goc-line.scss */
+  .line-teaser-group .views-row .created {
+    color: white;
+    float: right; }
+
+/* line 3, ../sass/node/_goc-fieldslideshow.scss */
+.node-type-article .pane-page-content {
+  position: relative; }
+/* line 6, ../sass/node/_goc-fieldslideshow.scss */
+.node-type-article .field-slideshow-wrapper {
+  background: url(../images/bg-image-carousel-article.png) no-repeat left bottom;
+  left: -35px;
+  padding-bottom: 30px;
+  position: relative;
+  width: 665px; }
+/* line 14, ../sass/node/_goc-fieldslideshow.scss */
+.node-type-article .field-slideshow {
+  background: #000;
+  color: #FFF; }
+/* line 19, ../sass/node/_goc-fieldslideshow.scss */
+.node-type-article .field-slideshow-slide {
+  height: 400px; }
+/* line 23, ../sass/node/_goc-fieldslideshow.scss */
+.node-type-article .field-slideshow-controls {
+  background: url(../images/bg-field-slideshow-controls.png) repeat-y right top;
+  bottom: 30px;
+  height: 55px;
+  padding-right: 150px;
+  position: absolute;
+  z-index: 100; }
+  /* line 32, ../sass/node/_goc-fieldslideshow.scss */
+  .node-type-article .field-slideshow-controls .prev,
+  .node-type-article .field-slideshow-controls .next {
+    display: inline-block;
+    height: 15px;
+    margin-top: 20px;
+    text-indent: -999em;
+    width: 15px; }
+  /* line 40, ../sass/node/_goc-fieldslideshow.scss */
+  .node-type-article .field-slideshow-controls .prev {
+    background: url('../images/fixed-s7f1337badd.png') 0 -185px no-repeat;
+    margin-left: 26px;
+    margin-right: 16px; }
+  /* line 45, ../sass/node/_goc-fieldslideshow.scss */
+  .node-type-article .field-slideshow-controls .next {
+    background: url('../images/fixed-s7f1337badd.png') 0 -140px no-repeat; }
+/* line 50, ../sass/node/_goc-fieldslideshow.scss */
+.node-type-article .field-slideshow-image-informations {
+  font-family: 'Droid serif', serif;
+  font-size: 12px;
+  line-height: 19px;
+  display: block;
+  padding-left: 180px;
+  padding-top: 10px; }
+
+/* line 2, ../sass/node/_goc-node.scss */
+.pane-node-header {
+  background: #af1028;
+  color: #FFF;
+  height: 39px;
+  left: 200px;
+  padding: 6px;
+  position: relative;
+  top: 26px;
+  width: 418px;
+  z-index: 100; }
+  /* line 13, ../sass/node/_goc-node.scss */
+  .pane-node-header h1 {
+    font-size: 18px;
+    line-height: 25px; }
+
+/* line 19, ../sass/node/_goc-node.scss */
+.no-img .pane-node-header {
+  background: none;
+  color: #444444;
+  height: auto;
+  margin-bottom: 1em;
+  padding: 0;
+  top: 0; }
+
+/* line 32, ../sass/node/_goc-node.scss */
+.pane-node-field-pro,
+.pane-node-field-contra,
+.pane-node-field-result,
+.pane-node-field-media-documents {
+  font-family: 'Droid serif', serif;
+  background: #af1028;
+  color: #FFF;
+  margin-bottom: 7px;
+  margin-top: 7px;
+  padding: 7px; }
+  /* line 40, ../sass/node/_goc-node.scss */
+  .pane-node-field-pro a,
+  .pane-node-field-contra a,
+  .pane-node-field-result a,
+  .pane-node-field-media-documents a {
+    color: #FFF; }
+  /* line 42, ../sass/node/_goc-node.scss */
+  .pane-node-field-pro .pane-title,
+  .pane-node-field-contra .pane-title,
+  .pane-node-field-result .pane-title,
+  .pane-node-field-media-documents .pane-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px; }
+
+/* line 48, ../sass/node/_goc-node.scss */
+.pane-node-field-media-documents .field-collection-documents-item {
+  padding-bottom: 40px;
+  position: relative; }
+  /* line 52, ../sass/node/_goc-node.scss */
+  .pane-node-field-media-documents .field-collection-documents-item .documents-download-button {
+    background: url('../images/fixed-s7f1337badd.png') 0 -70px no-repeat;
+    bottom: 0;
+    display: block;
+    height: 40px;
+    position: absolute;
+    right: 0;
+    width: 40px; }
+    /* line 16, ../sass/_goc-base.scss */
+    .pane-node-field-media-documents .field-collection-documents-item .documents-download-button:hover {
+      background-position: 0 0; }
+
+/* line 67, ../sass/node/_goc-node.scss */
+#mini-panel-node_header h1 {
+  font-size: 18px;
+  line-height: 25px; }
+
+/* line 72, ../sass/node/_goc-node.scss */
+.node-view .pane-node-field-cover {
+  text-align: center; }
+/* line 76, ../sass/node/_goc-node.scss */
+.node-view p {
+  margin-bottom: 1em; }
