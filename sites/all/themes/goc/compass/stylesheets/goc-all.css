@@ -10,16 +10,28 @@ body {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-  width: 960px; }
-  /* line 11, ../sass/global/_goc-site.scss */
+  position: relative;
+  width: 960px;
+  z-index: 1000; }
+  /* line 14, ../sass/global/_goc-site.scss */
   #header .pane-page-logo {
     text-align: right; }
 
-/* line 16, ../sass/global/_goc-site.scss */
+/* line 19, ../sass/global/_goc-site.scss */
+.hide-overflow-content {
+  background: #444444;
+  height: 60px;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 800; }
+
+/* line 29, ../sass/global/_goc-site.scss */
 #site {
   background: #FFF; }
 
-/* line 20, ../sass/global/_goc-site.scss */
+/* line 33, ../sass/global/_goc-site.scss */
 #footer {
   background: #af1028; }
 
