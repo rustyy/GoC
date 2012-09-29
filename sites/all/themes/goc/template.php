@@ -26,7 +26,6 @@ function goc_preprocess_panels_pane(&$vars) {
         $vars['classes_array'][] = 'no-img';
       }
       if ($vars['pane']->subtype === 'node_header') {
-        dpm($vars);
         $vars['classes_array'][] = 'grid-12';
         $vars['classes_array'][] = 'push-4';
         $vars['classes_array'][] = 'alpha omega';
