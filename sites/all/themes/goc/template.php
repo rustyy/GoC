@@ -158,3 +158,17 @@ function _helper_extend_teaser_css_classes($classes_array, $further_classes, $vi
   }
   return $classes_array;
 }
+
+function goc_preprocess_entity(&$variables) {
+
+
+  if (!empty($variables['field_fc_document'])) {
+    //dpm($variables);
+    $uri = $variables['field_fc_document'][0]['uri'];
+    $url = file_create_url($uri);
+
+    $variables['link_to_file'] = $url;
+    //dpm($url);
+  }
+
+}
