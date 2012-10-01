@@ -1,6 +1,6 @@
 #navigation {
-  background: #FFF image-url('bg-nav.png') repeat-x left top;
   @include fontstyle(sans-serif, $weight: 700);
+  background: #FFF image-url('bg-nav.png') repeat-x left top;
 
   li {
     list-style: none;
@@ -10,28 +10,36 @@
     float: left;
   }
 
+  // Maincategories.
   .menu {
     position: relative;
     height: 60px;
+
     a {
+      color: #FFF;
       display: block;
       float: left;
-      height: 38px;
-      color: #FFF;
-      padding: 0 15px;
+      height: 33px;
       margin: 0 5px;
+      padding: 5px 15px 0 15px;
+      text-decoration: none;
+
+      // Active / hover-state
       &:hover,
+      &.active,
       &.active-trail {
         background: image-url('bg-nav-btn.png') no-repeat center top;
       }
     }
   }
+
+  // Subcategories
   .menu .menu {
     display: none;
     position: absolute;
     bottom: 0;
     height: auto;
-    
+
     li {
       display: inline;
       float: none;
@@ -42,8 +50,13 @@
       background: none;
       color: #000;
       float: none;
-      padding: 0;
+      padding: 0 10px;
       margin: 0;
+
+      &:hover,
+      &.active {
+        text-decoration: underline;
+      }
     }
 
   }

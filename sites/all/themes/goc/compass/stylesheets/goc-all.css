@@ -29,17 +29,18 @@ body {
 
 /* line 29, ../sass/global/_goc-site.scss */
 #site {
-  background: #FFF; }
+  background: #FFF;
+  padding-top: 20px; }
 
-/* line 33, ../sass/global/_goc-site.scss */
+/* line 34, ../sass/global/_goc-site.scss */
 #footer {
   background: #af1028; }
 
 /* line 1, ../sass/global/_goc-navigation.scss */
 #navigation {
-  background: white url('../images/bg-nav.png?1348728600') repeat-x left top;
   font-family: 'Droid Sans', sans-serif;
-  font-weight: 700; }
+  font-weight: 700;
+  background: white url('../images/bg-nav.png?1348649743') repeat-x left top; }
   /* line 5, ../sass/global/_goc-navigation.scss */
   #navigation li {
     list-style: none;
@@ -47,71 +48,75 @@ body {
     padding: 0;
     display: block;
     float: left; }
-  /* line 13, ../sass/global/_goc-navigation.scss */
+  /* line 14, ../sass/global/_goc-navigation.scss */
   #navigation .menu {
     position: relative;
     height: 60px; }
-    /* line 16, ../sass/global/_goc-navigation.scss */
+    /* line 18, ../sass/global/_goc-navigation.scss */
     #navigation .menu a {
+      color: #FFF;
       display: block;
       float: left;
-      height: 38px;
-      color: #FFF;
-      padding: 0 15px;
-      margin: 0 5px; }
-      /* line 24, ../sass/global/_goc-navigation.scss */
-      #navigation .menu a:hover, #navigation .menu a.active-trail {
-        background: url('../images/bg-nav-btn.png?1348728600') no-repeat center top; }
-  /* line 29, ../sass/global/_goc-navigation.scss */
+      height: 33px;
+      margin: 0 5px;
+      padding: 5px 15px 0 15px;
+      text-decoration: none; }
+      /* line 30, ../sass/global/_goc-navigation.scss */
+      #navigation .menu a:hover, #navigation .menu a.active, #navigation .menu a.active-trail {
+        background: url('../images/bg-nav-btn.png?1348649743') no-repeat center top; }
+  /* line 37, ../sass/global/_goc-navigation.scss */
   #navigation .menu .menu {
     display: none;
     position: absolute;
     bottom: 0;
     height: auto; }
-    /* line 35, ../sass/global/_goc-navigation.scss */
+    /* line 43, ../sass/global/_goc-navigation.scss */
     #navigation .menu .menu li {
       display: inline;
       float: none; }
-    /* line 40, ../sass/global/_goc-navigation.scss */
+    /* line 48, ../sass/global/_goc-navigation.scss */
     #navigation .menu .menu a {
       display: inline;
       background: none;
       color: #000;
       float: none;
-      padding: 0;
+      padding: 0 10px;
       margin: 0; }
-  /* line 51, ../sass/global/_goc-navigation.scss */
+      /* line 57, ../sass/global/_goc-navigation.scss */
+      #navigation .menu .menu a:hover, #navigation .menu .menu a.active {
+        text-decoration: underline; }
+  /* line 64, ../sass/global/_goc-navigation.scss */
   #navigation .active-trail .menu {
     display: block; }
 
-/* line 58, ../sass/global/_goc-navigation.scss */
+/* line 71, ../sass/global/_goc-navigation.scss */
 #footer .pane-system-main-menu {
   margin: 20px 0; }
-/* line 61, ../sass/global/_goc-navigation.scss */
+/* line 74, ../sass/global/_goc-navigation.scss */
 #footer .menu {
   font-family: 'Droid Sans', sans-serif;
   overflow: hidden;
   text-align: center; }
-  /* line 66, ../sass/global/_goc-navigation.scss */
+  /* line 79, ../sass/global/_goc-navigation.scss */
   #footer .menu li {
     display: inline-block;
     list-style: none;
     margin: 0 20px;
     padding: 0;
     vertical-align: top; }
-    /* line 73, ../sass/global/_goc-navigation.scss */
+    /* line 86, ../sass/global/_goc-navigation.scss */
     #footer .menu li li {
       display: block;
       margin: 0; }
-      /* line 76, ../sass/global/_goc-navigation.scss */
+      /* line 89, ../sass/global/_goc-navigation.scss */
       #footer .menu li li a {
         font-weight: 300; }
-  /* line 82, ../sass/global/_goc-navigation.scss */
+  /* line 95, ../sass/global/_goc-navigation.scss */
   #footer .menu a {
     color: #fff;
     font-weight: 700;
     text-decoration: none; }
-    /* line 87, ../sass/global/_goc-navigation.scss */
+    /* line 100, ../sass/global/_goc-navigation.scss */
     #footer .menu a:hover {
       text-decoration: underline; }
 
