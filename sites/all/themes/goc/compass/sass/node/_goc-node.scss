@@ -76,5 +76,11 @@
   p {
     margin-bottom: 1em;
   }
+}
 
+// Related content.
+.pane-node-view-small-teaser-related-content {
+  .pane-title {
+    @include fontstyle($size: large);
+  }
 }

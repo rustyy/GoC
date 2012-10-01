@@ -2,7 +2,11 @@
   .views-row {
     background: $grey;
     margin-bottom: 7px;
-    padding: 6px 11px;
+
+    .inner {
+      padding: 6px 11px;
+    }
+
     a {
       @include fontstyle(sans-serif, $weight: 700, $color: $red);
       float: left;

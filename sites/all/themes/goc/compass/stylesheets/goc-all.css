@@ -41,6 +41,11 @@ body {
 #footer {
   background: #af1028; }
 
+/* line 43, ../sass/global/_goc-site.scss */
+.panel-separator {
+  clear: both;
+  height: 10px; }
+
 /* line 1, ../sass/global/_goc-navigation.scss */
 #navigation {
   font-family: 'Droid Sans', sans-serif;
@@ -233,16 +238,18 @@ body {
 /* line 2, ../sass/teaser/_goc-line.scss */
 .line-teaser-group .views-row {
   background: #cccccc;
-  margin-bottom: 7px;
-  padding: 6px 11px; }
+  margin-bottom: 7px; }
   /* line 6, ../sass/teaser/_goc-line.scss */
+  .line-teaser-group .views-row .inner {
+    padding: 6px 11px; }
+  /* line 10, ../sass/teaser/_goc-line.scss */
   .line-teaser-group .views-row a {
     font-family: 'Droid Sans', sans-serif;
     font-weight: 700;
     color: #af1028;
     float: left;
     text-decoration: none; }
-  /* line 11, ../sass/teaser/_goc-line.scss */
+  /* line 15, ../sass/teaser/_goc-line.scss */
   .line-teaser-group .views-row .created {
     color: white;
     float: right; }
@@ -376,3 +383,8 @@ body {
 /* line 76, ../sass/node/_goc-node.scss */
 .node-view p {
   margin-bottom: 1em; }
+
+/* line 83, ../sass/node/_goc-node.scss */
+.pane-node-view-small-teaser-related-content .pane-title {
+  font-size: 18px;
+  line-height: 25px; }

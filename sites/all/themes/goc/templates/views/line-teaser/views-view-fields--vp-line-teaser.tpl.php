@@ -23,6 +23,7 @@
  * @ingroup views_templates
  */
 ?>
-
-<?php print $fields['title']->content; ?>
-<span class="created"><?php print $fields['created']->content; ?></span>
+<div class="inner clearfix">
+  <?php print $fields['title']->content; ?>
+    <span class="created"><?php print $fields['created']->content; ?></span>
+</div>

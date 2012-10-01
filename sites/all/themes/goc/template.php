@@ -72,7 +72,7 @@ function goc_preprocess_views_view_unformatted(&$vars) {
   }
   // Add grid classes to other teaser variants.
   if ($display === 'vp_small_teaser' || $display === 'vp_small_teaser_home' || $display === 'vp_line_teaser' || $display === 'vp_line_teaser_home' || $display === 'small_teaser_related_content' || $display === 'line_teaser_related_content') {
-    $vars['classes_array'] = _helper_extend_teaser_css_classes($classes, array('alpha grid-16'), $vars['view'], TRUE);
+    $vars['classes_array'] = _helper_extend_teaser_css_classes($classes, array('alpha omega grid-16'), $vars['view'], TRUE);
   }
 }
 
