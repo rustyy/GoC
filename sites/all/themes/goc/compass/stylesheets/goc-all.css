@@ -18,6 +18,11 @@ body {
     text-align: right; }
 
 /* line 19, ../sass/global/_goc-site.scss */
+#logo img {
+  height: 120px;
+  width: 193px; }
+
+/* line 24, ../sass/global/_goc-site.scss */
 .hide-overflow-content {
   background: #444444;
   height: 60px;
@@ -27,12 +32,12 @@ body {
   top: 0;
   z-index: 800; }
 
-/* line 29, ../sass/global/_goc-site.scss */
+/* line 34, ../sass/global/_goc-site.scss */
 #site {
   background: #FFF;
   padding-top: 20px; }
 
-/* line 34, ../sass/global/_goc-site.scss */
+/* line 39, ../sass/global/_goc-site.scss */
 #footer {
   background: #af1028; }
 
