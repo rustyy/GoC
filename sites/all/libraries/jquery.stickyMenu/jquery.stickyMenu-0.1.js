@@ -8,72 +8,74 @@
  * http://www.gnu.org/licenses/gpl.html
  *
  * Version: 0.1
- * 
- * 
+ *
+ *
  */
 
 ;
-(function($) {
-  jQuery.fn.stickyMenu = function(arg) {
-    var o = $.extend({},$.fn.stickyMenu.defaults,arg);
-    
-    return this.each(function() {
+(function ($) {
+    jQuery.fn.stickyMenu = function (arg) {
+        var o = $.extend({}, $.fn.stickyMenu.defaults, arg);
 
-      var stickyMenu = $(this);
-      var stickyMenuCSS = {};
-      var stickyMenuOffset;
-      // Wait until all images are loaded,
-      // otherwise we get some strange behaviour on webkit-browsers.
-      $(window).load(function() {
-        stickyMenuOffset= stickyMenu.offset()
-      });
+        return this.each(function () {
+            var menu = $(this);
+            var baseCSS = {};
+            var menuOffset;
 
-      stickyMenuCSS.height = stickyMenu.height();
-      stickyMenuCSS.width = stickyMenu.width();
-      stickyMenu.css(stickyMenuCSS);
-      stickyMenu.wrap('<div class="sticky-menu-wrapper" />');
+            // Add some CSS for menu-wrapper.
+            $.extend(baseCSS, {'height':menu.height() + 'px'});
+            $.extend(baseCSS, {'width':menu.width() + 'px'});
 
-console.log(stickyMenu.find('.sticky-menu-shadow'));
+            // Wrap the menu to deal with scrolling later on.
+            menu.wrap('<div class="sticky-menu-wrapper" />');
+            var wrapper = menu.parent('.sticky-menu-wrapper');
 
+            // Add basic css defintions to menu and its wrapper.
+            wrapper.css(baseCSS);
+            menu.css(baseCSS);
 
-      $(document).scroll(function(){
-        var docScrollTop = $(this).scrollTop();
-        
-        //console.log(stickyMenuOffset.top);
-        if (docScrollTop >= stickyMenuOffset.top) {
-          $('.sticky-menu-wrapper').css({
-            'width' : stickyMenuCSS.width + 'px',
-            'height' : stickyMenuCSS.height + 'px',
-            'overflow' : 'hidden'
-          });
-          stickyMenu.css({
-            'width' : stickyMenuCSS.width + 'px',
-            'height' : stickyMenuCSS.height + 'px',
-            'position' : 'fixed',
-            'top' : 0,
-            'z-index' : 1000,
-            'overflow' : 'hidden'
-          });
-          
-          
-          
-            stickyMenu.append('<div class="sticky-menu-shadow" style="background: url(shadow.png) repeat-x left top; height: 10px"></div>');
-          
-          
-          
-          
-        }
-        else {
-          stickyMenu.attr('style', '');
-          stickyMenu.find('.sticky-menu-shadow').remove('sticky-menu-shadow');
-        }
-      });
+            // Get the offset of the menu to the top of the page.
+            var offset = wrapper.offset();
 
-    });
-    
-  };
+            // Add Dropshadow if set.
+            if (o.shadow) {
+                var shadowCSS = {
+                    'background':'#000',
+                    'height':'5px',
+                    'position':'fixed',
+                    'top':baseCSS.height,
+                    'width':baseCSS.width
+                }
 
-  $.fn.stickyMenu.defaults = {
-    shadow : true
-  };
+                menu.after('<div class="sticky-menu-shadow" />');
+                var shadow = menu.parent().find('.sticky-menu-shadow');
+                shadow.css(shadowCSS);
+                shadow.hide();
+            }
+            // If document is scrolled.
+            $(document).scroll(function () {
+                var document = $(this);
+                // If document is is scrolled more than the menus offset, we need to set it fixed.
+                if (document.scrollTop() >= offset.top) {
+                    menu.css($.extend({}, baseCSS, {'position':'fixed', 'z-index':'1000', 'top':'0'}));
+                    // Show shadow if set in options.
+                    if (o.shadow) {
+                        shadow.show();
+                    }
+                }
+                // Otherwise, reset style-attribute, because menu is already visible.
+                else {
+                    menu.attr({'style':''});
+                    // Hide shadow, if set in options.
+                    if (o.shadow) {
+                        shadow.hide();
+                    }
+                }
+            });
+        });
+    };
+
+    $.fn.stickyMenu.defaults = {
+        shadow:true
+    };
 })(jQuery);
