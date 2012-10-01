@@ -145,32 +145,6 @@ body {
     #footer .menu a:hover {
       text-decoration: underline; }
 
-/* line 1, ../sass/global/_goc-most-read-article.scss */
-.pane-homepage-vp-most-read-articles {
-  font-family: 'Droid Sans', sans-serif;
-  border: 1px solid #af1028;
-  text-transform: uppercase; }
-  /* line 7, ../sass/global/_goc-most-read-article.scss */
-  .pane-homepage-vp-most-read-articles .pane-title {
-    font-size: 20px;
-    line-height: 27px;
-    color: white;
-    background: #af1028;
-    padding-left: 6px; }
-  /* line 14, ../sass/global/_goc-most-read-article.scss */
-  .pane-homepage-vp-most-read-articles .pane-content {
-    padding: 5px 7px; }
-    /* line 17, ../sass/global/_goc-most-read-article.scss */
-    .pane-homepage-vp-most-read-articles .pane-content a {
-      font-weight: 700;
-      font-size: 12px;
-      line-height: 19px;
-      color: #af1028;
-      text-decoration: none; }
-    /* line 23, ../sass/global/_goc-most-read-article.scss */
-    .pane-homepage-vp-most-read-articles .pane-content a:hover {
-      text-decoration: underline; }
-
 /* line 3, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .views-row {
   background: #af1028;
