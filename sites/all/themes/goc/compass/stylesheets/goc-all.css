@@ -12,7 +12,7 @@ body {
   margin-right: auto;
   position: relative;
   width: 960px;
-  z-index: 1000; }
+  z-index: 400; }
   /* line 14, ../sass/global/_goc-site.scss */
   #header .pane-page-logo {
     text-align: right; }
