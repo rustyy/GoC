@@ -37,11 +37,24 @@ body {
   background: #FFF;
   padding-top: 20px; }
 
-/* line 39, ../sass/global/_goc-site.scss */
+/* line 43, ../sass/global/_goc-site.scss */
+#sidebar .pane-search-form .form-text {
+  border: 1px solid #af1028;
+  height: 21px;
+  width: 261px; }
+/* line 49, ../sass/global/_goc-site.scss */
+#sidebar .pane-search-form .form-submit {
+  background: url('../images/fixed-s729144ce37.png') 0 0 no-repeat;
+  border: none;
+  height: 25px;
+  text-indent: -999em;
+  width: 40px; }
+
+/* line 60, ../sass/global/_goc-site.scss */
 #footer {
   background: #af1028; }
 
-/* line 43, ../sass/global/_goc-site.scss */
+/* line 64, ../sass/global/_goc-site.scss */
 .panel-separator {
   clear: both;
   height: 10px; }
@@ -315,12 +328,12 @@ body {
     width: 15px; }
   /* line 40, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .prev {
-    background: url('../images/fixed-s7f1337badd.png') 0 -185px no-repeat;
+    background: url('../images/fixed-s729144ce37.png') 0 -240px no-repeat;
     margin-left: 26px;
     margin-right: 16px; }
   /* line 45, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .next {
-    background: url('../images/fixed-s7f1337badd.png') 0 -140px no-repeat; }
+    background: url('../images/fixed-s729144ce37.png') 0 -195px no-repeat; }
 /* line 50, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-image-informations {
   font-family: 'Droid serif', serif;
@@ -387,7 +400,7 @@ body {
   position: relative; }
   /* line 52, ../sass/node/_goc-node.scss */
   .pane-node-field-media-documents .field-collection-documents-item .documents-download-button {
-    background: url('../images/fixed-s7f1337badd.png') 0 -70px no-repeat;
+    background: url('../images/fixed-s729144ce37.png') 0 -125px no-repeat;
     bottom: 0;
     display: block;
     height: 40px;
@@ -396,7 +409,7 @@ body {
     width: 40px; }
     /* line 14, ../sass/_goc-base.scss */
     .pane-node-field-media-documents .field-collection-documents-item .documents-download-button:hover {
-      background-position: 0 0; }
+      background-position: 0 -55px; }
 
 /* line 67, ../sass/node/_goc-node.scss */
 #mini-panel-node_header h1 {

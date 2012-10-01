@@ -36,6 +36,27 @@ body {
   padding-top: 20px;
 }
 
+#sidebar {
+
+  .pane-search-form {
+
+    .form-text {
+      border: 1px solid $red;
+      height: 21px;
+      width: 261px;
+    }
+
+    .form-submit {
+      @include sprite-icons($icon: search-button);
+
+      border: none;
+      height: 25px;
+      text-indent: -999em;
+      width: 40px;
+    }
+  }
+}
+
 #footer {
   background: $red;
 }
