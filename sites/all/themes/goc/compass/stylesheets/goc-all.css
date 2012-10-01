@@ -153,20 +153,20 @@ body {
 /* line 24, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .headline a {
   font-family: 'Droid Sans', sans-serif;
-  font-size: 18px;
-  line-height: 25px;
+  font-size: 20px;
   background: #af1028;
   color: #FFF;
+  line-height: 36px;
   padding: 5px;
   text-decoration: none; }
-/* line 32, ../sass/teaser/_goc-big.scss */
+/* line 33, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .category-label {
   position: absolute;
   top: 10px;
   left: 10px;
   background: #fff;
   padding: 0 5px; }
-  /* line 39, ../sass/teaser/_goc-big.scss */
+  /* line 40, ../sass/teaser/_goc-big.scss */
   .big-teaser-group .category-label a {
     color: #444444;
     font-family: 'Droid serif', serif;
@@ -174,38 +174,38 @@ body {
     font-size: 10px;
     font-weight: bold;
     text-decoration: none; }
-/* line 53, ../sass/teaser/_goc-big.scss */
+/* line 54, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .no-img .category-label,
 .big-teaser-group .no-img .layer {
   position: static; }
-/* line 57, ../sass/teaser/_goc-big.scss */
+/* line 58, ../sass/teaser/_goc-big.scss */
 .big-teaser-group .no-img .headline {
   background: #af1028;
   padding: 5px; }
-  /* line 61, ../sass/teaser/_goc-big.scss */
+  /* line 62, ../sass/teaser/_goc-big.scss */
   .big-teaser-group .no-img .headline a {
     padding: 0; }
 
-/* line 53, ../sass/_goc-base.scss */
+/* line 62, ../sass/_goc-base.scss */
 .small-teaser-group .headline,
 .small-teaser-group .kicker {
   font-family: 'Droid Sans', sans-serif; }
-/* line 55, ../sass/_goc-base.scss */
+/* line 66, ../sass/_goc-base.scss */
 .small-teaser-group .headline {
-  font-size: 18px;
-  line-height: 25px; }
-/* line 57, ../sass/_goc-base.scss */
+  font-size: 20px;
+  line-height: 27px; }
+/* line 70, ../sass/_goc-base.scss */
 .small-teaser-group .kicker {
   font-size: 15px;
   line-height: 22px; }
-/* line 63, ../sass/_goc-base.scss */
+/* line 77, ../sass/_goc-base.scss */
 .small-teaser-group .headline a {
   color: #af1028;
   text-decoration: none; }
-  /* line 66, ../sass/_goc-base.scss */
+  /* line 80, ../sass/_goc-base.scss */
   .small-teaser-group .headline a:hover {
     text-decoration: underline; }
-/* line 72, ../sass/_goc-base.scss */
+/* line 85, ../sass/_goc-base.scss */
 .small-teaser-group .kicker {
   color: #444444; }
 /* line 4, ../sass/teaser/_goc-small.scss */
@@ -317,8 +317,8 @@ body {
   z-index: 100; }
   /* line 13, ../sass/node/_goc-node.scss */
   .pane-node-header h1 {
-    font-size: 18px;
-    line-height: 25px; }
+    font-size: 20px;
+    line-height: 27px; }
 
 /* line 19, ../sass/node/_goc-node.scss */
 .no-img .pane-node-header {
@@ -352,8 +352,8 @@ body {
   .pane-node-field-result .pane-title,
   .pane-node-field-media-documents .pane-title {
     font-weight: 700;
-    font-size: 18px;
-    line-height: 25px; }
+    font-size: 20px;
+    line-height: 27px; }
 
 /* line 48, ../sass/node/_goc-node.scss */
 .pane-node-field-media-documents .field-collection-documents-item {
@@ -368,14 +368,14 @@ body {
     position: absolute;
     right: 0;
     width: 40px; }
-    /* line 16, ../sass/_goc-base.scss */
+    /* line 14, ../sass/_goc-base.scss */
     .pane-node-field-media-documents .field-collection-documents-item .documents-download-button:hover {
       background-position: 0 0; }
 
 /* line 67, ../sass/node/_goc-node.scss */
 #mini-panel-node_header h1 {
-  font-size: 18px;
-  line-height: 25px; }
+  font-size: 20px;
+  line-height: 27px; }
 
 /* line 72, ../sass/node/_goc-node.scss */
 .node-view .pane-node-field-cover {
@@ -386,5 +386,5 @@ body {
 
 /* line 83, ../sass/node/_goc-node.scss */
 .pane-node-view-small-teaser-related-content .pane-title {
-  font-size: 18px;
-  line-height: 25px; }
+  font-size: 20px;
+  line-height: 27px; }

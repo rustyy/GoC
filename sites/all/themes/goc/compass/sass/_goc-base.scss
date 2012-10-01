@@ -1,9 +1,7 @@
-
 // GoC color defintions.
 $red: #af1028;
 $grey: #ccc;
 $grey-dark: #444;
-
 
 ////
 // sprites for fixed elements
@@ -20,57 +18,72 @@ $icons: sprite-map("fixed/*.png", $spacing: 30px);
 }
 
 // Mixin to set different fontstyles.
-@mixin fontstyle($font: false, $size: false, $weight: false, $color: false) {
+@mixin fontstyle($font: false, $size: false, $weight: false, $color: false, $line-height: true) {
   @if $font == sans-serif {
     font-family: 'Droid Sans', sans-serif;
   }
 
-  @if $font == serif { font-family: 'Droid serif', serif; }
+  @if $font == serif {
+    font-family: 'Droid serif', serif;
+  }
 
-  @if $weight { font-weight: $weight; }
+  @if $weight {
+    font-weight: $weight;
+  }
 
   @if $size == standard {
     font-size: 12px;
-    line-height: 19px;
+    @if $line-height {
+      line-height: 19px;
+    }
   }
 
   @if $size == medium {
     font-size: 15px;
-    line-height: 22px;
+    @if $line-height {
+      line-height: 22px;
+    }
   }
 
   @if $size == large {
-    font-size: 18px;
-    line-height: 25px;
+    font-size: 20px;
+    @if $line-height {
+      line-height: 27px;
+    }
   }
 
-  @if $color { color: $color; }
+  @if $color {
+    color: $color;
+  }
 }
 
 @mixin headlines($selector-headline: ".headline", $selector-kicker: ".kicker", $size-headline: large, $size-kicker: medium, $background: false) {
-
   #{$selector-headline},
-  #{$selector-kicker} { @include fontstyle(sans-serif); }
+  #{$selector-kicker} {
+    @include fontstyle(sans-serif);
+  }
 
-  #{$selector-headline} { @include fontstyle($size: $size-headline); }
+  #{$selector-headline} {
+    @include fontstyle($size: $size-headline);
+  }
 
-  #{$selector-kicker} { @include fontstyle($size: $size-kicker); }
+  #{$selector-kicker} {
+    @include fontstyle($size: $size-kicker);
+  }
 
   @if $background {
 
-  }
-  @else {
+  } @else {
     #{$selector-headline} a {
       color: $red;
       text-decoration: none;
       &:hover {
         text-decoration: underline;
       }
-
     }
 
-    #{$selector-kicker} { color: $grey-dark; }
+    #{$selector-kicker} {
+      color: $grey-dark;
+    }
   }
-
-
 }

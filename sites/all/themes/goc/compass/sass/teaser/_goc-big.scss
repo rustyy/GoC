@@ -22,9 +22,10 @@
   }
 
   .headline a {
-    @include fontstyle(sans-serif, large);
+    @include fontstyle(sans-serif, large, $line-height: false);
     background: $red;
     color: #FFF;
+    line-height: 36px;
     padding: 5px;
     text-decoration: none;
   }
