@@ -54,7 +54,7 @@
                 var document = $(this);
                 // If document is is scrolled more than the menus offset, we need to set it fixed.
                 if (document.scrollTop() >= offset.top) {
-                    menu.css($.extend({}, baseCSS, {'position':'fixed', 'z-index':'1000', 'top':'0'}));
+                    menu.css($.extend({}, baseCSS, {'position':'fixed', 'z-index':'400', 'top':'0'}));
                     // Show shadow if set in options.
                     if (o.shadow) {
                         shadow.show();

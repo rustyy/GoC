@@ -12,7 +12,7 @@ body {
   margin-right: auto;
   position: relative;
   width: 960px;
-  z-index: 1000; }
+  z-index: 400; }
   /* line 14, ../sass/global/_goc-site.scss */
   #header .pane-page-logo {
     text-align: right; }
@@ -30,7 +30,7 @@ body {
   position: fixed;
   right: 0;
   top: 0;
-  z-index: 800; }
+  z-index: 300; }
 
 /* line 34, ../sass/global/_goc-site.scss */
 #site {
@@ -386,5 +386,7 @@ body {
 
 /* line 83, ../sass/node/_goc-node.scss */
 .pane-node-view-small-teaser-related-content .pane-title {
+  font-family: 'Droid Sans', sans-serif;
   font-size: 20px;
-  line-height: 27px; }
+  line-height: 27px;
+  border-bottom: 1px dotted #cccccc; }
