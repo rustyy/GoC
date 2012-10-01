@@ -40,9 +40,6 @@
             // Add Dropshadow if set.
             if (o.shadow) {
                 var shadowCSS = {
-                    'background':'#000',
-                    'height':'5px',
-                    'position':'fixed',
                     'top':baseCSS.height,
                     'width':baseCSS.width
                 }

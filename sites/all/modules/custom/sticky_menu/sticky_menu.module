@@ -1,0 +1,42 @@
+<?php
+// $Id$
+
+//function sticky_menu_libraries_info() {
+//  $libraries['jquery_stickyMenu'] = array(
+//    'name' => 'Sticky Menu',
+//    'vendor url' => 'http://example.com',
+//    'download url' => 'http://example.com/download',
+//    'files' => array(
+//      // 'js' and 'css' follow the syntax of hook_library(), but file paths are
+//      // relative to the library path.
+//      'js' => array(
+//        'jquery.stickyMenu.js',
+//      ),
+//      'css' => array(
+//        'lib_style.css',
+//      ),
+//    ),
+//
+//  );
+//
+//  return $libraries;
+//}
+
+
+function sticky_menu_library() {
+  $libraries['jquery_stickyMenu'] = array(
+    'title' => 'Sticky Menu',
+    'version' => '0.1',
+    'js' => array(
+      libraries_get_path('jquery.stickyMenu') .'/jquery.stickyMenu.js' => array(),
+    ),
+    'css' => array(
+      libraries_get_path('jquery.stickyMenu') . '/stickyMenu.css' => array(),
+    ),
+  );
+  return $libraries;
+}
+
+function sticky_menu_page_alter(&$page) {
+  drupal_add_library('sticky_menu', 'jquery_stickyMenu');
+}

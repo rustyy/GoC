@@ -1,0 +1,8 @@
+;$Id$
+
+name = Sticky Menu
+description = Implements sticky_menu Library
+package = Custom
+core = 7.x
+dependencies[] = libraries
+files[] = sticky_menu.module

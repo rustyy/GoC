@@ -1,0 +1,5 @@
+.sticky-menu-shadow {
+  background: url(shadow.png) repeat-x left top;
+  height: 10px;
+  position: fixed;
+}

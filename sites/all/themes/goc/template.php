@@ -6,7 +6,6 @@
  * @param type $vars
  */
 function goc_preprocess_html(&$vars) {
-  drupal_add_js('sites/all/libraries/jquery.stickyMenu/jquery.stickyMenu-0.1.js', 'file');
   drupal_add_js('sites/all/libraries/jquery.imageAccordion/jquery.imageAccordion-0.1a.js', 'file');
   drupal_add_css('sites/all/libraries/jquery.imageAccordion/themes/standard/standard.css', 'file');
 }
