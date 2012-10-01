@@ -386,5 +386,7 @@ body {
 
 /* line 83, ../sass/node/_goc-node.scss */
 .pane-node-view-small-teaser-related-content .pane-title {
+  font-family: 'Droid Sans', sans-serif;
   font-size: 20px;
-  line-height: 27px; }
+  line-height: 27px;
+  border-bottom: 1px dotted #cccccc; }

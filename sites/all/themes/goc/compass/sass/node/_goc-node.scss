@@ -81,6 +81,7 @@
 // Related content.
 .pane-node-view-small-teaser-related-content {
   .pane-title {
-    @include fontstyle($size: large);
+    @include fontstyle(sans-serif, $size: large);
+    border-bottom: 1px dotted $grey;
   }
 }
