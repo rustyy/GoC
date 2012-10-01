@@ -41,20 +41,22 @@ body {
 #sidebar .pane-search-form .form-text {
   border: 1px solid #af1028;
   height: 21px;
+  outline: none;
   width: 261px; }
-/* line 49, ../sass/global/_goc-site.scss */
+/* line 50, ../sass/global/_goc-site.scss */
 #sidebar .pane-search-form .form-submit {
   background: url('../images/fixed-s729144ce37.png') 0 0 no-repeat;
   border: none;
+  cursor: pointer;
   height: 25px;
   text-indent: -999em;
   width: 40px; }
 
-/* line 60, ../sass/global/_goc-site.scss */
+/* line 62, ../sass/global/_goc-site.scss */
 #footer {
   background: #af1028; }
 
-/* line 64, ../sass/global/_goc-site.scss */
+/* line 66, ../sass/global/_goc-site.scss */
 .panel-separator {
   clear: both;
   height: 10px; }

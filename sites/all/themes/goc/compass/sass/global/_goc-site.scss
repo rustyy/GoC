@@ -43,6 +43,7 @@ body {
     .form-text {
       border: 1px solid $red;
       height: 21px;
+      outline: none;
       width: 261px;
     }
 
@@ -50,6 +51,7 @@ body {
       @include sprite-icons($icon: search-button);
 
       border: none;
+      cursor: pointer;
       height: 25px;
       text-indent: -999em;
       width: 40px;
