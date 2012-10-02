@@ -12,4 +12,4 @@ plugins[panels][styles] = plugins/styles
 stylesheets[all][] = 960gs/reset.css
 stylesheets[all][] = 960gs/960_24_col.css
 stylesheets[all][] = compass/stylesheets/goc-all.css
-scripts[] = compass/javascripts/goc-ck.js
+scripts[] = compass/javascripts/goc.js
