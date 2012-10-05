@@ -29,7 +29,8 @@
 .pane-node-field-pro,
 .pane-node-field-contra,
 .pane-node-field-result,
-.pane-node-field-media-documents {
+.pane-node-field-media-documents,
+.pane-node-terms {
   @include fontstyle(serif);
   background: $red;
   color: #FFF;
@@ -37,13 +38,33 @@
   margin-top: 7px;
   padding: 7px;
 
-  a { color: #FFF; }
+  a {
+    color: #FFF;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
 
   .pane-title {
     @include fontstyle($size: large, $weight: 700);
   }
 }
 
+.pane-node-terms {
+  display: inline-block;
+  li {
+    float: left;
+    margin-right: 5px;
+    a:after {
+      content: ",";
+    }
+    &.last a:after {
+      content: normal;
+
+    }
+  }
+}
 
 .pane-node-field-media-documents .field-collection-documents-item {
   padding-bottom: 40px;
@@ -61,10 +82,11 @@
   }
 }
 
-
 // Node-title and kicker.
 #mini-panel-node_header {
-  h1 { @include fontstyle($size: large); }
+  h1 {
+    @include fontstyle($size: large);
+  }
 }
 
 // Node body.

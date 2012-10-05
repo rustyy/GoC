@@ -65,7 +65,7 @@ body {
 #navigation {
   font-family: 'Droid Sans', sans-serif;
   font-weight: 700;
-  background: white url('../images/bg-nav.png?1348649743') repeat-x left top; }
+  background: white url('../images/bg-nav.png?1348728600') repeat-x left top; }
   /* line 5, ../sass/global/_goc-navigation.scss */
   #navigation li {
     list-style: none;
@@ -88,7 +88,7 @@ body {
       text-decoration: none; }
       /* line 30, ../sass/global/_goc-navigation.scss */
       #navigation .menu a:hover, #navigation .menu a.active, #navigation .menu a.active-trail {
-        background: url('../images/bg-nav-btn.png?1348649743') no-repeat center top; }
+        background: url('../images/bg-nav-btn.png?1348728600') no-repeat center top; }
   /* line 37, ../sass/global/_goc-navigation.scss */
   #navigation .menu .menu {
     display: none;
@@ -375,37 +375,62 @@ body {
   padding: 0;
   top: 0; }
 
-/* line 32, ../sass/node/_goc-node.scss */
+/* line 33, ../sass/node/_goc-node.scss */
 .pane-node-field-pro,
 .pane-node-field-contra,
 .pane-node-field-result,
-.pane-node-field-media-documents {
+.pane-node-field-media-documents,
+.pane-node-terms {
   font-family: 'Droid serif', serif;
   background: #af1028;
   color: #FFF;
   margin-bottom: 7px;
   margin-top: 7px;
   padding: 7px; }
-  /* line 40, ../sass/node/_goc-node.scss */
+  /* line 41, ../sass/node/_goc-node.scss */
   .pane-node-field-pro a,
   .pane-node-field-contra a,
   .pane-node-field-result a,
-  .pane-node-field-media-documents a {
-    color: #FFF; }
-  /* line 42, ../sass/node/_goc-node.scss */
+  .pane-node-field-media-documents a,
+  .pane-node-terms a {
+    color: #FFF;
+    text-decoration: none; }
+  /* line 45, ../sass/node/_goc-node.scss */
+  .pane-node-field-pro a:hover,
+  .pane-node-field-contra a:hover,
+  .pane-node-field-result a:hover,
+  .pane-node-field-media-documents a:hover,
+  .pane-node-terms a:hover {
+    text-decoration: underline; }
+  /* line 49, ../sass/node/_goc-node.scss */
   .pane-node-field-pro .pane-title,
   .pane-node-field-contra .pane-title,
   .pane-node-field-result .pane-title,
-  .pane-node-field-media-documents .pane-title {
+  .pane-node-field-media-documents .pane-title,
+  .pane-node-terms .pane-title {
     font-weight: 700;
     font-size: 20px;
     line-height: 27px; }
 
-/* line 48, ../sass/node/_goc-node.scss */
+/* line 54, ../sass/node/_goc-node.scss */
+.pane-node-terms {
+  display: inline-block; }
+  /* line 56, ../sass/node/_goc-node.scss */
+  .pane-node-terms li {
+    float: left;
+    margin-right: 5px; }
+    /* line 59, ../sass/node/_goc-node.scss */
+    .pane-node-terms li a:after {
+      content: ","; }
+    /* line 62, ../sass/node/_goc-node.scss */
+    .pane-node-terms li.last a:after {
+      content: normal; }
+
+/* line 69, ../sass/node/_goc-node.scss */
 .pane-node-field-media-documents .field-collection-documents-item {
   padding-bottom: 40px;
   position: relative; }
-  /* line 52, ../sass/node/_goc-node.scss */
+  /* line 73, ../sass/node/_goc-node.scss */
   .pane-node-field-media-documents .field-collection-documents-item .documents-download-button {
     background: url('../images/fixed-s729144ce37.png') 0 -125px no-repeat;
     bottom: 0;
@@ -418,19 +443,19 @@ body {
     .pane-node-field-media-documents .field-collection-documents-item .documents-download-button:hover {
       background-position: 0 -55px; }
 
-/* line 67, ../sass/node/_goc-node.scss */
+/* line 87, ../sass/node/_goc-node.scss */
 #mini-panel-node_header h1 {
   font-size: 20px;
   line-height: 27px; }
 
-/* line 72, ../sass/node/_goc-node.scss */
+/* line 94, ../sass/node/_goc-node.scss */
 .node-view .pane-node-field-cover {
   text-align: center; }
-/* line 76, ../sass/node/_goc-node.scss */
+/* line 98, ../sass/node/_goc-node.scss */
 .node-view p {
   margin-bottom: 1em; }
 
-/* line 83, ../sass/node/_goc-node.scss */
+/* line 105, ../sass/node/_goc-node.scss */
 .pane-node-view-small-teaser-related-content .pane-title {
   font-family: 'Droid Sans', sans-serif;
   font-size: 20px;
