@@ -65,7 +65,7 @@ body {
 #navigation {
   font-family: 'Droid Sans', sans-serif;
   font-weight: 700;
-  background: white url('../images/bg-nav.png?1348728600') repeat-x left top; }
+  background: white url('../images/bg-nav.png?1348649743') repeat-x left top; }
   /* line 5, ../sass/global/_goc-navigation.scss */
   #navigation li {
     list-style: none;
@@ -88,7 +88,7 @@ body {
       text-decoration: none; }
       /* line 30, ../sass/global/_goc-navigation.scss */
       #navigation .menu a:hover, #navigation .menu a.active, #navigation .menu a.active-trail {
-        background: url('../images/bg-nav-btn.png?1348728600') no-repeat center top; }
+        background: url('../images/bg-nav-btn.png?1348649743') no-repeat center top; }
   /* line 37, ../sass/global/_goc-navigation.scss */
   #navigation .menu .menu {
     display: none;
@@ -268,6 +268,37 @@ body {
   .line-teaser-group .views-row .created {
     color: white;
     float: right; }
+
+/* line 3, ../sass/teaser/_goc-slideshow.scss */
+.view-display-id-vp_slideshow .kicker {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 12px;
+  line-height: 19px;
+  background: #cccccc;
+  display: inline-block;
+  color: #444444;
+  padding: 2px; }
+/* line 11, ../sass/teaser/_goc-slideshow.scss */
+.view-display-id-vp_slideshow .headline a {
+  font-family: 'Droid Sans', sans-serif;
+  font-size: 20px;
+  line-height: 27px;
+  background: #af1028;
+  color: #FFF;
+  padding: 5px;
+  text-decoration: none; }
+/* line 20, ../sass/teaser/_goc-slideshow.scss */
+.view-display-id-vp_slideshow .slide-teaser {
+  position: absolute;
+  width: 300px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px; }
+  /* line 27, ../sass/teaser/_goc-slideshow.scss */
+  .view-display-id-vp_slideshow .slide-teaser p {
+    background: rgba(0, 0, 0, 0.5);
+    color: #FFF;
+    margin: 0 10px; }
 
 /* line 3, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .pane-page-content {

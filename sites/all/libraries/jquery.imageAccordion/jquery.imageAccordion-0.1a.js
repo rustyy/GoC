@@ -173,11 +173,14 @@
                 });
 
                 function animateTeaser(obj, e) {
-                    if (e === "mouseenter" && o.teaser != null) {
-                        $(o.teaser, obj).stop(true, true).fadeIn('slow');
-                    }
-                    if (e === "mouseleave" && o.teaser != null) {
-                        $(o.teaser, obj).stop(true, true).fadeOut('slow');
+                    var teaserCSS = {}
+                    if (o.teaser) {
+                        if (e === "mouseenter") {
+                            $(o.teaser, obj).stop(true, true).fadeIn('slow');
+                        }
+                        if (e === "mouseleave") {
+                            $(o.teaser, obj).stop(true, true).fadeOut('slow');
+                        }
                     }
                 }
 
