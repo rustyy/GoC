@@ -183,6 +183,7 @@
 
                 // Add css to accordion-container.
                 accordion.css(accCss);
+
                 // Accordion has been initialized, so initCount set to 1.
                 initCount = 1;
                 return true;
@@ -190,9 +191,7 @@
 
             // If accordion contains images, we are waiting until they are fully loaded.
             if (accordion.find('img')) {
-                $('img', accordion).load(function () {
-                    init();
-                });
+                $('img', accordion).load(init());
             }
             // Otherwise we go ahead.
             else {
