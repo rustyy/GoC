@@ -54,7 +54,8 @@
       margin: 0;
 
       &:hover,
-      &.active {
+      &.active,
+      &.active-trail {
         text-decoration: underline;
       }
     }
