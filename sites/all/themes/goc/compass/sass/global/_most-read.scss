@@ -1,0 +1,15 @@
+.pane-homepage-vp-most-read-articles {
+  h2 {
+    @include fontstyle($font: sans-serif, $size: large);
+    background: $red;
+    color: #fff;
+    padding: 0 7px;
+  }
+}
+
+.most-read-articles {
+  .views-row {
+    border-bottom: 1px dotted $grey;
+    padding: 7px 0;
+  }
+}

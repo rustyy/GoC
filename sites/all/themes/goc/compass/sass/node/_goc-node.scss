@@ -6,11 +6,15 @@
   left: 200px;
   padding: 6px;
   position: relative;
-  top: 26px;
+  //top: 26px;
   width: 418px;
   z-index: 100;
 
   h1 {
+    @include fontstyle($size: small);
+  }
+
+  h2 {
     @include fontstyle($size: large);
   }
 }
@@ -79,13 +83,6 @@
     position: absolute;
     right: 0;
     width: 40px;
-  }
-}
-
-// Node-title and kicker.
-#mini-panel-node_header {
-  h1 {
-    @include fontstyle($size: large);
   }
 }
 
