@@ -67,3 +67,11 @@ body {
   clear: both;
   height: 10px;
 }
+
+a {
+  color: $red;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
