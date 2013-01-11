@@ -26,7 +26,7 @@ function media_browser($selected = NULL) {
     elseif ($v === 'false') { $params[$k] = FALSE; }
   }
 
-  array_walk_recursive($params, '_media_recursive_check_plain');
+  array_walk_recursive($params, 'media_recursive_check_plain');
   $params = media_set_browser_params($params);
 
   // If one or more files have been selected, the browser interaction is now
@@ -194,18 +194,6 @@ function media_set_browser_params(array $params = NULL) {
  */
 function media_get_browser_params() {
   return media_set_browser_params();
-}
-
-/**
- * Silly function to recursively run check_plain on an array.
- *
- * There is probably something in core I am not aware of that does this.
- *
- * @param $value
- * @param $key
- */
-function _media_recursive_check_plain(&$value, $key) {
-  $value = check_plain($value);
 }
 
 /**
