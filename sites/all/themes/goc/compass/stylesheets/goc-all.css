@@ -65,7 +65,7 @@ body {
 #navigation {
   font-family: 'Droid Sans', sans-serif;
   font-weight: 700;
-  background: white url('../images/bg-nav.png?1348728600') repeat-x left top; }
+  background: white url('../images/bg-nav.png?1357937263') repeat-x left top; }
   /* line 5, ../sass/global/_goc-navigation.scss */
   #navigation li {
     list-style: none;
@@ -88,7 +88,7 @@ body {
       text-decoration: none; }
       /* line 30, ../sass/global/_goc-navigation.scss */
       #navigation .menu a:hover, #navigation .menu a.active, #navigation .menu a.active-trail {
-        background: url('../images/bg-nav-btn.png?1348728600') no-repeat center top; }
+        background: url('../images/bg-nav-btn.png?1357937263') no-repeat center top; }
   /* line 37, ../sass/global/_goc-navigation.scss */
   #navigation .menu .menu {
     display: none;
@@ -307,17 +307,18 @@ body {
 .node-type-article .field-slideshow-wrapper {
   background: url(../images/bg-image-carousel-article.png) no-repeat left bottom;
   left: -35px;
+  margin-top: -36px;
   padding-bottom: 30px;
   position: relative;
   width: 665px; }
-/* line 14, ../sass/node/_goc-fieldslideshow.scss */
+/* line 15, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow {
   background: #000;
   color: #FFF; }
-/* line 19, ../sass/node/_goc-fieldslideshow.scss */
+/* line 20, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-slide {
   height: 400px; }
-/* line 23, ../sass/node/_goc-fieldslideshow.scss */
+/* line 24, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-controls {
   background: url(../images/bg-field-slideshow-controls.png) repeat-y right top;
   bottom: 30px;
@@ -325,7 +326,7 @@ body {
   padding-right: 150px;
   position: absolute;
   z-index: 100; }
-  /* line 32, ../sass/node/_goc-fieldslideshow.scss */
+  /* line 33, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .prev,
   .node-type-article .field-slideshow-controls .next {
     display: inline-block;
@@ -333,15 +334,15 @@ body {
     margin-top: 20px;
     text-indent: -999em;
     width: 15px; }
-  /* line 40, ../sass/node/_goc-fieldslideshow.scss */
+  /* line 41, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .prev {
     background: url('../images/fixed-s729144ce37.png') 0 -240px no-repeat;
     margin-left: 26px;
     margin-right: 16px; }
-  /* line 45, ../sass/node/_goc-fieldslideshow.scss */
+  /* line 46, ../sass/node/_goc-fieldslideshow.scss */
   .node-type-article .field-slideshow-controls .next {
     background: url('../images/fixed-s729144ce37.png') 0 -195px no-repeat; }
-/* line 50, ../sass/node/_goc-fieldslideshow.scss */
+/* line 51, ../sass/node/_goc-fieldslideshow.scss */
 .node-type-article .field-slideshow-image-informations {
   font-family: 'Droid serif', serif;
   font-size: 12px;
@@ -358,15 +359,14 @@ body {
   left: 200px;
   padding: 6px;
   position: relative;
-  top: 26px;
   width: 418px;
   z-index: 100; }
-  /* line 13, ../sass/node/_goc-node.scss */
-  .pane-node-header h1 {
+  /* line 17, ../sass/node/_goc-node.scss */
+  .pane-node-header h2 {
     font-size: 20px;
     line-height: 27px; }
 
-/* line 19, ../sass/node/_goc-node.scss */
+/* line 23, ../sass/node/_goc-node.scss */
 .no-img .pane-node-header {
   background: none;
   color: #444444;
@@ -375,7 +375,7 @@ body {
   padding: 0;
   top: 0; }
 
-/* line 33, ../sass/node/_goc-node.scss */
+/* line 37, ../sass/node/_goc-node.scss */
 .pane-node-field-pro,
 .pane-node-field-contra,
 .pane-node-field-result,
@@ -387,7 +387,7 @@ body {
   margin-bottom: 7px;
   margin-top: 7px;
   padding: 7px; }
-  /* line 41, ../sass/node/_goc-node.scss */
+  /* line 45, ../sass/node/_goc-node.scss */
   .pane-node-field-pro a,
   .pane-node-field-contra a,
   .pane-node-field-result a,
@@ -395,14 +395,14 @@ body {
   .pane-node-terms a {
     color: #FFF;
     text-decoration: none; }
-  /* line 45, ../sass/node/_goc-node.scss */
+  /* line 49, ../sass/node/_goc-node.scss */
   .pane-node-field-pro a:hover,
   .pane-node-field-contra a:hover,
   .pane-node-field-result a:hover,
   .pane-node-field-media-documents a:hover,
   .pane-node-terms a:hover {
     text-decoration: underline; }
-  /* line 49, ../sass/node/_goc-node.scss */
+  /* line 53, ../sass/node/_goc-node.scss */
   .pane-node-field-pro .pane-title,
   .pane-node-field-contra .pane-title,
   .pane-node-field-result .pane-title,
@@ -412,25 +412,25 @@ body {
     font-size: 20px;
     line-height: 27px; }
 
-/* line 54, ../sass/node/_goc-node.scss */
+/* line 58, ../sass/node/_goc-node.scss */
 .pane-node-terms {
   display: inline-block; }
-  /* line 56, ../sass/node/_goc-node.scss */
+  /* line 60, ../sass/node/_goc-node.scss */
   .pane-node-terms li {
     float: left;
     margin-right: 5px; }
-    /* line 59, ../sass/node/_goc-node.scss */
+    /* line 63, ../sass/node/_goc-node.scss */
     .pane-node-terms li a:after {
       content: ","; }
-    /* line 62, ../sass/node/_goc-node.scss */
+    /* line 66, ../sass/node/_goc-node.scss */
     .pane-node-terms li.last a:after {
       content: normal; }
 
-/* line 69, ../sass/node/_goc-node.scss */
+/* line 73, ../sass/node/_goc-node.scss */
 .pane-node-field-media-documents .field-collection-documents-item {
   padding-bottom: 40px;
   position: relative; }
-  /* line 73, ../sass/node/_goc-node.scss */
+  /* line 77, ../sass/node/_goc-node.scss */
   .pane-node-field-media-documents .field-collection-documents-item .documents-download-button {
     background: url('../images/fixed-s729144ce37.png') 0 -125px no-repeat;
     bottom: 0;
@@ -443,19 +443,14 @@ body {
     .pane-node-field-media-documents .field-collection-documents-item .documents-download-button:hover {
       background-position: 0 -55px; }
 
-/* line 87, ../sass/node/_goc-node.scss */
-#mini-panel-node_header h1 {
-  font-size: 20px;
-  line-height: 27px; }
-
-/* line 94, ../sass/node/_goc-node.scss */
+/* line 91, ../sass/node/_goc-node.scss */
 .node-view .pane-node-field-cover {
   text-align: center; }
-/* line 98, ../sass/node/_goc-node.scss */
+/* line 95, ../sass/node/_goc-node.scss */
 .node-view p {
   margin-bottom: 1em; }
 
-/* line 105, ../sass/node/_goc-node.scss */
+/* line 102, ../sass/node/_goc-node.scss */
 .pane-node-view-small-teaser-related-content .pane-title {
   font-family: 'Droid Sans', sans-serif;
   font-size: 20px;
