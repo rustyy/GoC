@@ -8,6 +8,47 @@
 function goc_preprocess_html(&$vars) {
   drupal_add_js('sites/all/libraries/jquery.imageAccordion/jquery.imageAccordion-0.1a.js', 'file');
   drupal_add_css('sites/all/libraries/jquery.imageAccordion/themes/standard/standard.css', 'file');
+
+  // Add Touch Icons.
+  $elements = array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'rel' => 'apple-touch-icon',
+      'sizes' => '57x57',
+      'href' => drupal_get_path('theme', 'goc') . '/apple-touch-icons/apple-touch-icon-57x57-precomposed.png',
+    ),
+  );
+  drupal_add_html_head($elements, 'touch_icon_57');
+
+  $elements = array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'rel' => 'apple-touch-icon',
+      'sizes' => '72x72',
+      'href' => drupal_get_path('theme', 'goc') . '/apple-touch-icons/apple-touch-icon-72x72-precomposed.png',
+    ),
+  );
+  drupal_add_html_head($elements, 'touch_icon_72');
+
+  $elements = array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'rel' => 'apple-touch-icon',
+      'sizes' => '114x114',
+      'href' => drupal_get_path('theme', 'goc') . '/apple-touch-icons/apple-touch-icon-114x114-precomposed.png',
+    ),
+  );
+  drupal_add_html_head($elements, 'touch_icon_114');
+
+  $elements = array(
+    '#tag' => 'link',
+    '#attributes' => array(
+      'rel' => 'apple-touch-icon',
+      'sizes' => '144x144',
+      'href' => drupal_get_path('theme', 'goc') . '/apple-touch-icons/apple-touch-icon-144x144-precomposed.png',
+    ),
+  );
+  drupal_add_html_head($elements, 'touch_icon_144');
 }
 
 /***
