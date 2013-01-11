@@ -1,0 +1,3 @@
+[submodule "sites/all/libraries/jquery.imagesloaded"]
+	path = sites/all/libraries/jquery.imagesloaded
+	url = git://github.com/desandro/imagesloaded.git
