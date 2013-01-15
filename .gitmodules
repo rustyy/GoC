@@ -1,3 +1,6 @@
 [submodule "sites/all/libraries/jquery.imagesloaded"]
 	path = sites/all/libraries/jquery.imagesloaded
 	url = git://github.com/desandro/imagesloaded.git
+[submodule "sites/all/libraries/jquery.squeezeGallery"]
+	path = sites/all/libraries/jquery.squeezeGallery
+	url = git@github.com:rustyy/Squeeze-Gallery.git
