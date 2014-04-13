@@ -19,7 +19,7 @@ class RadioactivityFileIncidentStorage extends RadioactivityIncidentStorage {
   /**
    * Add incident directly to the db
    */
-  public function addIncident(RadioactivityIncident$incident) {
+  public function addIncident(RadioactivityIncident $incident) {
     $row  = serialize($incident);
     $tmp  = VAR_RADIOACTIVITY_TEMP_DIR;
     $file = $tmp . "/radioactivity-payload.txt";
@@ -83,15 +83,6 @@ class RadioactivityFileIncidentStorage extends RadioactivityIncidentStorage {
     else {
 
       return self::$fileEmitters;
-    }
-  }
-
-  /**
-   * Default emitter processing via ajax callback path
-   */
-  public function processEmitters() {
-    if (count(self::$fileEmitters) > 0) {
-      radioactivity_emitter_callback_data('file', self::$fileEmitters);
     }
   }
 
