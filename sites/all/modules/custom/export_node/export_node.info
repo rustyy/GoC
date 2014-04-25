@@ -1,0 +1,5 @@
+name = "export node"
+description = "Exports a single node and its next and prev node as json"
+core = "7.x"
+version = "7.x-1.0"
+package = "goc"
