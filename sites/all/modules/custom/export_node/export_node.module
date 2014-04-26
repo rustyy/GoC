@@ -159,6 +159,8 @@ function _export_nodes_callback($arg = 'all') {
     $image = theme_image_style($img_vars);
 
     $json[] = array(
+      'nid' => $node->nid,
+      'tid' => $node->field_rubric[$lang][0]['tid'],
       'image' => $image,
       'headline' => $node->title,
       'kicker' => $node->field_kicker[$lang][0]['safe_value'],
