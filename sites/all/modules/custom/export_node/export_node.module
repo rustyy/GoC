@@ -84,11 +84,11 @@ function _export_node_callback($arg = NULL) {
     'body' => $node->body[$lang][0]['safe_value'],
   );
 
-  if (!empty($prev_nid)) {
-    $json['prev_nid'] = $prev_nid;
+  if ($prev_nid) {
+    $json['prev_nid'] = $prev_nid['nid'];
   }
-  if (!empty($next_nid)) {
-    $json['next_nid'] = $next_nid;
+  if ($next_nid) {
+    $json['next_nid'] = $next_nid['nid'];
   }
 
   drupal_json_output($json);
