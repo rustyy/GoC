@@ -7,10 +7,10 @@
 function export_node_menu() {
   $items = array();
 
-  $items['export/node/%'] = array(
+  $items['node/%/export'] = array(
     'type' => MENU_CALLBACK,
     'page callback' => '_export_node_callback',
-    'page arguments' => array(2),
+    'page arguments' => array(1),
     'access callback' => TRUE,
   );
   return $items;
@@ -23,11 +23,37 @@ function export_node_menu() {
  */
 function _export_node_callback($arg = NULL) {
   $node = node_load($arg);
-  $lang = $node->language;
 
   // Exit if node does not exist or is not published.
   if (!$node || $node->status == 0) {
-    return drupal_json_output(array('Access denied'));
+    drupal_json_output(array('Access denied'));
+    drupal_exit();
+  }
+
+  $lang = $node->language;
+  $ids = array();
+  $images = array();
+
+  // Get the image.
+  foreach ($node->field_media_image[$lang] as $k) {
+    $ids[] = $k['value'];
+  }
+
+  $fc_items = field_collection_item_load_multiple($ids);
+  foreach ($fc_items as $k => $v) {
+    $img_vars = array(
+      'style_name' => 'mobile_1',
+      'path' => $v->field_fc_image[$lang][0]['uri'],
+      'alt' => $v->field_fc_image[$lang][0]['alt'] . ' - Foto: ' . $v->field_fc_copyright[$lang][0]['safe_value'],
+      'title' => $v->field_fc_image[$lang][0]['title'] . ' - Foto: ' . $v->field_fc_copyright[$lang][0]['safe_value'],
+    );
+
+    $image = theme_image_style($img_vars);
+    $images[] = array(
+      'image' => $image,
+      'caption' => $v->field_fc_headline[$lang][0]['safe_value'],
+      'copyright' => $v->field_fc_copyright[$lang][0]['safe_value'],
+    );
   }
 
   // Get the node before the current.
@@ -52,6 +78,7 @@ function _export_node_callback($arg = NULL) {
 
   // Prepare json.
   $json = array(
+    'images' => $images,
     'headline' => $node->title,
     'kicker' => $node->field_kicker[$lang][0]['safe_value'],
     'body' => $node->body[$lang][0]['safe_value'],
@@ -59,11 +86,11 @@ function _export_node_callback($arg = NULL) {
 
   if (!empty($prev_nid)) {
     $json['prev_nid'] = $prev_nid;
-
   }
   if (!empty($next_nid)) {
     $json['next_nid'] = $next_nid;
   }
 
-  return drupal_json_output($json);
+  drupal_json_output($json);
+  drupal_exit();
 }
