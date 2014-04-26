@@ -110,6 +110,7 @@ function _export_nodes_callback($arg = 'all') {
   $node = '';
   $lang = '';
   $image = '';
+  $term = '';
   $copyright = '';
   $alt = '';
   $title = '';
@@ -135,9 +136,10 @@ function _export_nodes_callback($arg = 'all') {
     $node = node_load($record->nid);
     $lang = $node->language;
     $image = field_collection_item_load($node->field_media_image[$lang][0]['value']);
+    $term = taxonomy_term_load($node->field_rubric[$lang][0]['tid'])->name;
 
     if (!empty($image->field_fc_copyright[$lang][0]['safe_value'])) {
-      $copyright = ' - Foto' . $image->field_fc_copyright[$lang][0]['safe_value'];
+      $copyright = ' - Foto: ' . $image->field_fc_copyright[$lang][0]['safe_value'];
     }
 
     if (!empty($image->field_fc_image[$lang][0]['alt'])) {
@@ -162,6 +164,7 @@ function _export_nodes_callback($arg = 'all') {
       'nid' => $node->nid,
       'tid' => $node->field_rubric[$lang][0]['tid'],
       'image' => $image,
+      'term' => $term,
       'headline' => $node->title,
       'kicker' => $node->field_kicker[$lang][0]['safe_value'],
     );
