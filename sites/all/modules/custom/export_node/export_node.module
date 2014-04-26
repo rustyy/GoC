@@ -13,6 +13,12 @@ function export_node_menu() {
     'page arguments' => array(1),
     'access callback' => TRUE,
   );
+  $items['export_nodes/%'] = array(
+    'type' => MENU_CALLBACK,
+    'page callback' => '_export_nodes_callback',
+    'page arguments' => array(1),
+    'access callback' => TRUE,
+  );
   return $items;
 }
 
@@ -91,6 +97,73 @@ function _export_node_callback($arg = NULL) {
     $json['next_nid'] = $next_nid['nid'];
   }
 
+  drupal_json_output($json);
+  drupal_exit();
+}
+
+/**
+ * Export nodes callback.
+ * Generates json output with nodes by category.
+ * @param string $arg
+ */
+function _export_nodes_callback($arg = 'all') {
+  $node = '';
+  $lang = '';
+  $image = '';
+  $copyright = '';
+  $alt = '';
+  $title = '';
+
+  if ($arg == 'all') {
+    $q = "SELECT n.nid
+        FROM {node} n
+        JOIN {field_data_field_rubric} r
+        ON n.nid = r.entity_id";
+  }
+  else {
+    $q = "SELECT n.nid
+        FROM {node} n
+        JOIN {field_data_field_rubric} r
+        ON n.nid = r.entity_id
+        WHERE r.field_rubric_tid = :tid";
+  }
+
+  $result = db_query($q, array(':tid' => $arg));
+  $json = array();
+
+  foreach ($result as $record) {
+    $node = node_load($record->nid);
+    $lang = $node->language;
+    $image = field_collection_item_load($node->field_media_image[$lang][0]['value']);
+
+    if (!empty($image->field_fc_copyright[$lang][0]['safe_value'])) {
+      $copyright = ' - Foto' . $image->field_fc_copyright[$lang][0]['safe_value'];
+    }
+
+    if (!empty($image->field_fc_image[$lang][0]['alt'])) {
+      $alt = $image->field_fc_image[$lang][0]['alt'];
+    }
+
+    if (!empty($image->field_fc_image[$lang][0]['title'])) {
+      $title = $image->field_fc_image[$lang][0]['title'];
+    }
+
+    $img_vars = array(
+      'style_name' => 'mobile_1',
+      'path' => $image->field_fc_image[$lang][0]['uri'],
+      'alt' => $alt . $copyright,
+      'title' => $title . $copyright,
+      'width' => '',
+      'height' => '',
+    );
+    $image = theme_image_style($img_vars);
+
+    $json[] = array(
+      'image' => $image,
+      'headline' => $node->title,
+      'kicker' => $node->field_kicker[$lang][0]['safe_value'],
+    );
+  }
   drupal_json_output($json);
   drupal_exit();
 }
