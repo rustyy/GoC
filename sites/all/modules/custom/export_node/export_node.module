@@ -126,7 +126,9 @@ function _export_nodes_callback($arg = 'all') {
         FROM {node} n
         JOIN {field_data_field_rubric} r
         ON n.nid = r.entity_id
-        WHERE r.field_rubric_tid = :tid";
+        JOIN {taxonomy_term_hierarchy} h
+        ON r.field_rubric_tid = h.tid
+        WHERE r.field_rubric_tid = :tid OR h.parent = :tid";
   }
 
   $result = db_query($q, array(':tid' => $arg));
