@@ -19,7 +19,57 @@ function export_node_menu() {
     'page arguments' => array(1),
     'access callback' => TRUE,
   );
+
+  $items['admin/settings/export_node'] = array(
+    'type' => MENU_NORMAL_ITEM,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('export_node_admin'),
+    'access arguments' => array('administer export_node settings'),
+    'title' => t('Export node settings'),
+    'description' => t('Administer export node'),
+  );
+
   return $items;
+}
+
+/**
+ * Implements hook_admin().
+ *
+ * Adds the possibility to add htaccess data to the image src path.
+ * @return mixed
+ */
+function export_node_admin() {
+  $form = array();
+  $form['node_export_dev_mode'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Activate Devel mode'),
+    '#default_value' => variable_get('node_export_dev_mode', 0),
+  );
+
+  $form['node_export_dev_host'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Host domain'),
+    '#default_value' => variable_get('node_export_dev_host'),
+  );
+
+  $form['node_export_htaccess_user'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Htaccess User'),
+    '#default_value' => variable_get('node_export_htaccess_user'),
+  );
+
+  // @todo: hash pw.
+  $form['node_export_htaccess_pw'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Htaccess password'),
+    '#default_value' => variable_get('node_export_htaccess_pw'),
+  );
+
+  return system_settings_form($form);
+}
+
+function export_node_admin_validate($form, &$form_state) {
+
 }
 
 /**
@@ -107,13 +157,16 @@ function _export_node_callback($arg = NULL) {
  * @param string $arg
  */
 function _export_nodes_callback($arg = 'all') {
-  $node = '';
-  $lang = '';
-  $image = '';
-  $term = '';
-  $copyright = '';
-  $alt = '';
-  $title = '';
+  // Init variables.
+  $node = FALSE; // Node loaded.
+  $lang = 'und'; // Node's language.
+  $image = FALSE; // Image loaded (field collection item).
+  $term = ''; // Node Category.
+  $copyright = ''; // Copyright string.
+  $alt = ''; // Image alt text.
+  $title = ''; // Image title text.
+  $result = NULL; // query result.
+  $json = array(); // Json output.
 
   if ($arg == 'all') {
     $q = "SELECT n.nid
@@ -132,7 +185,6 @@ function _export_nodes_callback($arg = 'all') {
   }
 
   $result = db_query($q, array(':tid' => $arg));
-  $json = array();
 
   foreach ($result as $record) {
     $node = node_load($record->nid);
