@@ -55,10 +55,6 @@ function export_node_admin() {
   return system_settings_form($form);
 }
 
-function export_node_admin_validate($form, &$form_state) {
-
-}
-
 /**
  * Export node page callback.
  * Returns json for a specific node.
@@ -76,6 +72,8 @@ function _export_node_callback($arg = NULL) {
   $lang = $node->language;
   $ids = array();
   $images = array();
+  $term = '';
+  $term = taxonomy_term_load($node->field_rubric[$lang][0]['tid']);
 
   // Get the image.
   foreach ($node->field_media_image[$lang] as $k) {
@@ -121,6 +119,7 @@ function _export_node_callback($arg = NULL) {
 
   // Prepare json.
   $json = array(
+    'category' => $term->name,
     'images' => $images,
     'headline' => $node->title,
     'kicker' => $node->field_kicker[$lang][0]['safe_value'],
@@ -134,7 +133,7 @@ function _export_node_callback($arg = NULL) {
     $json['next_nid'] = $next_nid['nid'];
   }
 
-  drupal_json_output($json);
+  _export_node_output_json('export_node_callback', $json);
   drupal_exit();
 }
 
@@ -217,7 +216,8 @@ function _export_nodes_callback($arg = 'all') {
       'kicker' => $node->field_kicker[$lang][0]['safe_value'],
     );
   }
-  drupal_json_output($json);
+
+  _export_node_output_json('export_nodes_callback', $json);
   drupal_exit();
 }
 
@@ -231,4 +231,21 @@ function _export_node_get_settings() {
   $settings['dev_mode'] = variable_get('node_export_dev_mode');
   $settings['host_domain'] = variable_get('node_export_dev_host');
   return $settings;
+}
+
+/**
+ * Helper function for jsonp output.
+ * @param $cb
+ * @param $json
+ */
+function _export_node_output_json($cb, $json) {
+  $callback = check_plain($_REQUEST[$cb]);
+  if (isset($callback) && $callback != '') {
+    $response = drupal_json_encode($json);
+    header("Content-type: text/javascript");
+    print $callback . "(" . $response . ");";
+  }
+  else {
+    drupal_json_output($json);
+  }
 }
