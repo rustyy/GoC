@@ -52,19 +52,6 @@ function export_node_admin() {
     '#default_value' => variable_get('node_export_dev_host'),
   );
 
-  $form['node_export_htaccess_user'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Htaccess User'),
-    '#default_value' => variable_get('node_export_htaccess_user'),
-  );
-
-  // @todo: hash pw.
-  $form['node_export_htaccess_pw'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Htaccess password'),
-    '#default_value' => variable_get('node_export_htaccess_pw'),
-  );
-
   return system_settings_form($form);
 }
 
@@ -158,6 +145,7 @@ function _export_node_callback($arg = NULL) {
  */
 function _export_nodes_callback($arg = 'all') {
   // Init variables.
+  $module_settings = _export_node_get_settings();
   $node = FALSE; // Node loaded.
   $lang = 'und'; // Node's language.
   $image = FALSE; // Image loaded (field collection item).
@@ -212,7 +200,13 @@ function _export_nodes_callback($arg = 'all') {
       'width' => '',
       'height' => '',
     );
+
     $image = theme_image_style($img_vars);
+
+    if ($module_settings['dev_mode']) {
+      //@todo: improve regex.
+      $image = preg_replace('@(?!http:)//\w+.\w+[^/]@i', '//' . $module_settings['host_domain'], $image);
+    }
 
     $json[] = array(
       'nid' => $node->nid,
@@ -225,4 +219,16 @@ function _export_nodes_callback($arg = 'all') {
   }
   drupal_json_output($json);
   drupal_exit();
+}
+
+
+/**
+ * Helper function that returns the module settings.
+ * @return array
+ */
+function _export_node_get_settings() {
+  $settings = array();
+  $settings['dev_mode'] = variable_get('node_export_dev_mode');
+  $settings['host_domain'] = variable_get('node_export_dev_host');
+  return $settings;
 }
