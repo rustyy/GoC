@@ -205,7 +205,7 @@ function _export_nodes_callback($arg = 'all') {
 
     if ($module_settings['dev_mode']) {
       //@todo: improve regex.
-      $image = preg_replace('@(?!http:)//\w+.\w+[^/]@i', '//' . $module_settings['host_domain'], $image);
+      $image = preg_replace('@(?!http:)//\w+.\w+.\w+[^/]@i', '//' . $module_settings['host_domain'], $image);
     }
 
     $json[] = array(
