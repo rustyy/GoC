@@ -74,6 +74,7 @@ function _export_node_callback($arg = NULL) {
   $images = array();
   $term = '';
   $term = taxonomy_term_load($node->field_rubric[$lang][0]['tid']);
+  $module_settings = _export_node_get_settings();
 
   // Get the image.
   foreach ($node->field_media_image[$lang] as $k) {
@@ -90,6 +91,12 @@ function _export_node_callback($arg = NULL) {
     );
 
     $image = theme_image_style($img_vars);
+
+    if ($module_settings['dev_mode']) {
+      //@todo: improve regex.
+      $image = preg_replace('@(?!http:)//\w+.\w+.\w+[^/]@i', '//' . $module_settings['host_domain'], $image);
+    }
+
     $images[] = array(
       'image' => $image,
       'caption' => $v->field_fc_headline[$lang][0]['safe_value'],
