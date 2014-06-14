@@ -14,3 +14,5 @@ FirePHPCore
 
 # phpstorm stuff
 .idea
+
+*.sublime-workspace
