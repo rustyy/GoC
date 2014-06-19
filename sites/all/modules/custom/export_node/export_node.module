@@ -113,7 +113,7 @@ function _export_node_callback($arg = NULL) {
 
   // Get the node-id before the current being viewed.
   $prev_nid = _export_node_get_node_before($node->field_rubric[$lang][0]['tid'], $node->created);
-  
+
   // Get the node posted after the current being viewed.
   $next_nid = _export_node_get_node_after($node->field_rubric[$lang][0]['tid'], $node->created);
 
@@ -251,13 +251,13 @@ function _export_node_output_json($cb, $json) {
 }
 
 /**
- * Helper function that returns a node posted before a given date and with a specific term id. 
+ * Helper function that returns a node posted before a given date and with a specific term id.
  * @param  integer $tid     [Term id.]
  * @param  timestamp $created [Node creation date.]
  * @return integer          [Node ID]
  */
 function _export_node_get_node_before($tid, $created){
-  $q = "SELECT n.nid FROM {node} n 
+  $q = "SELECT n.nid FROM {node} n
   JOIN {field_data_field_rubric} r
   ON n.nid = r.entity_id
   WHERE r.field_rubric_tid = :tid AND n.created < :created
@@ -267,7 +267,7 @@ function _export_node_get_node_before($tid, $created){
 }
 
 /**
- * Helper function that returns a node posted after a given date and with a specific term id. 
+ * Helper function that returns a node posted after a given date and with a specific term id.
  * @param  integer $tid     [Term id.]
  * @param  timestamp $created [Node creation date.]
  * @return integer          [Node ID]
@@ -279,7 +279,7 @@ function _export_node_get_node_after($tid, $created) {
   ON n.nid = r.entity_id
   WHERE r.field_rubric_tid = :tid AND n.created > :created
   LIMIT 1";
-  $result = db_query($q, array(':tid' => $node->field_rubric[$lang][0]['tid'], ':created' => $node->created));
+  $result = db_query($q, array(':tid' => $tid, ':created' => $created));
   return $result->fetchAssoc();
 }
 
